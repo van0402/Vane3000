@@ -941,30 +941,30 @@
 
     // ✅ Hiển thị bài trắc nghiệm với thứ tự ngẫu nhiên
    function renderQuiz() {
-  const quizForm = document.getElementById("quizForm");
-  quizForm.innerHTML = "";
-  document.getElementById("result").innerText = "";
+      const quizForm = document.getElementById("quizForm");
+      quizForm.innerHTML = "";
+      document.getElementById("result").innerText = "";
 
-  const selectedQuestions = [];
-  for (let i = 40; i <= 50; i++) {
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    selectedQuestions.push(questions[randomIndex]);
-  }
-  window.shuffledQuestions = selectedQuestions;
+      const selectedQuestions = [];
+      for (let i = 0; i < 50; i++) {
+        const randomIndex = Math.floor(Math.random() * questions.length);
+        selectedQuestions.push(questions[randomIndex]);
+      }
+      window.shuffledQuestions = selectedQuestions;
 
-  selectedQuestions.forEach((q, index) => {
-    const div = document.createElement("div");
-    div.classList.add("question-block");
+      selectedQuestions.forEach((q, index) => {
+        const div = document.createElement("div");
+        div.classList.add("question-block");
 
-    let html = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>`;
-    html += q.options.map((opt, i) =>
-      `<label><input type="radio" name="q${index}" value="${i}"> • ${String.fromCharCode(65 + i)}: ${opt}</label>`
-    ).join('');
+        let html = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>`;
+        html += q.options.map((opt, i) =>
+          `<label><input type="radio" name="q${index}" value="${i}"> • ${String.fromCharCode(65 + i)}: ${opt}</label>`
+        ).join('');
 
-    div.innerHTML = html;
-    quizForm.appendChild(div);
-  });
-}
+        div.innerHTML = html;
+        quizForm.appendChild(div);
+      });
+    }
 
 
     // ✅ Nộp bài và chấm điểm
