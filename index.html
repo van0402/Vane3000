@@ -34,6 +34,24 @@
   <div class="result" id="result"></div>
 
   <script>
+    let questions = JSON.parse(localStorage.getItem('questions'));
+
+if (!questions || questions.length === 0) {
+  questions = [
+    {
+      question: "Thủ đô của Việt Nam là gì?",
+      options: ["Hà Nội", "TP.HCM", "Huế", "Đà Nẵng"],
+      answer: 0
+    },
+    {
+      question: "2 + 2 bằng mấy?",
+      options: ["3", "4", "5", "6"],
+      answer: 1
+    }
+  ];
+  localStorage.setItem('questions', JSON.stringify(questions));
+}
+
     // Load câu hỏi từ LocalStorage
     let questions = JSON.parse(localStorage.getItem('questions')) || [];
 
@@ -114,4 +132,4 @@
   </script>
 </body>
 </html>
-# van0402
+
