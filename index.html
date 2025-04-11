@@ -118,8 +118,13 @@
           if (selectedIndex === q.answer) {
             score++;
           } else {
-            labels[selectedIndex].style.color = "red";
-            labels[selectedIndex].innerHTML += " ❌";
+           labels[selectedIndex].style.color = "red";
+
+const wrongMark = document.createElement("span");
+wrongMark.style.color = "red";
+wrongMark.textContent = " ❌";
+labels[selectedIndex].appendChild(wrongMark);
+
           }
         }
 
