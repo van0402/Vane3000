@@ -2,106 +2,107 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Trắc nghiệm tự tạo</title>
+  <title>Trắc nghiệm ICONIX</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: 30px auto; }
-    input, button, textarea { margin: 5px 0; padding: 6px; width: 100%; }
-    .question-block { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
-    .result { font-weight: bold; margin-top: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 10px;
+    }
+    .question-block {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      margin-right: 6px;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    button {
+      margin: 10px 5px 0 0;
+      padding: 8px 16px;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
 
-  <h2>📝 Thêm câu hỏi mới</h2>
-  <div>
-    <input type="text" id="newQuestion" placeholder="Câu hỏi">
-    <input type="text" id="opt1" placeholder="Đáp án A">
-    <input type="text" id="opt2" placeholder="Đáp án B">
-    <input type="text" id="opt3" placeholder="Đáp án C">
-    <input type="text" id="opt4" placeholder="Đáp án D">
-    <select id="correctAnswer">
-      <option value="0">A</option>
-      <option value="1">B</option>
-      <option value="2">C</option>
-      <option value="3">D</option>
-    </select>
-    <button onclick="addQuestion()">➕ Thêm câu hỏi</button>
-  </div>
-
-  <h2>🧠 Làm bài trắc nghiệm</h2>
+  <h2>🧠 Bài trắc nghiệm ICONIX</h2>
   <form id="quizForm"></form>
   <button onclick="submitQuiz()">📝 Nộp bài</button>
+  <button onclick="renderQuiz()">🔁 Làm lại</button>
   <div class="result" id="result"></div>
 
   <script>
-    let questions = JSON.parse(localStorage.getItem('questions'));
-
-if (!questions || questions.length === 0) {
-  questions = [
-    {
-      question: "Thủ đô của Việt Nam là gì?",
-      options: ["Hà Nội", "TP.HCM", "Huế", "Đà Nẵng"],
-      answer: 0
-    },
-    {
-      question: "2 + 2 bằng mấy?",
-      options: ["3", "4", "5", "6"],
-      answer: 1
-    }
-  ];
-  localStorage.setItem('questions', JSON.stringify(questions));
-}
-
-    // Load câu hỏi từ LocalStorage
-    let questions = JSON.parse(localStorage.getItem('questions')) || [];
-
-    // Thêm câu hỏi mới
-    function addQuestion() {
-      const q = document.getElementById("newQuestion").value;
-      const opts = [
-        document.getElementById("opt1").value,
-        document.getElementById("opt2").value,
-        document.getElementById("opt3").value,
-        document.getElementById("opt4").value,
-      ];
-      const ans = parseInt(document.getElementById("correctAnswer").value);
-
-      if (q && opts.every(opt => opt !== "")) {
-        questions.push({ question: q, options: opts, answer: ans });
-        localStorage.setItem('questions', JSON.stringify(questions));
-        alert("Đã thêm câu hỏi!");
-        renderQuiz();
-      } else {
-        alert("Vui lòng nhập đầy đủ thông tin!");
+    // ✅ Câu hỏi viết sẵn ở đây
+    const questions = [
+      {
+        question: "ICONIX Process tập trung vào giai đoạn nào trong vòng đời phát triển phần mềm?",
+        options: [
+          "Phân tích và thiết kế",
+          "Kiểm thử phần mềm",
+          "Lập kế hoạch dự án",
+          "Quản lý dự án"
+        ],
+        answer: 0
+      },
+      {
+        question: "Use Case là gì trong phân tích hệ thống?",
+        options: [
+          "Một đoạn mã nguồn",
+          "Một công cụ lập trình",
+          "Mô tả chức năng hệ thống từ góc nhìn người dùng",
+          "Cơ sở dữ liệu của hệ thống"
+        ],
+        answer: 2
+      },
+      {
+        question: "Lợi ích chính của mô hình ICONIX là gì?",
+        options: [
+          "Tăng chi phí phát triển",
+          "Giảm chất lượng phần mềm",
+          "Rút ngắn thời gian phân tích và thiết kế",
+          "Loại bỏ vai trò của khách hàng"
+        ],
+        answer: 2
       }
+    ];
 
-      // Clear form
-      document.getElementById("newQuestion").value = "";
-      opts.forEach((_, i) => document.getElementById("opt" + (i + 1)).value = "");
-    }
-
-    // Hiển thị câu hỏi trắc nghiệm (random)
+    // ✅ Render bài trắc nghiệm
     function renderQuiz() {
       const quizForm = document.getElementById("quizForm");
       quizForm.innerHTML = "";
+      document.getElementById("result").innerText = "";
 
-      // Random câu hỏi
+      // Trộn thứ tự câu hỏi
       const shuffled = [...questions].sort(() => 0.5 - Math.random());
+      window.shuffledQuestions = shuffled;
 
       shuffled.forEach((q, index) => {
         const div = document.createElement("div");
         div.classList.add("question-block");
-        div.innerHTML = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>` +
-          q.options.map((opt, i) =>
-            `<label><input type="radio" name="q${index}" value="${i}"> ${opt}</label><br>`
-          ).join('');
+
+        let html = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>`;
+        html += q.options.map((opt, i) =>
+          `<label><input type="radio" name="q${index}" value="${i}"> • ${String.fromCharCode(65 + i)}: ${opt}</label>`
+        ).join('');
+
+        div.innerHTML = html;
         quizForm.appendChild(div);
       });
-
-      window.shuffledQuestions = shuffled; // Lưu để chấm điểm
     }
 
-    // Nộp bài & chấm điểm
+    // ✅ Nộp bài và chấm điểm
     function submitQuiz() {
       let score = 0;
       const shuffled = window.shuffledQuestions || [];
@@ -110,26 +111,21 @@ if (!questions || questions.length === 0) {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
         const questionBlock = document.querySelectorAll(".question-block")[index];
 
-        // Kiểm tra đáp án
         if (selected && parseInt(selected.value) === q.answer) {
           score++;
         }
 
-        // Hiển thị đáp án đúng
         const correctAnswerText = q.options[q.answer];
         const answerDisplay = document.createElement("p");
         answerDisplay.style.color = "green";
-        answerDisplay.innerText = `✅ Đáp án đúng: ${correctAnswerText}`;
+        answerDisplay.innerText = `✅ Đáp án đúng: ${String.fromCharCode(65 + q.answer)}: ${correctAnswerText}`;
         questionBlock.appendChild(answerDisplay);
       });
 
       document.getElementById("result").innerText = `🎉 Bạn được ${score}/${shuffled.length} điểm.`;
     }
 
-    // Render lần đầu
     renderQuiz();
-    
   </script>
 </body>
 </html>
-
