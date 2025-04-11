@@ -57,12 +57,12 @@
         answer: 0
       },
       {
-        question: "Use Case là gì trong phân tích hệ thống?",
+        question: "Câu hỏi chính mà quy trình ICONIX muốn trả lời là gì??",
         options: [
-          "Một đoạn mã nguồn",
-          "Một công cụ lập trình",
-          "Mô tả chức năng hệ thống từ góc nhìn người dùng",
-          "Cơ sở dữ liệu của hệ thống"
+          "Làm thế nào để sử dụng được hết các loại sơ đồ UML",
+          "Làm thế nào để đi từ người dùng đến sản phẩm",
+          "Làm thế nào để có thể đi từ use case đến mã nguồn",
+          "Làm thế nào để lập trình hướng đối tượng"
         ],
         answer: 2
       },
@@ -75,7 +75,868 @@
           "Loại bỏ vai trò của khách hàng"
         ],
         answer: 2
-      }
+      },
+        {
+    question: "Quy trình ICONIX giúp thu hẹp khoảng cách giữa lý thuyết và thực tế như thế nào?",
+    options: [
+      "Phát triển hệ thống dựa trên mô hình UML đầy đủ",
+      "Tập trung vào thiết kế trực tiếp từ mã nguồn",
+      "Liên kết các use case với các đối tượng trong hệ thống",
+      "Chuyển đổi nhanh từ yêu cầu thành mã nguồn mà không qua phân tích"
+    ],
+    answer: 2
+  },
+  {
+    question: "Quy trình ICONIX có giảng giải quyết vấn đề gì trước đây?",
+    options: [
+      "Thiếu sự chi tiết trong các mô hình",
+      "Thiếu tài liệu mô tả hệ thống",
+      "Cồng kềnh và nhiều thứ không cần thiết trong dự án thực tế",
+      "Thiếu mô tả chức năng của mã nguồn"
+    ],
+    answer: 2
+  },
+  {
+    question: "Trong quy trình ICONIX, các yêu cầu hành vi được mô tả như thế nào?",
+    options: [
+      "Thông qua các bảng cơ sở dữ liệu",
+      "Thông qua mô hình dữ liệu",
+      "Thông qua use case mô tả cách người dùng và hệ thống tương tác",
+      "Thông qua mô hình hình lớp"
+    ],
+    answer: 2
+  },
+  {
+    question: "Trong quy trình ICONIX, hoạt động nào giúp làm rõ và loại bỏ sự mơ hồ trong yêu cầu hệ thống?",
+    options: [
+      "Vẽ sơ đồ lớp",
+      "Kiểm thử đơn vị",
+      "Viết mã nguồn",
+      "Phân tích độ bền (robustness analysis)"
+    ],
+    answer: 3
+  },
+  {
+    question: "Việc sử dụng sơ đồ trình tự (sequence diagram) trong quy trình ICONIX nhằm mục đích gì?",
+    options: [
+      "Để xác định các yêu cầu không chức năng",
+      "Để phân tích tính bảo mật của hệ thống",
+      "Để phân tích tính khả thi của dự án",
+      "Để phân bổ hành vi cho các lớp đối tượng"
+    ],
+    answer: 3
+  },
+  {
+    question: "Trong quy trình ICONIX, tại sao cần thực hiện đánh giá thiết kế sơ bộ (Preliminary Design Review)?",
+    options: [
+      "Để kiểm tra tính chính xác của mô hình dữ liệu",
+      "Để kiểm thử toàn bộ hệ thống",
+      "Để đảm bảo mô hình miền và use case khớp nhau",
+      "Để xác định tất cả các lỗi trong mã nguồn"
+    ],
+    answer: 2
+  },
+  {
+    question: "Làm thế nào để một sơ đồ bền giúp liên kết use case với mô hình đối tượng?",
+    options: [
+      "Tạo ra các tượng giao diện (GUI)",
+      "Xác định các đối tượng miền và các thông điệp truyền giữa chúng",
+      "Liệt kê tất cả các yêu cầu chức năng",
+      "Xác định các lỗi tiềm ẩn trong thiết kế"
+    ],
+    answer: 1
+  },
+  {
+    question: "Sau khi hoàn thành giai đoạn phân tích và thiết kế sơ bộ, nếu phát hiện sự khác biệt giữa use case và sơ đồ lớp, ta sẽ xử lý như thế nào?",
+    options: [
+      "Kiểm tra mã nguồn",
+      "Bỏ qua sự khác biệt",
+      "Cập nhật sơ đồ lớp và use case để đảm bảo khớp với nhau",
+      "Thực hiện kiểm thử đơn vị"
+    ],
+    answer: 2
+  },
+  {
+    question: "Khi thực hiện sơ đồ trình tự, điều gì cần được xem xét đầu tiên để đảm bảo thiết kế đúng?",
+    options: [
+      "Sơ đồ lớp",
+      "Các đối tượng biến và thực thể sơ đồ bền",
+      "Các bảng cơ sở dữ liệu",
+      "Các yêu cầu phi chức năng"
+    ],
+    answer: 1
+  },
+  {
+    question: "Khi nào ta cần thực hiện đánh giá thiết kế chi tiết (Critical Design Review) trong quy trình ICONIX?",
+    options: [
+      "Sau khi hoàn thành sơ đồ trình tự và cập nhật mô hình hình tình",
+      "Trước khi thiết kế sơ đồ lớp",
+      "Sau khi viết mã nguồn",
+      "Sau khi kiểm thử đơn vị"
+    ],
+    answer: 0
+  },
+  {
+    question: "Ta cần làm gì để đảm bảo rằng quá trình phân tích trong quy trình ICONIX tạo ra thiết kế có thể thực hiện được?",
+    options: [
+      "Phát triển sơ đồ lớp",
+      "Kiểm thử toàn bộ hệ thống",
+      "Viết mã nguồn ngay lập tức",
+      "Thực hiện phân tích độ bền (robustness analysis) để xác định các đối tượng cần thiết"
+    ],
+    answer: 3
+  },
+  {
+    question: "Trong quá trình kiểm thử đơn vị, các bài kiểm thử được viết dựa trên:",
+    options: [
+      "Sơ đồ lớp",
+      "Mô hình miền",
+      "Kịch bản chính từ sơ đồ trình tự",
+      "Use case và các controllers từ sơ đồ độ bền"
+    ],
+    answer: 3
+  },
+  {
+    question: "Trong quá trình phát triển phần mềm, nếu có sự thay đổi về yêu cầu, bước nào trong ICONIX Process có thể giúp thích ứng với thay đổi đó?",
+    options: [
+      "Cập nhật sơ đồ trình tự và thiết kế chi tiết",
+      "Viết mã nguồn mới",
+      "Kiểm thử toàn bộ hệ thống",
+      "Thay đổi mô hình lớp"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mô hình miền (domain model) trong quy trình ICONIX là gì?",
+    options: [
+      "Là một bản thiết kế cơ sở dữ liệu",
+      "Là sơ đồ quy trình nghiệp vụ",
+      "Là “từ điển” thuật ngữ trong dự án",
+      "Là một bảng dữ liệu quan hệ"
+    ],
+    answer: 2
+  },
+        {
+    question: "Mô hình miền khác gì so với bảng thuật ngữ dự án (project glossary)?",
+    options: [
+      "Mô hình miền là một biểu đồ được minh họa, hiển thị mối quan hệ giữa các thuật ngữ.",
+      "Mô hình miền chỉ chứa thông tin về các lớp (classes) trong dự án.",
+      "Mô hình miền không có mối quan hệ với bảng thuật ngữ dự án.",
+      "Mô hình miền chỉ sử dụng trong giai đoạn kiểm thử dự án."
+    ],
+    answer: 0
+  },
+  {
+    question: "Mô hình miền hiển thị loại quan hệ nào giữa các lớp trong miền?",
+    options: [
+      "Quan hệ tuần tự (sequential relationships).",
+      "Quan hệ phụ thuộc (dependency relationships).",
+      "Quan hệ đồng thời (concurrent relationships).",
+      "Quan hệ tổng hợp (aggregation) và tổng quát hóa (generalization)."
+    ],
+    answer: 3
+  },
+  {
+    question: "Mô hình miền là cơ sở đầu tiên cho việc xây dựng sơ đồ nào trong quy trình ICONIX?",
+    options: [
+      "Sơ đồ mạnh mẽ",
+      "Sơ đồ hoạt động",
+      "Sơ đồ trình tự",
+      "Sơ đồ use case"
+    ],
+    answer: 0
+  },
+  {
+    question: "Tại sao không nên kỳ vọng sơ đồ lớp cuối cùng sẽ khớp chính xác với mô hình miền?",
+    options: [
+      "Vì sơ đồ lớp chỉ là mô hình tạm thời",
+      "Vì mô hình miền đơn giản hơn và không chứa các chi tiết thiết kế cụ thể",
+      "Vì sơ đồ lớp không quan trọng",
+      "Vì mô hình miền không liên quan đến sơ đồ lớp"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tại sao việc xây dựng mô hình miền ban đầu chỉ nên kéo dài khoảng 2 giờ?",
+    options: [
+      "Vì không cần mô hình lớp chi tiết",
+      "Vì mô hình miền sẽ được cập nhật liên tục trong quá trình dự án",
+      "Vì thời gian giới hạn của dự án",
+      "Vì chỉ có các yêu cầu chức năng quan trọng"
+    ],
+    answer: 1
+  },
+  {
+    question: "Khi mô hình miền có quá nhiều mối quan hệ giữa các lớp, ta nên làm gì để cải thiện?",
+    options: [
+      "Thêm nhiều lớp hơn để giải thích",
+      "Sử dụng quan hệ tổng quát hóa (generalization) để đơn giản hóa mối quan hệ",
+      "Bỏ bớt các lớp",
+      "Giữ nguyên và tiếp tục"
+    ],
+    answer: 1
+  },
+  {
+    question: "Nếu phát hiện mô hình miền thiếu một số đối tượng quan trọng, ta nên làm gì?",
+    options: [
+      "Xây dựng lại mô hình từ đầu",
+      "Cập nhật mô hình miền để bao gồm các đối tượng bị thiếu",
+      "Bỏ qua những đối tượng này",
+      "Tạo một sơ đồ mới"
+    ],
+    answer: 1
+  },
+  {
+    question: "Quan hệ \"has-a\" trong mô hình miền là loại quan hệ gì?",
+    options: [
+      "Tổng quát hóa",
+      "Tập hợp (aggregation)",
+      "Quan hệ một-nhiều",
+      "Kế thừa"
+    ],
+    answer: 1
+  },
+  {
+    question: "Lý do nên bắt đầu với mô hình miền thay vì use case là gì?",
+    options: [
+      "Vì use case không cần phải rõ ràng ngay từ đầu",
+      "Vì mô hình miền dễ thực hiện hơn",
+      "Để tiết kiệm thời gian",
+      "Để đảm bảo use case được viết trong bối cảnh của mô hình đối tượng và tránh sự mơ hồ"
+    ],
+    answer: 3
+  },
+  {
+    question: "Vai trò của mô hình miền trong quá trình phát triển hệ thống là gì?",
+    options: [
+      "Để kiểm thử hệ thống",
+      "Để tối ưu hóa mã nguồn",
+      "Để đảm bảo giao tiếp rõ ràng, nhất quán giữa các thành viên dự án",
+      "Để mô hình hóa cơ sở dữ liệu"
+    ],
+    answer: 2
+  },
+  {
+    question: "Quá trình nào giúp phát hiện các đối tượng bị thiếu trong mô hình miền sau khi phiên tạo mô hình ban đầu hoàn thành?",
+    options: [
+      "Kiểm thử hệ thống.",
+      "Phân tích use case và sơ đồ độ bền (robustness diagrams).",
+      "Triển khai hệ thống.",
+      "Phân tích mã nguồn."
+    ],
+    answer: 1
+  },
+  {
+    question: "Điểm khác biệt chính giữa một đối tượng và một bảng cơ sở dữ liệu là gì?",
+    options: [
+      "Một đối tượng luôn chứa nhiều thuộc tính hơn bảng cơ sở dữ liệu.",
+      "Bảng cơ sở dữ liệu không liên quan gì đến đối tượng trong mô hình miền.",
+      "Một đối tượng đại diện cho một tập hợp các bản ghi, trong khi bảng đại diện cho một bản ghi duy nhất.",
+      "Một đối tượng đại diện cho một tập hợp các bản ghi."
+    ],
+    answer: 2
+  },
+      [
+  {
+    "question": "Sơ đồ miền nào dưới đây là đúng?",
+    "options": [
+      "Context → state → State → ConcreteStateA, ConcreteStateB",
+      "Context → state +Request() → State +Handle() → ConcreteStateA, ConcreteStateB +Handle()",
+      "Context → state 1..* → State → ConcreteStateA, ConcreteStateB",
+      "Context → state → State → ConcreteStateA, ConcreteStateB"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mục tiêu chính của mô hình miền là gì?",
+    "options": [
+      "Để xây dựng mô hình dữ liệu chính xác",
+      "Để xác định các yêu cầu phi chức năng",
+      "Giúp tạo ra một ngôn ngữ chung để truyền đạt thông tin rõ ràng giữa các thành viên dự án",
+      "Để thiết kế cơ sở dữ liệu"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Mô hình miền đại diện cho phần nào của hệ thống?",
+    "options": [
+      "Phân tích mô tả cấu trúc của hệ thống.",
+      "Chỉ mô tả các giao diện người dùng.",
+      "Mô tả các trường hợp sử dụng chi tiết.",
+      "Phản động mô tả hành vi của hệ thống."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao việc xây dựng mô hình miền ban đầu chỉ nên kéo dài khoảng 2 giờ?",
+    "options": [
+      "Vì thời gian giới hạn của dự án",
+      "Vì mô hình miền sẽ được cập nhật liên tục trong quá trình dự án",
+      "Vì không cần mô hình lớp chi tiết",
+      "Vì chỉ có các yêu cầu chức năng quan trọng"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mối quan hệ nào dưới đây là ví dụ về quan hệ 'is-a'?",
+    "options": [
+      "Quyển Sách có Mục Lục",
+      "Con Mèo là một Loài Động Vật",
+      "Người Dùng có Tài Khoản",
+      "Mục Đơn Hàng thuộc Giỏ Hàng"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Lý do nên bắt đầu với mô hình miền thay vì use case là gì?",
+    "options": [
+      "Vì mô hình miền để thực hiện hơn",
+      "Để đảm bảo use case được viết trong bối cảnh của mô hình đối tượng và tránh sự mơ hồ",
+      "Để tiết kiệm thời gian",
+      "Vì use case không cần phải rõ ràng ngay từ đầu"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Vai trò của mô hình miền trong quá trình phát triển hệ thống là gì?",
+    "options": [
+      "Để mô hình hóa cơ sở dữ liệu",
+      "Để kiểm thử hệ thống",
+      "Để đảm bảo giao tiếp rõ ràng, nhất quán giữa các thành viên dự án",
+      "Để tối ưu hóa mã nguồn"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Nếu phát hiện hai thuật ngữ 'Book' và 'Books' trong mô hình miền, bước tiếp theo bạn nên làm gì?",
+    "options": [
+      "Giữ lại cả hai thuật ngữ",
+      "Xác định và loại bỏ sự trùng lặp, giữ lại một trong hai thuật ngữ",
+      "Tạo lớp mới cho mỗi thuật ngữ",
+      "Thêm thuộc tính cho cả hai"
+    ],
+    "answer": 1
+  },{
+    "question": "Mục tiêu chính của mô hình miền là gì?",
+    "options": [
+      "Giúp tạo ra một ngôn ngữ chung để truyền đạt thông tin rõ ràng giữa các thành viên dự án",
+      "Để thiết kế cơ sở dữ liệu",
+      "Để xác định các yêu cầu phi chức năng",
+      "Để xây dựng mô hình dữ liệu chính xác"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Mô hình miền được minh họa như thế nào?",
+    "options": [
+      "Như một sơ đồ lớp (class diagram) đơn giản với các đường nối giữa các lớp.",
+      "Như một sơ đồ hoạt động (activity diagram).",
+      "Như một sơ đồ triển khai (deployment diagram).",
+      "Như một sơ đồ trình tự (sequence diagram)."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Ý nghĩa của các mối quan hệ \"has-a\" và \"is-a\" trong mô hình miền là gì?",
+    "options": [
+      "Chúng là các mối quan hệ giữa các thuộc tính của lớp.",
+      "Chúng chỉ áp dụng cho các lớp giao diện (interfaces).",
+      "Chúng không có trong mô hình miền.",
+      "Chúng mô tả cách các lớp chứa các lớp khác và các lớp được kế thừa."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Mô hình miền đại diện cho phần nào của hệ thống?",
+    "options": [
+      "Chỉ mô tả các giao diện người dùng.",
+      "Phân tích mô tả cấu trúc của hệ thống.",
+      "Phần động mô tả hành vi của hệ thống.",
+      "Mô tả các trường hợp sử dụng chi tiết."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Trong mô hình miền, tại sao không nên nhầm lẫn giữa đối tượng và bảng cơ sở dữ liệu?",
+    "options": [
+      "Vì bảng cơ sở dữ liệu không có quan hệ với các đối tượng",
+      "Vì bảng cơ sở dữ liệu chứa nhiều khóa ngoại",
+      "Vì đối tượng đại diện cho một thể hiện duy nhất, trong khi bảng cơ sở dữ liệu đại diện cho một tập hợp",
+      "Vì các đối tượng phức tạp hơn bảng dữ liệu"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao không nên kỳ vọng sơ đồ lớp cuối cùng sẽ khớp chính xác với mô hình miền?",
+    "options": [
+      "Vì sơ đồ lớp chỉ là mô hình tạm thời",
+      "Vì mô hình miền đơn giản hơn và không chứa các chi tiết thiết kế cụ thể",
+      "Vì sơ đồ lớp không quan trọng",
+      "Vì mô hình miền không liên quan đến sơ đồ lớp"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Khi mô hình miền có quá nhiều mối quan hệ giữa các lớp, ta nên làm gì để cải thiện?",
+    "options": [
+      "Thêm nhiều lớp hơn để giải thích",
+      "Sử dụng quan hệ tổng quát hóa (generalization) để đơn giản hóa mối quan hệ",
+      "Bỏ bớt các lớp",
+      "Giữ nguyên và tiếp tục"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Nếu phát hiện mô hình miền thiếu một số đối tượng quan trọng, ta nên làm gì?",
+    "options": [
+      "Xây dựng lại mô hình từ đầu",
+      "Bỏ qua những đối tượng này",
+      "Tạo một sơ đồ mới",
+      "Cập nhật mô hình để bao gồm các đối tượng bị thiếu"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tại sao khi tạo mô hình miền, cần tập trung vào các đối tượng trong thế giới thực?",
+    "options": [
+      "Vì các đối tượng trong thế giới thực đơn giản hơn các đối tượng trong phần mềm.",
+      "Vì các đối tượng trong thế giới thực không ảnh hưởng đến kiến trúc phần mềm.",
+      "Vì nó giúp tránh sử dụng quá nhiều tài nguyên trong quá trình phát triển phần mềm.",
+      "Vì phần mềm nên được thiết kế sao cho giống với cách thế giới thực hoạt động, và thế giới thực thay đổi ít thường xuyên hơn so với yêu cầu phần mềm."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Mối quan hệ nào sau đây là đúng khi nói về các mối quan hệ trong mô hình miền?",
+    "options": [
+      "Tất cả các mối quan hệ trong mô hình miền đều là các mối quan hệ tuần tự.",
+      "Mối quan hệ tổng quát hóa (is-a) chỉ thể hiện một lớp cha có nhiều lớp con.",
+      "Mối quan hệ giữa các lớp không trọng quan trọng trong mô hình miền.",
+      "Mối quan hệ tổng hợp (has-a) thể hiện một đối tượng sở hữu một đối tượng khác và mối quan hệ tổng quát hóa (is-a) thể hiện sự kế thừa giữa các lớp."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quá trình nào giúp phát hiện các đối tượng bị thiếu trong mô hình miền sau khi phiên tạo mô hình ban đầu hoàn thành?",
+    "options": [
+      "Phân tích mã nguồn.",
+      "Triển khai hệ thống.",
+      "Phân tích use case và sơ đồ độ bền (robustness diagrams).",
+      "Kiểm thử hệ thống."
+    ],
+    "answer": 2
+  },
+        {
+    "question": "Lý do nên bắt đầu với mô hình miền thay vì use case là gì?",
+    "options": [
+      "Để tiết kiệm thời gian",
+      "Để đảm bảo use case được viết trong bối cảnh của mô hình đối tượng và tránh sự mờ hổ",
+      "Vì mô hình miền để thực hiện hơn",
+      "Vì use case không cần phải rõ ràng ngay từ đầu"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Vai trò của mô hình miền trong quá trình phát triển hệ thống là gì?",
+    "options": [
+      "Để tối ưu hóa mã nguồn",
+      "Để đảm bảo giao tiếp rõ ràng, nhất quán giữa các thành viên dự án",
+      "Để kiểm thử hệ thống",
+      "Để mô hình hóa cơ sở dữ liệu"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mối quan hệ nào sau đây là đúng khi nói về các mối quan hệ trong mô hình miền?",
+    "options": [
+      "Mối quan hệ tổng quát hóa (is-a) chỉ thể hiện một lớp cha có nhiều lớp con.",
+      "Mối quan hệ giữa các lớp không quan trọng trong mô hình miến.",
+      "Mối quan hệ tổng hợp (has-a) thể hiện một đối tượng sở hữu một đối tượng khác và mối quan hệ tổng quát hóa (is-a) thể hiện sự kế thừa giữa các lớp.",
+      "Tất cả các mối quan hệ trong mô hình hình miến đều là các mối quan hệ tuần tự."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Mục tiêu của phiên tạo mô hình miền ban đầu là gì?",
+    "options": [
+      "Xây dựng một phiên bản sơ bộ để có thể điều chỉnh trong quá trình làm việc.",
+      "Tìm ra các lỗi phần mềm trong hệ thống.",
+      "Tạo ra mô hình hoàn chỉnh mà không cần sửa đổi sau này.",
+      "Hoàn thiện mô hình miền ngay từ đầu."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Điểm khác biệt chính giữa một đối tượng và một bảng cơ sở dữ liệu là gì?",
+    "options": [
+      "Một đối tượng đại diện cho một tập hợp các bản ghi, trong khi bảng đại diện cho một bản ghi duy nhất.",
+      "Bảng cơ sở dữ liệu không liên quan gì đến đối tượng trong mô hình miền.",
+      "Một đối tượng đại diện cho một thể hiện đơn lẻ, trong khi bảng cơ sở dữ liệu đại diện cho một tập hợp các bản ghi.",
+      "Một đối tượng luôn chứa nhiều thuộc tính hơn bảng cơ sở dữ liệu"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Use case giúp trả lời câu hỏi nào liên quan đến hệ thống?",
+    "options": [
+      "Hệ thống sẽ được triển khai như thế nào?",
+      "Sự phân bổ nguồn lực phát triển trong dự án.",
+      "Người dùng của hệ thống đang cố gắng làm gì và trải nghiệm người dùng ra sao?",
+      "Cách hệ thống lưu trữ dữ liệu trong cơ sở dữ liệu."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Yêu cầu chức năng (functional requirements) thường là gì?",
+    "options": [
+      "Một tài liệu đầy đủ chi tiết về thiết kế hệ thống.",
+      "Một mô hình các trường hợp sử dụng của hệ thống.",
+      "Một tập hợp các yêu cầu cao và thấp cấp từ nhiều nguồn, thường được ghi lại liên tiếp trong một tài liệu Word.",
+      "Một sơ đồ thể hiện các đối tượng trong hệ thống."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Vai trò của use case trong việc bổ sung cho yêu cầu chức năng là gì?",
+    "options": [
+      "Để xác định các trường hợp thử nghiệm phần mềm.",
+      "Để cung cấp một phương pháp có cấu trúc giúp ghi lại các yêu cầu hành vi, hỗ trợ quá trình thiết kế.",
+      "Để lập danh sách các lỗi tiềm ẩn trong hệ thống.",
+      "Để thay thế hoàn toàn tài liệu yêu cầu chức năng."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Điều gì làm cho yêu cầu chức năng (functional requirements) trở thành bước đầu tiên trong quá trình thu thập yêu cầu?",
+    "options": [
+      "Vì yêu cầu chức năng cung cấp một bản thiết kế chi tiết của hệ thống",
+      "Vì yêu cầu chức năng thay thế hoàn toàn các trường hợp sử dụng.",
+      "Vì yêu cầu chức năng chỉ bao gồm các yêu cầu kỹ thuật.",
+      "Vì yêu cầu chức năng là tập hợp các yêu cầu ban đầu từ các bên liên quan, giúp xác định các yêu cầu hành vi cần làm rõ hơn."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Yếu tố nào sau đây giúp ích trong việc xác định use case?",
+    "options": [
+      "Viết tài liệu quản lý dự án.",
+      "Thực hiện kiểm thử hiệu năng.",
+      "Tạo storyboards và nguyên mẫu (UI mockups, demo chức năng cơ bản).",
+      "Phân tích cấu trúc cơ sở dữ liệu."
+    ],
+    "answer": 2
+  },
+        {
+    "question": "Tại sao việc ghi nhận các 'rainy-day scenarios' (kịch bản không mong muốn) lại quan trọng khi viết use case?",
+    "options": [
+      "Vì các kịch bản này giúp xác định những tính năng cần thiết trong hệ thống.",
+      "Vì các kịch bản này không ảnh hưởng đến cách hệ thống hoạt động trong thực tế.",
+      "Vì các kịch bản này chỉ hữu ích trong giai đoạn kiểm thử hệ thống.",
+      "Vì các kịch bản này cung cấp thông tin về hệ thống cần phản hồi khi có lỗi hoặc khi người dùng tương tác với các tính năng ít được sử dụng, đảm bảo hệ thống hoạt động toàn diện và ổn định."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tại sao việc viết use case nên tập trung vào sự tương tác giữa người dùng và hệ thống?",
+    "options": [
+      "Để tạo sơ đồ trạng thái",
+      "Để xác định các lỗi trong hệ thống",
+      "Để mô tả rõ ràng các hành vi cần thiết mà hệ thống phải thực hiện",
+      "Để đảm bảo tính an toàn của hệ thống"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Trong quá trình viết use case, điều gì cần được chú ý nhất?",
+    "options": [
+      "Sử dụng các thuật ngữ rõ ràng và nhất quán với mô hình miền",
+      "Xác định yêu cầu phi chức năng",
+      "Viết mã nguồn trực tiếp từ use case",
+      "Tạo ra nhiều sơ đồ lớp"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Khi hệ thống gặp lỗi trong quá trình kiểm thử và không thực hiện đúng theo use case, bước tiếp theo là gì?",
+    "options": [
+      "Xây dựng lại hệ thống từ đầu",
+      "Tạo thêm các sơ đồ trạng thái",
+      "Chỉnh sửa mã nguồn để phản ánh đúng hành vi trong use case",
+      "Thay đổi yêu cầu ban đầu"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi phát hiện một đối tượng không được mô tả trong use case nhưng có liên quan đến hệ thống, bạn sẽ làm gì?",
+    "options": [
+      "Chỉ thay đổi mô hình miền",
+      "Bỏ qua đối tượng này",
+      "Thêm đối tượng vào use case và mô hình miền",
+      "Xóa bỏ đối tượng"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Nếu phát hiện ra một yêu cầu mới trong quá trình viết use case, bạn sẽ làm gì?",
+    "options": [
+      "Cập nhật use case để bao gồm yêu cầu mới",
+      "Viết mã nguồn cho yêu cầu này",
+      "Thay đổi toàn bộ thiết kế hệ thống",
+      "Bỏ qua yêu cầu này"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Khi viết use case, tại sao cần tránh sử dụng câu bị động?",
+    "options": [
+      "Để đảm bảo rõ ràng ai đang thực hiện hành động và hệ thống phản hồi như thế nào",
+      "Để dễ dàng viết mã nguồn",
+      "Để mô tả hệ thống theo yêu cầu",
+      "Để giảm bớt sự phức tạp trong thiết kế"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Nếu mô hình miền thay đổi trong quá trình phát triển, điều gì cần thực hiện với use case?",
+    "options": [
+      "Tạo sơ đồ trình tự mới",
+      "Cập nhật use case để phù hợp với mô hình miền mới",
+      "Bỏ qua mô hình miền",
+      "Thay đổi mô hình lớp"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Viết một đoạn văn bản mô tả một \"sunny-day scenario\" cho chức năng Đăng nhập trong hệ thống bán hàng trực tuyến, sử dụng cấu trúc \"noun-verb-noun\".",
+    "options": [
+      "Hệ thống hiển thị màn hình đăng nhập.",
+      "Người dùng nhập mật khẩu và đăng nhập thành công.",
+      "Người dùng nhập tên đăng nhập và mật khẩu, sau đó nhấn nút Đăng nhập. Hệ thống xác thực thông tin và đăng nhập người dùng.",
+      "Người dùng vào trang đăng nhập, kiểm tra thông tin và đăng nhập thành công."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Trong quá trình viết use case, bạn phát hiện hệ thống cần phản hồi khi người dùng nhập sai mật khẩu. Hãy mô tả một 'rainy-day scenario' cho tình huống này.",
+    "options": [
+      "Hệ thống chấp nhận mọi đầu vào và cho phép người dùng đăng nhập.",
+      "Hệ thống hiển thị thông báo lỗi \"Mật khẩu không đúng\" và yêu cầu người dùng nhập lại mật khẩu.",
+      "Hệ thống không phản hồi gì và yêu cầu người dùng nhập lại thông tin.",
+      "Hệ thống chuyển người dùng đến trang chính."
+    ],
+    "answer": 1
+  },{
+    "question": "Use case giúp trả lời câu hỏi nào liên quan đến hệ thống?",
+    "options": {
+      "A": "Hệ thống sẽ được triển khai như thế nào?",
+      "B": "Sự phân bổ nguồn lực phát triển trong dự án.",
+      "C": "Người dùng của hệ thống đang cố gắng làm gì và trải nghiệm người dùng ra sao?",
+      "D": "Cách hệ thống lưu trữ dữ liệu trong cơ sở dữ liệu."
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Yêu cầu chức năng (functional requirements) thường là gì?",
+    "options": {
+      "A": "Một tài liệu đầy đủ chi tiết về thiết kế hệ thống.",
+      "B": "Một mô hình các trường hợp sử dụng của hệ thống.",
+      "C": "Một tập hợp các yêu cầu cao và thấp cấp từ nhiều nguồn, thường được ghi lại liên tiếp trong một tài liệu Word.",
+      "D": "Một sơ đồ thể hiện các đối tượng trong hệ thống."
+    },
+    "answer": "C"
+  },{
+    "question": "Vai trò của use case trong việc bổ sung cho yêu cầu chức năng là gì?",
+    "options": {
+      "A": "Để xác định các trường hợp thử nghiệm phần mềm.",
+      "B": "Để cung cấp một phương pháp có cấu trúc giúp ghi lại các yêu cầu hành vi, hỗ trợ quá trình thiết kế.",
+      "C": "Để lập danh sách các lỗi tiềm ẩn trong hệ thống.",
+      "D": "Để thay thế hoàn toàn tài liệu yêu cầu chức năng."
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Điều gì làm cho yêu cầu chức năng (functional requirements) trở thành bước đầu tiên trong quá trình thu thập yêu cầu?",
+    "options": {
+      "A": "Vì yêu cầu chức năng cung cấp một bản thiết kế chi tiết của hệ thống",
+      "B": "Vì yêu cầu chức năng thay thế hoàn toàn các trường hợp sử dụng.",
+      "C": "Vì yêu cầu chức năng chỉ bao gồm các yêu cầu kỹ thuật.",
+      "D": "Vì yêu cầu chức năng là tập hợp các yêu cầu ban đầu từ các bên liên quan, giúp xác định các yêu cầu hành vi cần làm rõ hơn."
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Yếu tố nào sau đây giúp ích trong việc xác định use case?",
+    "options": {
+      "A": "Viết tài liệu quản lý dự án.",
+      "B": "Thực hiện kiểm thử hiệu năng.",
+      "C": "Tạo storyboards và nguyên mẫu (UI mockups, demo chức năng cơ bản).",
+      "D": "Phân tích cấu trúc cơ sở dữ liệu."
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Tại sao việc ghi nhận các “rainy-day scenarios” (kịch bản không mong muốn) lại quan trọng khi viết use case?",
+    "options": {
+      "A": "Vì các kịch bản này giúp xác định những tính năng cần thiết trong hệ thống.",
+      "B": "Vì các kịch bản này không ảnh hưởng đến cách hệ thống hoạt động trong thực tế.",
+      "C": "Vì các kịch bản này chỉ hữu ích trong giai đoạn kiểm thử hệ thống.",
+      "D": "Vì các kịch bản này cung cấp thông tin về hệ thống cần phản hồi khi có lỗi hoặc khi người dùng tương tác với các tính năng ít được sử dụng, đảm bảo hệ thống hoạt động toàn diện và ổn định."
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Tại sao việc viết use case nên tập trung vào sự tương tác giữa người dùng và hệ thống?",
+    "options": {
+      "A": "Để tạo sơ đồ trạng thái",
+      "B": "Để xác định các lỗi trong hệ thống",
+      "C": "Để mô tả rõ ràng các hành vi cần thiết mà hệ thống phải thực hiện",
+      "D": "Để đảm bảo tính an toàn của hệ thống"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Trong quá trình viết use case, điều gì cần được chú ý nhất?",
+    "options": {
+      "A": "Sử dụng các thuật ngữ rõ ràng và nhất quán với mô hình miền",
+      "B": "Xác định yêu cầu phi chức năng",
+      "C": "Viết mã nguồn trực tiếp từ use case",
+      "D": "Tạo ra nhiều sơ đồ lớp"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Khi hệ thống gặp lỗi trong quá trình kiểm thử và không thực hiện đúng theo use case, bước tiếp theo là gì?",
+    "options": {
+      "A": "Xây dựng lại hệ thống từ đầu",
+      "B": "Tạo thêm các sơ đồ trạng thái",
+      "C": "Chỉnh sửa mã nguồn để phản ánh đúng hành vi trong use case",
+      "D": "Thay đổi yêu cầu ban đầu"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Khi phát hiện một đối tượng không được mô tả trong use case nhưng có liên quan đến hệ thống, bạn sẽ làm gì?",
+    "options": {
+      "A": "Chỉ thay đổi mô hình miền",
+      "B": "Bỏ qua đối tượng này",
+      "C": "Thêm đối tượng vào use case và mô hình miền",
+      "D": "Xóa bỏ đối tượng"
+    },
+    "answer": "C"
+  },{
+    "question": "Nếu phát hiện ra một yêu cầu mới trong quá trình viết use case, bạn sẽ làm gì?",
+    "options": {
+      "A": "Cập nhật use case để bao gồm yêu cầu mới",
+      "B": "Viết mã nguồn cho yêu cầu này",
+      "C": "Thay đổi toàn bộ thiết kế hệ thống",
+      "D": "Bỏ qua yêu cầu này"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Khi viết use case, tại sao cần tránh sử dụng câu bị động?",
+    "options": {
+      "A": "Để đảm bảo rõ ràng ai đang thực hiện hành động và hệ thống phản hồi như thế nào",
+      "B": "Để dễ dàng viết mã nguồn",
+      "C": "Để mô tả hệ thống theo yêu cầu",
+      "D": "Để giảm bớt sự phức tạp trong thiết kế"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Nếu mô hình miền thay đổi trong quá trình phát triển, điều gì cần thực hiện với use case?",
+    "options": {
+      "A": "Tạo sơ đồ trình tự mới",
+      "B": "Cập nhật use case để phù hợp với mô hình miền mới",
+      "C": "Bỏ qua mô hình miền",
+      "D": "Thay đổi mô hình lớp"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Viết một đoạn văn bản mô tả một 'sunny-day scenario' cho chức năng Đăng nhập trong hệ thống bán hàng trực tuyến, sử dụng cấu trúc 'noun-verb-noun'.",
+    "options": {
+      "A": "Hệ thống hiển thị màn hình đăng nhập.",
+      "B": "Người dùng nhập mật khẩu và đăng nhập thành công.",
+      "C": "Người dùng nhập tên đăng nhập và mật khẩu, sau đó nhấn nút Đăng nhập. Hệ thống xác thực thông tin và đăng nhập người dùng.",
+      "D": "Người dùng vào trang đăng nhập, kiểm tra thông tin và đăng nhập thành công."
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Trong quá trình viết use case, bạn phát hiện hệ thống cần phản hồi khi người dùng nhập sai mật khẩu. Hãy mô tả một 'rainy-day scenario' cho tình huống này.",
+    "options": {
+      "A": "Hệ thống chấp nhận mọi đầu vào và cho phép người dùng đăng nhập.",
+      "B": "Hệ thống hiển thị thông báo lỗi 'Mật khẩu không đúng' và yêu cầu người dùng nhập lại mật khẩu.",
+      "C": "Hệ thống không phản hồi gì và yêu cầu người dùng nhập lại thông tin.",
+      "D": "Hệ thống chuyển người dùng đến trang chính."
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Use case là gì trong quy trình ICONIX?",
+    "options": {
+      "A": "Một cách có cấu trúc để ghi lại các yêu cầu hành vi của hệ thống.",
+      "B": "Một sơ đồ thể hiện các mối quan hệ giữa các lớp trong hệ thống.",
+      "C": "Một công cụ kiểm thử phần mềm tự động.",
+      "D": "Một báo cáo tài chính liên quan đến chi phí phát triển."
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Use case cung cấp điều gì cho quá trình thiết kế hệ thống?",
+    "options": {
+      "A": "Một nền tảng để thiết kế và ước tính thời gian, công sức một cách đáng tin cậy.",
+      "B": "Một danh sách các công cụ cần sử dụng trong dự án.",
+      "C": "Một cách để dự đoán lỗi trong phần mềm.",
+      "D": "Một phương pháp để viết tài liệu dự án theo cách tổng quát."
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Khi mô hình miền và use case không khớp nhau, bạn nên làm gì?",
+    "options": {
+      "A": "Bỏ qua sự không khớp",
+      "B": "Kiểm tra lại mô hình dữ liệu",
+      "C": "Cập nhật mô hình miền hoặc use case để đảm bảo sự khớp nhau",
+      "D": "Làm việc lại với khách hàng để thu thập thêm yêu cầu"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Theo quy trình ICONIX, tại sao mô hình miền ban đầu thường được coi là không hoàn chỉnh?",
+    "options": {
+      "A": "Vì không thể bao gồm tất cả các chức năng trong mô hình đầu tiên.",
+      "B": "Vì tất cả các yêu cầu đều phải được xác định rõ ràng trước khi bắt đầu xây dựng mô hình miền.",
+      "C": "Vì mô hình miền ban đầu không liên quan đến use case.",
+      "D": "Vì mô hình miền ban đầu chỉ là một bản sơ bộ và sẽ được cải tiến dần qua quá trình phát triển use case."
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Hãy tạo một mô hình miền ban đầu cho một hệ thống bán sách trực tuyến. Bạn sẽ chọn những thực thể nào và tại sao?",
+    "options": {
+      "A": "Chọn các thực thể như Sách, Tác giả, và Giỏ hàng, vì đây là các thực thể chính của hệ thống bán sách trực tuyến và phù hợp với nhu cầu người dùng.",
+      "B": "Chọn các thực thể liên quan đến hệ thống thanh toán và giao hàng, vì đó là phần quan trọng nhất trong hệ thống bán sách.",
+      "C": "Chọn tất cả các thực thể có thể xuất hiện trong hệ thống, để không bỏ sót thông tin nào.",
+      "D": "Chọn các thực thể liên quan đến quản trị hệ thống, vì nó giúp đảm bảo hệ thống vận hành đúng cách."
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Viết một đoạn văn bản mô tả một 'sunny-day scenario' cho chức năng Đăng nhập trong hệ thống bán hàng trực tuyến, sử dụng cấu trúc 'noun-verb-noun'.",
+    "options": {
+      "A": "Người dùng nhập tên đăng nhập và mật khẩu, sau đó nhấn nút Đăng nhập. Hệ thống xác thực thông tin và đăng nhập người dùng.",
+      "B": "Người dùng nhập mật khẩu và đăng nhập thành công.",
+      "C": "Hệ thống hiển thị màn hình đăng nhập.",
+      "D": "Người dùng vào trang đăng nhập, kiểm tra thông tin và đăng nhập thành công."
+    },
+    "answer": "A"
+  }
+]
+
+
+
     ];
 
     // ✅ Hiển thị bài trắc nghiệm với thứ tự ngẫu nhiên
