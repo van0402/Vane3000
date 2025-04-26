@@ -45,901 +45,3181 @@
 
   <script>
     // ✅ Câu hỏi được viết trực tiếp tại đây
-    const questions = [
-      {
-        question: "ICONIX Process tập trung vào giai đoạn nào trong vòng đời phát triển phần mềm?",
-        options: [
-          "Phân tích và thiết kế",
-          "Kiểm thử phần mềm",
-          "Lập kế hoạch dự án",
-          "Quản lý dự án"
-        ],
-        answer: 0
-      },
-      {
-        question: "Câu hỏi chính mà quy trình ICONIX muốn trả lời là gì??",
-        options: [
-          "Làm thế nào để sử dụng được hết các loại sơ đồ UML",
-          "Làm thế nào để đi từ người dùng đến sản phẩm",
-          "Làm thế nào để có thể đi từ use case đến mã nguồn",
-          "Làm thế nào để lập trình hướng đối tượng"
-        ],
-        answer: 2
-      },
-      {
-        question: "Lợi ích chính của mô hình ICONIX là gì?",
-        options: [
-          "Tăng chi phí phát triển",
-          "Giảm chất lượng phần mềm",
-          "Rút ngắn thời gian phân tích và thiết kế",
-          "Loại bỏ vai trò của khách hàng"
-        ],
-        answer: 2
-      },
-        {
-    question: "Quy trình ICONIX giúp thu hẹp khoảng cách giữa lý thuyết và thực tế như thế nào?",
-    options: [
-      "Phát triển hệ thống dựa trên mô hình UML đầy đủ",
-      "Tập trung vào thiết kế trực tiếp từ mã nguồn",
-      "Liên kết các use case với các đối tượng trong hệ thống",
-      "Chuyển đổi nhanh từ yêu cầu thành mã nguồn mà không qua phân tích"
-    ],
-    answer: 2
-  },
+   const questions = [
   {
-    question: "Quy trình ICONIX có giảng giải quyết vấn đề gì trước đây?",
-    options: [
-      "Thiếu sự chi tiết trong các mô hình",
-      "Thiếu tài liệu mô tả hệ thống",
-      "Cồng kềnh và nhiều thứ không cần thiết trong dự án thực tế",
-      "Thiếu mô tả chức năng của mã nguồn"
-    ],
-    answer: 2
-  },
-  {
-    question: "Trong quy trình ICONIX, các yêu cầu hành vi được mô tả như thế nào?",
-    options: [
-      "Thông qua các bảng cơ sở dữ liệu",
-      "Thông qua mô hình dữ liệu",
-      "Thông qua use case mô tả cách người dùng và hệ thống tương tác",
-      "Thông qua mô hình hình lớp"
-    ],
-    answer: 2
-  },
-  {
-    question: "Trong quy trình ICONIX, hoạt động nào giúp làm rõ và loại bỏ sự mơ hồ trong yêu cầu hệ thống?",
-    options: [
-      "Vẽ sơ đồ lớp",
-      "Kiểm thử đơn vị",
-      "Viết mã nguồn",
-      "Phân tích độ bền (robustness analysis)"
-    ],
-    answer: 3
-  },
-  {
-    question: "Việc sử dụng sơ đồ trình tự (sequence diagram) trong quy trình ICONIX nhằm mục đích gì?",
-    options: [
-      "Để xác định các yêu cầu không chức năng",
-      "Để phân tích tính bảo mật của hệ thống",
-      "Để phân tích tính khả thi của dự án",
-      "Để phân bổ hành vi cho các lớp đối tượng"
-    ],
-    answer: 3
-  },
-  {
-    question: "Trong quy trình ICONIX, tại sao cần thực hiện đánh giá thiết kế sơ bộ (Preliminary Design Review)?",
-    options: [
-      "Để kiểm tra tính chính xác của mô hình dữ liệu",
-      "Để kiểm thử toàn bộ hệ thống",
-      "Để đảm bảo mô hình miền và use case khớp nhau",
-      "Để xác định tất cả các lỗi trong mã nguồn"
-    ],
-    answer: 2
-  },
-  {
-    question: "Làm thế nào để một sơ đồ bền giúp liên kết use case với mô hình đối tượng?",
-    options: [
-      "Tạo ra các tượng giao diện (GUI)",
-      "Xác định các đối tượng miền và các thông điệp truyền giữa chúng",
-      "Liệt kê tất cả các yêu cầu chức năng",
-      "Xác định các lỗi tiềm ẩn trong thiết kế"
-    ],
-    answer: 1
-  },
-  {
-    question: "Sau khi hoàn thành giai đoạn phân tích và thiết kế sơ bộ, nếu phát hiện sự khác biệt giữa use case và sơ đồ lớp, ta sẽ xử lý như thế nào?",
-    options: [
-      "Kiểm tra mã nguồn",
-      "Bỏ qua sự khác biệt",
-      "Cập nhật sơ đồ lớp và use case để đảm bảo khớp với nhau",
-      "Thực hiện kiểm thử đơn vị"
-    ],
-    answer: 2
-  },
-  {
-    question: "Khi thực hiện sơ đồ trình tự, điều gì cần được xem xét đầu tiên để đảm bảo thiết kế đúng?",
-    options: [
-      "Sơ đồ lớp",
-      "Các đối tượng biến và thực thể sơ đồ bền",
-      "Các bảng cơ sở dữ liệu",
-      "Các yêu cầu phi chức năng"
-    ],
-    answer: 1
-  },
-  {
-    question: "Khi nào ta cần thực hiện đánh giá thiết kế chi tiết (Critical Design Review) trong quy trình ICONIX?",
-    options: [
-      "Sau khi hoàn thành sơ đồ trình tự và cập nhật mô hình hình tình",
-      "Trước khi thiết kế sơ đồ lớp",
-      "Sau khi viết mã nguồn",
-      "Sau khi kiểm thử đơn vị"
-    ],
-    answer: 0
-  },
-  {
-    question: "Ta cần làm gì để đảm bảo rằng quá trình phân tích trong quy trình ICONIX tạo ra thiết kế có thể thực hiện được?",
-    options: [
-      "Phát triển sơ đồ lớp",
-      "Kiểm thử toàn bộ hệ thống",
-      "Viết mã nguồn ngay lập tức",
-      "Thực hiện phân tích độ bền (robustness analysis) để xác định các đối tượng cần thiết"
-    ],
-    answer: 3
-  },
-  {
-    question: "Trong quá trình kiểm thử đơn vị, các bài kiểm thử được viết dựa trên:",
-    options: [
-      "Sơ đồ lớp",
-      "Mô hình miền",
-      "Kịch bản chính từ sơ đồ trình tự",
-      "Use case và các controllers từ sơ đồ độ bền"
-    ],
-    answer: 3
-  },
-  {
-    question: "Trong quá trình phát triển phần mềm, nếu có sự thay đổi về yêu cầu, bước nào trong ICONIX Process có thể giúp thích ứng với thay đổi đó?",
-    options: [
-      "Cập nhật sơ đồ trình tự và thiết kế chi tiết",
-      "Viết mã nguồn mới",
-      "Kiểm thử toàn bộ hệ thống",
-      "Thay đổi mô hình lớp"
-    ],
-    answer: 0
-  },
-  {
-    question: "Mô hình miền (domain model) trong quy trình ICONIX là gì?",
-    options: [
-      "Là một bản thiết kế cơ sở dữ liệu",
-      "Là sơ đồ quy trình nghiệp vụ",
-      "Là “từ điển” thuật ngữ trong dự án",
-      "Là một bảng dữ liệu quan hệ"
-    ],
-    answer: 2
-  },
-        {
-    question: "Mô hình miền khác gì so với bảng thuật ngữ dự án (project glossary)?",
-    options: [
-      "Mô hình miền là một biểu đồ được minh họa, hiển thị mối quan hệ giữa các thuật ngữ.",
-      "Mô hình miền chỉ chứa thông tin về các lớp (classes) trong dự án.",
-      "Mô hình miền không có mối quan hệ với bảng thuật ngữ dự án.",
-      "Mô hình miền chỉ sử dụng trong giai đoạn kiểm thử dự án."
-    ],
-    answer: 0
-  },
-  {
-    question: "Mô hình miền hiển thị loại quan hệ nào giữa các lớp trong miền?",
-    options: [
-      "Quan hệ tuần tự (sequential relationships).",
-      "Quan hệ phụ thuộc (dependency relationships).",
-      "Quan hệ đồng thời (concurrent relationships).",
-      "Quan hệ tổng hợp (aggregation) và tổng quát hóa (generalization)."
-    ],
-    answer: 3
-  },
-  {
-    question: "Mô hình miền là cơ sở đầu tiên cho việc xây dựng sơ đồ nào trong quy trình ICONIX?",
-    options: [
-      "Sơ đồ mạnh mẽ",
-      "Sơ đồ hoạt động",
-      "Sơ đồ trình tự",
-      "Sơ đồ use case"
-    ],
-    answer: 0
-  },
-  {
-    question: "Tại sao không nên kỳ vọng sơ đồ lớp cuối cùng sẽ khớp chính xác với mô hình miền?",
-    options: [
-      "Vì sơ đồ lớp chỉ là mô hình tạm thời",
-      "Vì mô hình miền đơn giản hơn và không chứa các chi tiết thiết kế cụ thể",
-      "Vì sơ đồ lớp không quan trọng",
-      "Vì mô hình miền không liên quan đến sơ đồ lớp"
-    ],
-    answer: 1
-  },
-  {
-    question: "Tại sao việc xây dựng mô hình miền ban đầu chỉ nên kéo dài khoảng 2 giờ?",
-    options: [
-      "Vì không cần mô hình lớp chi tiết",
-      "Vì mô hình miền sẽ được cập nhật liên tục trong quá trình dự án",
-      "Vì thời gian giới hạn của dự án",
-      "Vì chỉ có các yêu cầu chức năng quan trọng"
-    ],
-    answer: 1
-  },
-  {
-    question: "Khi mô hình miền có quá nhiều mối quan hệ giữa các lớp, ta nên làm gì để cải thiện?",
-    options: [
-      "Thêm nhiều lớp hơn để giải thích",
-      "Sử dụng quan hệ tổng quát hóa (generalization) để đơn giản hóa mối quan hệ",
-      "Bỏ bớt các lớp",
-      "Giữ nguyên và tiếp tục"
-    ],
-    answer: 1
-  },
-  {
-    question: "Nếu phát hiện mô hình miền thiếu một số đối tượng quan trọng, ta nên làm gì?",
-    options: [
-      "Xây dựng lại mô hình từ đầu",
-      "Cập nhật mô hình miền để bao gồm các đối tượng bị thiếu",
-      "Bỏ qua những đối tượng này",
-      "Tạo một sơ đồ mới"
-    ],
-    answer: 1
-  },
-  {
-    question: "Quan hệ \"has-a\" trong mô hình miền là loại quan hệ gì?",
-    options: [
-      "Tổng quát hóa",
-      "Tập hợp (aggregation)",
-      "Quan hệ một-nhiều",
-      "Kế thừa"
-    ],
-    answer: 1
-  },
-  {
-    question: "Lý do nên bắt đầu với mô hình miền thay vì use case là gì?",
-    options: [
-      "Vì use case không cần phải rõ ràng ngay từ đầu",
-      "Vì mô hình miền dễ thực hiện hơn",
-      "Để tiết kiệm thời gian",
-      "Để đảm bảo use case được viết trong bối cảnh của mô hình đối tượng và tránh sự mơ hồ"
-    ],
-    answer: 3
-  },
-  {
-    question: "Vai trò của mô hình miền trong quá trình phát triển hệ thống là gì?",
-    options: [
-      "Để kiểm thử hệ thống",
-      "Để tối ưu hóa mã nguồn",
-      "Để đảm bảo giao tiếp rõ ràng, nhất quán giữa các thành viên dự án",
-      "Để mô hình hóa cơ sở dữ liệu"
-    ],
-    answer: 2
-  },
-  {
-    question: "Quá trình nào giúp phát hiện các đối tượng bị thiếu trong mô hình miền sau khi phiên tạo mô hình ban đầu hoàn thành?",
-    options: [
-      "Kiểm thử hệ thống.",
-      "Phân tích use case và sơ đồ độ bền (robustness diagrams).",
-      "Triển khai hệ thống.",
-      "Phân tích mã nguồn."
-    ],
-    answer: 1
-  },
-  {
-    question: "Điểm khác biệt chính giữa một đối tượng và một bảng cơ sở dữ liệu là gì?",
-    options: [
-      "Một đối tượng luôn chứa nhiều thuộc tính hơn bảng cơ sở dữ liệu.",
-      "Bảng cơ sở dữ liệu không liên quan gì đến đối tượng trong mô hình miền.",
-      "Một đối tượng đại diện cho một tập hợp các bản ghi, trong khi bảng đại diện cho một bản ghi duy nhất.",
-      "Một đối tượng đại diện cho một tập hợp các bản ghi."
-    ],
-    answer: 2
-  },
-      
-  {
-    "question": "Sơ đồ miền nào dưới đây là đúng?",
+    "question": "Bước đầu tiên trong quy trình marketing là gì?",
     "options": [
-      "Context → state → State → ConcreteStateA, ConcreteStateB",
-      "Context → state +Request() → State +Handle() → ConcreteStateA, ConcreteStateB +Handle()",
-      "Context → state 1..* → State → ConcreteStateA, ConcreteStateB",
-      "Context → state → State → ConcreteStateA, ConcreteStateB"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Mục tiêu chính của mô hình miền là gì?",
-    "options": [
-      "Để xây dựng mô hình dữ liệu chính xác",
-      "Để xác định các yêu cầu phi chức năng",
-      "Giúp tạo ra một ngôn ngữ chung để truyền đạt thông tin rõ ràng giữa các thành viên dự án",
-      "Để thiết kế cơ sở dữ liệu"
+      "Phát triển sản phẩm mới",
+      "Xây dựng mối quan hệ khách hàng",
+      "Hiểu biết thị trường và khách hàng.",
+      "Định giá sản phẩm"
     ],
     "answer": 2
   },
   {
-    "question": "Mô hình miền đại diện cho phần nào của hệ thống?",
+    "question": "Kết quả cuối cùng mà quy trình marketing hướng tới là gì?",
     "options": [
-      "Phân tích mô tả cấu trúc của hệ thống.",
-      "Chỉ mô tả các giao diện người dùng.",
-      "Mô tả các trường hợp sử dụng chi tiết.",
-      "Phản động mô tả hành vi của hệ thống."
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Tại sao việc xây dựng mô hình miền ban đầu chỉ nên kéo dài khoảng 2 giờ?",
-    "options": [
-      "Vì thời gian giới hạn của dự án",
-      "Vì mô hình miền sẽ được cập nhật liên tục trong quá trình dự án",
-      "Vì không cần mô hình lớp chi tiết",
-      "Vì chỉ có các yêu cầu chức năng quan trọng"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Mối quan hệ nào dưới đây là ví dụ về quan hệ 'is-a'?",
-    "options": [
-      "Quyển Sách có Mục Lục",
-      "Con Mèo là một Loài Động Vật",
-      "Người Dùng có Tài Khoản",
-      "Mục Đơn Hàng thuộc Giỏ Hàng"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Lý do nên bắt đầu với mô hình miền thay vì use case là gì?",
-    "options": [
-      "Vì mô hình miền để thực hiện hơn",
-      "Để đảm bảo use case được viết trong bối cảnh của mô hình đối tượng và tránh sự mơ hồ",
-      "Để tiết kiệm thời gian",
-      "Vì use case không cần phải rõ ràng ngay từ đầu"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Vai trò của mô hình miền trong quá trình phát triển hệ thống là gì?",
-    "options": [
-      "Để mô hình hóa cơ sở dữ liệu",
-      "Để kiểm thử hệ thống",
-      "Để đảm bảo giao tiếp rõ ràng, nhất quán giữa các thành viên dự án",
-      "Để tối ưu hóa mã nguồn"
+      "Tăng doanh số bán hàng",
+      "Phát triển các sản phẩm mới",
+      "Thu hút giá trị từ Khách hàng",
+      "Cải thiện hình ảnh thương hiệu"
     ],
     "answer": 2
   },
   {
-    "question": "Nếu phát hiện hai thuật ngữ 'Book' và 'Books' trong mô hình miền, bước tiếp theo bạn nên làm gì?",
+    "question": "Marketing tập trung vào việc gì để đạt được hiệu quả?",
     "options": [
-      "Giữ lại cả hai thuật ngữ",
-      "Xác định và loại bỏ sự trùng lặp, giữ lại một trong hai thuật ngữ",
-      "Tạo lớp mới cho mỗi thuật ngữ",
-      "Thêm thuộc tính cho cả hai"
+      "Sử dụng công nghệ truyền thông mới",
+      "Tăng chi phí quảng cáo",
+      "Phát triển chiến lược hướng tới Khách hàng",
+      "Đẩy mạnh sản xuất sản phẩm"
     ],
-    "answer": 1
-  },{
-    "question": "Mục tiêu chính của mô hình miền là gì?",
+    "answer": 2
+  },
+  {
+    "question": "Làm thế nào để marketing xây dựng mối quan hệ khách hàng bền vững?",
     "options": [
-      "Giúp tạo ra một ngôn ngữ chung để truyền đạt thông tin rõ ràng giữa các thành viên dự án",
-      "Để thiết kế cơ sở dữ liệu",
-      "Để xác định các yêu cầu phi chức năng",
-      "Để xây dựng mô hình dữ liệu chính xác"
+      "Bằng cách cung cấp giá trị vượt trội, duy trì tương tác thường xuyên và đáp ứng tốt các nhu cầu của khách hàng.",
+      "Bằng cách tuyển dụng đội ngũ nhân viên bán hàng chất lượng cao.",
+      "Bằng cách tăng chi phí quảng cáo.",
+      "Bằng cách đẩy mạnh các hoạt động xúc tiến thương mại thường niên."
     ],
     "answer": 0
   },
   {
-    "question": "Mô hình miền được minh họa như thế nào?",
+    "question": "Tại sao marketing hiện đại lại nhấn mạnh vào việc \"thu hút bằng giá trị thực từ khách hàng\"?",
     "options": [
-      "Như một sơ đồ lớp (class diagram) đơn giản với các đường nối giữa các lớp.",
-      "Như một sơ đồ hoạt động (activity diagram).",
-      "Như một sơ đồ triển khai (deployment diagram).",
-      "Như một sơ đồ trình tự (sequence diagram)."
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Ý nghĩa của các mối quan hệ \"has-a\" và \"is-a\" trong mô hình miền là gì?",
-    "options": [
-      "Chúng là các mối quan hệ giữa các thuộc tính của lớp.",
-      "Chúng chỉ áp dụng cho các lớp giao diện (interfaces).",
-      "Chúng không có trong mô hình miền.",
-      "Chúng mô tả cách các lớp chứa các lớp khác và các lớp được kế thừa."
+      "Vì đây là cách mà chi phí tiêu tốn là tiết kiệm nhất.",
+      "Vì hiện nay tiềm lực tài chính và năng lực sản xuất của doanh nghiệp là không hạn chế.",
+      "Vì khách hàng chủ yếu là giới trẻ.",
+      "Vì đây là cách giúp doanh nghiệp tăng doanh thu, phát triển lâu dài và xây dựng lòng trung thành với thương hiệu."
     ],
     "answer": 3
   },
   {
-    "question": "Mô hình miền đại diện cho phần nào của hệ thống?",
+    "question": "Định nghĩa của Dave Chaffey về marketing số là gì?",
     "options": [
-      "Chỉ mô tả các giao diện người dùng.",
-      "Phân tích mô tả cấu trúc của hệ thống.",
-      "Phần động mô tả hành vi của hệ thống.",
-      "Mô tả các trường hợp sử dụng chi tiết."
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Trong mô hình miền, tại sao không nên nhầm lẫn giữa đối tượng và bảng cơ sở dữ liệu?",
-    "options": [
-      "Vì bảng cơ sở dữ liệu không có quan hệ với các đối tượng",
-      "Vì bảng cơ sở dữ liệu chứa nhiều khóa ngoại",
-      "Vì đối tượng đại diện cho một thể hiện duy nhất, trong khi bảng cơ sở dữ liệu đại diện cho một tập hợp",
-      "Vì các đối tượng phức tạp hơn bảng dữ liệu"
+      "Sử dụng công nghệ số để tăng hiệu quả truyền thông",
+      "Kết hợp marketing truyền thống và số hóa",
+      "Hoàn thành mục tiêu marketing qua phương tiện truyền thông số",
+      "Phát triển các công cụ quảng cáo số"
     ],
     "answer": 2
   },
   {
-    "question": "Tại sao không nên kỳ vọng sơ đồ lớp cuối cùng sẽ khớp chính xác với mô hình miền?",
+    "question": "Điểm khác biệt lớn nhất giữa marketing số và marketing truyền thống là gì?",
     "options": [
-      "Vì sơ đồ lớp chỉ là mô hình tạm thời",
-      "Vì mô hình miền đơn giản hơn và không chứa các chi tiết thiết kế cụ thể",
-      "Vì sơ đồ lớp không quan trọng",
-      "Vì mô hình miền không liên quan đến sơ đồ lớp"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Khi mô hình miền có quá nhiều mối quan hệ giữa các lớp, ta nên làm gì để cải thiện?",
-    "options": [
-      "Thêm nhiều lớp hơn để giải thích",
-      "Sử dụng quan hệ tổng quát hóa (generalization) để đơn giản hóa mối quan hệ",
-      "Bỏ bớt các lớp",
-      "Giữ nguyên và tiếp tục"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Nếu phát hiện mô hình miền thiếu một số đối tượng quan trọng, ta nên làm gì?",
-    "options": [
-      "Xây dựng lại mô hình từ đầu",
-      "Bỏ qua những đối tượng này",
-      "Tạo một sơ đồ mới",
-      "Cập nhật mô hình để bao gồm các đối tượng bị thiếu"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Tại sao khi tạo mô hình miền, cần tập trung vào các đối tượng trong thế giới thực?",
-    "options": [
-      "Vì các đối tượng trong thế giới thực đơn giản hơn các đối tượng trong phần mềm.",
-      "Vì các đối tượng trong thế giới thực không ảnh hưởng đến kiến trúc phần mềm.",
-      "Vì nó giúp tránh sử dụng quá nhiều tài nguyên trong quá trình phát triển phần mềm.",
-      "Vì phần mềm nên được thiết kế sao cho giống với cách thế giới thực hoạt động, và thế giới thực thay đổi ít thường xuyên hơn so với yêu cầu phần mềm."
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Mối quan hệ nào sau đây là đúng khi nói về các mối quan hệ trong mô hình miền?",
-    "options": [
-      "Tất cả các mối quan hệ trong mô hình miền đều là các mối quan hệ tuần tự.",
-      "Mối quan hệ tổng quát hóa (is-a) chỉ thể hiện một lớp cha có nhiều lớp con.",
-      "Mối quan hệ giữa các lớp không trọng quan trọng trong mô hình miền.",
-      "Mối quan hệ tổng hợp (has-a) thể hiện một đối tượng sở hữu một đối tượng khác và mối quan hệ tổng quát hóa (is-a) thể hiện sự kế thừa giữa các lớp."
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Quá trình nào giúp phát hiện các đối tượng bị thiếu trong mô hình miền sau khi phiên tạo mô hình ban đầu hoàn thành?",
-    "options": [
-      "Phân tích mã nguồn.",
-      "Triển khai hệ thống.",
-      "Phân tích use case và sơ đồ độ bền (robustness diagrams).",
-      "Kiểm thử hệ thống."
-    ],
-    "answer": 2
-  },
-        {
-    "question": "Lý do nên bắt đầu với mô hình miền thay vì use case là gì?",
-    "options": [
-      "Để tiết kiệm thời gian",
-      "Để đảm bảo use case được viết trong bối cảnh của mô hình đối tượng và tránh sự mờ hổ",
-      "Vì mô hình miền để thực hiện hơn",
-      "Vì use case không cần phải rõ ràng ngay từ đầu"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Vai trò của mô hình miền trong quá trình phát triển hệ thống là gì?",
-    "options": [
-      "Để tối ưu hóa mã nguồn",
-      "Để đảm bảo giao tiếp rõ ràng, nhất quán giữa các thành viên dự án",
-      "Để kiểm thử hệ thống",
-      "Để mô hình hóa cơ sở dữ liệu"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Mối quan hệ nào sau đây là đúng khi nói về các mối quan hệ trong mô hình miền?",
-    "options": [
-      "Mối quan hệ tổng quát hóa (is-a) chỉ thể hiện một lớp cha có nhiều lớp con.",
-      "Mối quan hệ giữa các lớp không quan trọng trong mô hình miến.",
-      "Mối quan hệ tổng hợp (has-a) thể hiện một đối tượng sở hữu một đối tượng khác và mối quan hệ tổng quát hóa (is-a) thể hiện sự kế thừa giữa các lớp.",
-      "Tất cả các mối quan hệ trong mô hình hình miến đều là các mối quan hệ tuần tự."
+      "Sử dụng công cụ quảng cáo in ấn",
+      "Phạm vi tiếp cận khách hàng bị giới hạn",
+      "Khả năng tương tác thời gian thực",
+      "Phụ thuộc vào nhân sự truyền thông"
     ],
     "answer": 2
   },
   {
-    "question": "Mục tiêu của phiên tạo mô hình miền ban đầu là gì?",
+    "question": "Làm thế nào công cụ tìm kiếm cải thiện hiệu quả hoạt động marketing số?",
     "options": [
-      "Xây dựng một phiên bản sơ bộ để có thể điều chỉnh trong quá trình làm việc.",
-      "Tìm ra các lỗi phần mềm trong hệ thống.",
-      "Tạo ra mô hình hoàn chỉnh mà không cần sửa đổi sau này.",
-      "Hoàn thiện mô hình miền ngay từ đầu."
+      "Trên các diễn đàn",
+      "Bằng các từ khóa và chiến lược SEO",
+      "Thông qua các trang mạng xã hội",
+      "Sử dụng Youtube"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Vai trò của dữ liệu trong marketing số là gì?",
+    "options": [
+      "Tất cả đều đúng.",
+      "Giúp đo lường hiệu quả chiến dịch và điều chỉnh chiến lược phù hợp.",
+      "Dữ liệu giúp phân tích đối thủ kinh doanh.",
+      "Dữ liệu giúp phân tích hành vi khách hàng."
     ],
     "answer": 0
   },
   {
-    "question": "Điểm khác biệt chính giữa một đối tượng và một bảng cơ sở dữ liệu là gì?",
+    "question": "Tại sao chiến lược \"đẩy\" và \"kéo\" nên được kết hợp trong marketing số?",
     "options": [
-      "Một đối tượng đại diện cho một tập hợp các bản ghi, trong khi bảng đại diện cho một bản ghi duy nhất.",
-      "Bảng cơ sở dữ liệu không liên quan gì đến đối tượng trong mô hình miền.",
-      "Một đối tượng đại diện cho một thể hiện đơn lẻ, trong khi bảng cơ sở dữ liệu đại diện cho một tập hợp các bản ghi.",
-      "Một đối tượng luôn chứa nhiều thuộc tính hơn bảng cơ sở dữ liệu"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Use case giúp trả lời câu hỏi nào liên quan đến hệ thống?",
-    "options": [
-      "Hệ thống sẽ được triển khai như thế nào?",
-      "Sự phân bổ nguồn lực phát triển trong dự án.",
-      "Người dùng của hệ thống đang cố gắng làm gì và trải nghiệm người dùng ra sao?",
-      "Cách hệ thống lưu trữ dữ liệu trong cơ sở dữ liệu."
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Yêu cầu chức năng (functional requirements) thường là gì?",
-    "options": [
-      "Một tài liệu đầy đủ chi tiết về thiết kế hệ thống.",
-      "Một mô hình các trường hợp sử dụng của hệ thống.",
-      "Một tập hợp các yêu cầu cao và thấp cấp từ nhiều nguồn, thường được ghi lại liên tiếp trong một tài liệu Word.",
-      "Một sơ đồ thể hiện các đối tượng trong hệ thống."
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Vai trò của use case trong việc bổ sung cho yêu cầu chức năng là gì?",
-    "options": [
-      "Để xác định các trường hợp thử nghiệm phần mềm.",
-      "Để cung cấp một phương pháp có cấu trúc giúp ghi lại các yêu cầu hành vi, hỗ trợ quá trình thiết kế.",
-      "Để lập danh sách các lỗi tiềm ẩn trong hệ thống.",
-      "Để thay thế hoàn toàn tài liệu yêu cầu chức năng."
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Điều gì làm cho yêu cầu chức năng (functional requirements) trở thành bước đầu tiên trong quá trình thu thập yêu cầu?",
-    "options": [
-      "Vì yêu cầu chức năng cung cấp một bản thiết kế chi tiết của hệ thống",
-      "Vì yêu cầu chức năng thay thế hoàn toàn các trường hợp sử dụng.",
-      "Vì yêu cầu chức năng chỉ bao gồm các yêu cầu kỹ thuật.",
-      "Vì yêu cầu chức năng là tập hợp các yêu cầu ban đầu từ các bên liên quan, giúp xác định các yêu cầu hành vi cần làm rõ hơn."
+      "Vì đây là những cách tiếp cận chi phí rẻ và hiệu quả.",
+      "Vì đây là cách thức đơn giản nhất.",
+      "Tất cả sai",
+      "Để tối ưu hóa khả năng tiếp cận khách hàng và tăng tỷ lệ chuyển đổi bằng cách sử dụng các phương pháp chủ động và bị động"
     ],
     "answer": 3
   },
   {
-    "question": "Yếu tố nào sau đây giúp ích trong việc xác định use case?",
+    "question": "Thực chất của việc thu hút giá trị từ Khách hàng là gì?",
     "options": [
-      "Viết tài liệu quản lý dự án.",
-      "Thực hiện kiểm thử hiệu năng.",
-      "Tạo storyboards và nguyên mẫu (UI mockups, demo chức năng cơ bản).",
-      "Phân tích cấu trúc cơ sở dữ liệu."
+      "Tất cả phương án trên.",
+      "Thông qua lòng trung thành của khách hàng",
+      "Thông qua giá trị thương hiệu.",
+      "Đảm bảo lợi nhuận và tăng trưởng lâu dài."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao marketing truyền thống vẫn quan trọng trong một số lĩnh vực?",
+    "options": [
+      "Vì nó có chi phí thấp hơn Marketing số.",
+      "Tất cả sai.",
+      "Vì nó có thể tạo sự tin cậy cao hơn ở những nhóm khách hàng không thường xuyên sử dụng công nghệ số.",
+      "Vì phù hợp cho các chiến lược Marketing dài hạn và chi phí lớn."
     ],
     "answer": 2
   },
-        {
-    "question": "Tại sao việc ghi nhận các 'rainy-day scenarios' (kịch bản không mong muốn) lại quan trọng khi viết use case?",
+  {
+    "question": "Marketing số giúp lưu trữ thông tin khách hàng hiệu quả hơn như thế nào?",
     "options": [
-      "Vì các kịch bản này giúp xác định những tính năng cần thiết trong hệ thống.",
-      "Vì các kịch bản này không ảnh hưởng đến cách hệ thống hoạt động trong thực tế.",
-      "Vì các kịch bản này chỉ hữu ích trong giai đoạn kiểm thử hệ thống.",
-      "Vì các kịch bản này cung cấp thông tin về hệ thống cần phản hồi khi có lỗi hoặc khi người dùng tương tác với các tính năng ít được sử dụng, đảm bảo hệ thống hoạt động toàn diện và ổn định."
+      "Bằng cách sử dụng các công cụ CRM và dữ liệu số để quản lý và phân tích thông tin.",
+      "Tất cả sai.",
+      "Bằng cách sử dụng các chương trình chăm sóc khách hàng thường xuyên và hiệu quả.",
+      "Bằng cách cá nhân hóa thông tin khách hàng."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Big Data và Customer value thuộc nội dung nào trong 7Ds của Marketing số?",
+    "options": [
+      "Digital technology",
+      "Tất cả sai",
+      "Digital data",
+      "Digital goals"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tablet, desktop, và smartphone thuộc mảng nào trong 7Ds của Marketing số?",
+    "options": [
+      "Thiết bị số",
+      "Công nghệ số",
+      "Tất cả sai",
+      "Dữ liệu số - Digital data"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Nguyên nhân sâu xa làm xuất hiện marketing là gì?",
+    "options": [
+      "Nhu cầu nghiên cứu thị trường",
+      "Định giá sản phẩm",
+      "Cạnh tranh trong trao đổi",
+      "Sự phát triển công nghệ"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khái niệm Marketing xuất hiện lần đầu tiên ở những quốc gia và vùng lãnh thổ nào?",
+    "options": [
+      "Anh và các nước Châu Âu",
+      "Mỹ và các nước phương Tây",
+      "Châu Á và Trung Đông",
+      "Nhật Bản"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tại sao nghiên cứu khách hàng lại là bước đầu tiên quan trọng trong quy trình marketing?",
+    "options": [
+      "Vì nó giúp doanh nghiệp hiểu rõ nhu cầu và xu hướng thị trường, từ đó phát triển các chiến lược phù hợp hơn đối thủ.",
+      "Vì nó giúp doanh nghiệp hiểu rõ những khó khăn và nguồn lực tài chính của họ, từ đó phát triển các chiến lược phù hợp hơn đối thủ.",
+      "Vì nó giúp doanh nghiệp hiểu rõ thông tin nhân khẩu học của họ, từ đó phát triển các chiến lược phù hợp hơn đối thủ.",
+      "Vì nó giúp doanh nghiệp hiểu rõ nhu cầu và sở tích của khách hàng tiềm năng, từ đó phát triển các chiến lược phù hợp hơn đối thủ."
     ],
     "answer": 3
   },
   {
-    "question": "Tại sao việc viết use case nên tập trung vào sự tương tác giữa người dùng và hệ thống?",
+    "question": "Làm thế nào để chiến lược marketing số hỗ trợ doanh nghiệp nhỏ cạnh tranh với doanh nghiệp lớn?",
     "options": [
-      "Để tạo sơ đồ trạng thái",
-      "Để xác định các lỗi trong hệ thống",
-      "Để mô tả rõ ràng các hành vi cần thiết mà hệ thống phải thực hiện",
-      "Để đảm bảo tính an toàn của hệ thống"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Trong quá trình viết use case, điều gì cần được chú ý nhất?",
-    "options": [
-      "Sử dụng các thuật ngữ rõ ràng và nhất quán với mô hình miền",
-      "Xác định yêu cầu phi chức năng",
-      "Viết mã nguồn trực tiếp từ use case",
-      "Tạo ra nhiều sơ đồ lớp"
+      "Bằng cách tận dụng các công cụ trực tuyến với chi phí thấp nhưng hiệu quả cao để tiếp cận khách hàng mục tiêu.",
+      "Bằng cách cố gắng xây dựng các chiến lược Marketing dài hơi và tốn kém.",
+      "Bằng cách thuê ngoài các chuyên gia Marketing với những nguồn lực mạnh hiện có để đạt mục tiêu.",
+      "Bằng cách sử dụng các hình thức quảng bá tốn kém."
     ],
     "answer": 0
   },
   {
-    "question": "Khi hệ thống gặp lỗi trong quá trình kiểm thử và không thực hiện đúng theo use case, bước tiếp theo là gì?",
+    "question": "Tại sao marketing số có chi phí thấp hơn so với marketing truyền thống?",
     "options": [
-      "Xây dựng lại hệ thống từ đầu",
-      "Tạo thêm các sơ đồ trạng thái",
-      "Chỉnh sửa mã nguồn để phản ánh đúng hành vi trong use case",
-      "Thay đổi yêu cầu ban đầu"
+      "Vì nó không yêu cầu in ấn.",
+      "Vì có thể kiểm soát chi phí quảng cáo một cách hiệu quả.",
+      "Tất cả đúng",
+      "Vì sử dụng phương tiện hiện đại và hiệu quả hơn."
     ],
     "answer": 2
   },
   {
-    "question": "Khi phát hiện một đối tượng không được mô tả trong use case nhưng có liên quan đến hệ thống, bạn sẽ làm gì?",
+    "question": "Làm thế nào marketing số có thể phản hồi khách hàng nhanh hơn marketing truyền thống?",
     "options": [
-      "Chỉ thay đổi mô hình miền",
-      "Bỏ qua đối tượng này",
-      "Thêm đối tượng vào use case và mô hình miền",
-      "Xóa bỏ đối tượng"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Nếu phát hiện ra một yêu cầu mới trong quá trình viết use case, bạn sẽ làm gì?",
-    "options": [
-      "Cập nhật use case để bao gồm yêu cầu mới",
-      "Viết mã nguồn cho yêu cầu này",
-      "Thay đổi toàn bộ thiết kế hệ thống",
-      "Bỏ qua yêu cầu này"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Khi viết use case, tại sao cần tránh sử dụng câu bị động?",
-    "options": [
-      "Để đảm bảo rõ ràng ai đang thực hiện hành động và hệ thống phản hồi như thế nào",
-      "Để dễ dàng viết mã nguồn",
-      "Để mô tả hệ thống theo yêu cầu",
-      "Để giảm bớt sự phức tạp trong thiết kế"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Nếu mô hình miền thay đổi trong quá trình phát triển, điều gì cần thực hiện với use case?",
-    "options": [
-      "Tạo sơ đồ trình tự mới",
-      "Cập nhật use case để phù hợp với mô hình miền mới",
-      "Bỏ qua mô hình miền",
-      "Thay đổi mô hình lớp"
+      "Qua các kênh truyền thống.",
+      "Qua các kênh trực tuyến như email, mạng xã hội, cho phép giao tiếp tức thời.",
+      "Qua các phương tiện đại chúng như TV.",
+      "Tất cả sai"
     ],
     "answer": 1
   },
   {
-    "question": "Viết một đoạn văn bản mô tả một \"sunny-day scenario\" cho chức năng Đăng nhập trong hệ thống bán hàng trực tuyến, sử dụng cấu trúc \"noun-verb-noun\".",
+    "question": "AI có thuộc mảng nào trong mô hình 7Ds của Marketing số:",
     "options": [
-      "Hệ thống hiển thị màn hình đăng nhập.",
-      "Người dùng nhập mật khẩu và đăng nhập thành công.",
-      "Người dùng nhập tên đăng nhập và mật khẩu, sau đó nhấn nút Đăng nhập. Hệ thống xác thực thông tin và đăng nhập người dùng.",
-      "Người dùng vào trang đăng nhập, kiểm tra thông tin và đăng nhập thành công."
+      "Thiết bị số",
+      "Nền tảng số",
+      "Công nghệ Marketing số.",
+      "Dữ liệu số"
     ],
     "answer": 2
   },
   {
-    "question": "Trong quá trình viết use case, bạn phát hiện hệ thống cần phản hồi khi người dùng nhập sai mật khẩu. Hãy mô tả một 'rainy-day scenario' cho tình huống này.",
+    "question": "Theo Hiệp hội Marketing Mỹ (AMA), marketing được định nghĩa là gì?",
     "options": [
-      "Hệ thống chấp nhận mọi đầu vào và cho phép người dùng đăng nhập.",
-      "Hệ thống hiển thị thông báo lỗi \"Mật khẩu không đúng\" và yêu cầu người dùng nhập lại mật khẩu.",
-      "Hệ thống không phản hồi gì và yêu cầu người dùng nhập lại thông tin.",
-      "Hệ thống chuyển người dùng đến trang chính."
+      "Tất cả các phương án trên",
+      "Chiến lược để tăng lợi nhuận doanh nghiệp",
+      "Hoạt động, quy trình tạo ra giá trị và xây dựng mối quan hệ với khách hàng",
+      "Quá trình bán sản phẩm hoặc dịch vụ cho khách hàng"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Điểm chính yếu của marketing hiện đại là gì?",
+    "options": [
+      "Quản lý hệ thống phân phối",
+      "Đặt khách hàng làm trung tâm của mọi hoạt động",
+      "Sử dụng công cụ tài chính để tăng trưởng",
+      "Chỉ tập trung vào truyền thông"
     ],
     "answer": 1
   },
   {
-    question: "Use case giúp trả lời câu hỏi nào liên quan đến hệ thống?",
-    options: [
-      "Hệ thống sẽ được triển khai như thế nào?",
-      "Sự phân bổ nguồn lực phát triển trong dự án.",
-      "Người dùng của hệ thống đang cố gắng làm gì và trải nghiệm người dùng ra sao?",
-      "Cách hệ thống lưu trữ dữ liệu trong cơ sở dữ liệu."
+    "question": "Tại sao marketing số lại chú trọng đến sự hiện diện trực tuyến của doanh nghiệp?",
+    "options": [
+      "Vì nó giúp khách hàng dễ dàng tìm kiếm thông tin và tương tác với thương hiệu trên nhiều nền tảng khác nhau.",
+      "Vì đây là cách thức chi phí thấp nhất để tiếp cận khách hàng.",
+      "Tất cả sai",
+      "Vì các mạng xã hội và nền tảng cho marketing đang hiệu quả và phổ biến."
     ],
-    answer: 2
+    "answer": 0
   },
   {
-    question: "Yêu cầu chức năng (functional requirements) thường là gì?",
-    options: [
-      "Một tài liệu đầy đủ chi tiết về thiết kế hệ thống.",
-      "Một mô hình các trường hợp sử dụng của hệ thống.",
-      "Một tập hợp các yêu cầu cao và thấp cấp từ nhiều nguồn, thường được ghi lại liên tiếp trong một tài liệu Word.",
-      "Một sơ đồ thể hiện các đối tượng trong hệ thống."
+    "question": "Điểm mạnh của email marketing trong chiến lược số là gì?",
+    "options": [
+      "Tất cả đều sai",
+      "Khả năng cá nhân hóa thông điệp và duy trì mối quan hệ với khách hàng.",
+      "Khả năng tiếp cận nhiều khách hàng mục tiêu hiệu quả.",
+      "Khả năng tiếp cận khách hàng rẻ và hiệu quả nhất."
     ],
-    answer: 2
+    "answer": 1
   },
   {
-    question: "Vai trò của use case trong việc bổ sung cho yêu cầu chức năng là gì?",
-    options: [
-      "Để xác định các trường hợp thử nghiệm phần mềm.",
-      "Để cung cấp một phương pháp có cấu trúc giúp ghi lại các yêu cầu hành vi, hỗ trợ quá trình thiết kế.",
-      "Để lập danh sách các lỗi tiềm ẩn trong hệ thống.",
-      "Để thay thế hoàn toàn tài liệu yêu cầu chức năng."
+    "question": "Tại sao marketing số được coi là linh hoạt hơn marketing truyền thống?",
+    "options": [
+      "Vì hoạt động trên môi trường Internet và các mạng xã hội.",
+      "Vì nó hiện đại và hấp dẫn hơn.",
+      "Vì nó cho phép điều chỉnh chiến lược dựa trên dữ liệu thời gian thực và phản hồi nhanh chóng từ khách hàng.",
+      "Tất cả sai"
     ],
-    answer: 1
+    "answer": 2
   },
   {
-    question: "Điều gì làm cho yêu cầu chức năng (functional requirements) trở thành bước đầu tiên trong quá trình thu thập yêu cầu?",
-    options: [
-      "Vì yêu cầu chức năng cung cấp một bản thiết kế chi tiết của hệ thống",
-      "Vì yêu cầu chức năng thay thế hoàn toàn các trường hợp sử dụng.",
-      "Vì yêu cầu chức năng chỉ bao gồm các yêu cầu kỹ thuật.",
-      "Vì yêu cầu chức năng là tập hợp các yêu cầu ban đầu từ các bên liên quan, giúp xác định các yêu cầu hành vi cần làm rõ hơn."
+    "question": "Marketing số khác biệt chính với marketing truyền thống là gì?",
+    "options": [
+      "Chỉ dựa vào các công cụ tìm kiếm",
+      "Tập trung vào giao tiếp một chiều",
+      "Sử dụng dữ liệu và công nghệ số",
+      "Tăng cường quảng cáo truyền thống"
     ],
-    answer: 3
+    "answer": 2
   },
   {
-    question: "Yếu tố nào sau đây giúp ích trong việc xác định use case?",
-    options: [
-      "Viết tài liệu quản lý dự án.",
-      "Thực hiện kiểm thử hiệu năng.",
-      "Tạo storyboards và nguyên mẫu (UI mockups, demo chức năng cơ bản).",
-      "Phân tích cấu trúc cơ sở dữ liệu."
+    "question": "Bản chất của marketing là gì?",
+    "options": [
+      "Đẩy mạnh truyền thông quảng cáo",
+      "Hiểu và đáp ứng nhu cầu Khách hàng",
+      "Sử dụng công cụ kỹ thuật số để bán hàng",
+      "Phân tích đối thủ cạnh tranh"
     ],
-    answer: 2
+    "answer": 1
   },
   {
-    question: "Tại sao việc ghi nhận các “rainy-day scenarios” (kịch bản không mong muốn) lại quan trọng khi viết use case?",
-    options: [
-      "Vì các kịch bản này giúp xác định những tính năng cần thiết trong hệ thống.",
-      "Vì các kịch bản này không ảnh hưởng đến cách hệ thống hoạt động trong thực tế.",
-      "Vì các kịch bản này chỉ hữu ích trong giai đoạn kiểm thử hệ thống.",
-      "Vì các kịch bản này cung cấp thông tin về hệ thống cần phản hồi khi có lỗi hoặc khi người dùng tương tác với các tính năng ít được sử dụng, đảm bảo hệ thống hoạt động toàn diện và ổn định."
+    "question": "Hãy cho biết Google và Facebook thuộc nội dung nào trong mô hình 7Ds của Marketing số?",
+    "options": [
+      "Digital technology",
+      "Digital data",
+      "Nền tảng số - Digital platforms.",
+      "Digital media"
     ],
-    answer: 3
+    "answer": 2
   },
   {
-    question: "Tại sao việc viết use case nên tập trung vào sự tương tác giữa người dùng và hệ thống?",
-    options: [
-      "Để tạo sơ đồ trạng thái",
-      "Để xác định các lỗi trong hệ thống",
-      "Để mô tả rõ ràng các hành vi cần thiết mà hệ thống phải thực hiện",
-      "Để đảm bảo tính an toàn của hệ thống"
+    "question": "Tại sao tính nhất quán trong thông điệp lại quan trọng đối với thương hiệu số?",
+    "options": [
+      "Tạo sự khác biệt với đối thủ",
+      "Giúp tiết kiệm chi phí quảng cáo",
+      "Duy trì lòng tin và ấn tượng trong tâm trí khách hàng",
+      "Hỗ trợ SEO tốt hơn"
     ],
-    answer: 2
+    "answer": 2
   },
   {
-    question: "Trong quá trình viết use case, điều gì cần được chú ý nhất?",
-    options: [
-      "Sử dụng các thuật ngữ rõ ràng và nhất quán với mô hình miền",
-      "Xác định yêu cầu phi chức năng",
-      "Viết mã nguồn trực tiếp từ use case",
-      "Tạo ra nhiều sơ đồ lớp"
+    "question": "Tại sao thương hiệu số lại quan trọng trong kỷ nguyên số hóa?",
+    "options": [
+      "Giảm chi phí quảng cáo truyền thống.",
+      "Nó giúp tăng hiệu quả sản xuất.",
+      "Là công cụ duy nhất để doanh nghiệp phát triển.",
+      "Tạo sự nhận diện và kết nối mạnh mẽ với khách hàng trong môi trường số."
     ],
-    answer: 0
+    "answer": 3
   },
   {
-    question: "Khi hệ thống gặp lỗi trong quá trình kiểm thử và không thực hiện đúng theo use case, bước tiếp theo là gì?",
-    options: [
-      "Xây dựng lại hệ thống từ đầu",
-      "Tạo thêm các sơ đồ trạng thái",
-      "Chỉnh sửa mã nguồn để phản ánh đúng hành vi trong use case",
-      "Thay đổi yêu cầu ban đầu"
+    "question": "Thương hiệu số tác động đến khách hàng như thế nào?",
+    "options": [
+      "Bằng cách giảm giá sản phẩm.",
+      "Thông qua khuyến mãi thường xuyên",
+      "Thông qua sự nhất quán và khả năng tương tác cao.",
+      "Qua việc sử dụng các kênh truyền thống."
     ],
-    answer: 2
+    "answer": 2
   },
   {
-    question: "Khi phát hiện một đối tượng không được mô tả trong use case nhưng có liên quan đến hệ thống, bạn sẽ làm gì?",
-    options: [
-      "Chỉ thay đổi mô hình miền",
-      "Bỏ qua đối tượng này",
-      "Thêm đối tượng vào use case và mô hình miền",
-      "Xóa bỏ đối tượng"
+    "question": "Một trong những rủi ro khi xây dựng thương hiệu số là gì?",
+    "options": [
+      "Tăng quá nhanh lượng khách hàng tiềm năng.",
+      "Thông điệp không nhất quán làm mất lòng tin khách hàng.",
+      "Đầu tư quá nhiều vào marketing truyền thống.",
+      "Chi phí quảng cáo số cao hơn các phương tiện truyền thống."
     ],
-    answer: 2
+    "answer": 1
   },
   {
-    question: "Nếu phát hiện ra một yêu cầu mới trong quá trình viết use case, bạn sẽ làm gì?",
-    options: [
-      "Cập nhật use case để bao gồm yêu cầu mới",
-      "Viết mã nguồn cho yêu cầu này",
-      "Thay đổi toàn bộ thiết kế hệ thống",
-      "Bỏ qua yêu cầu này"
+    "question": "Lợi ích lớn nhất của thương hiệu số so với thương hiệu truyền thống là gì?",
+    "options": [
+      "Tăng tính hiện đại trong quảng bá thương hiệu.",
+      "Khả năng tương tác liên tục và nhanh chóng với khách hàng.",
+      "Tăng giá trị của sản phẩm.",
+      "Loại bỏ hoàn toàn các chi phí quảng cáo truyền thống."
     ],
-    answer: 0
+    "answer": 1
   },
   {
-    question: "Khi viết use case, tại sao cần tránh sử dụng câu bị động?",
-    options: [
-      "Để đảm bảo rõ ràng ai đang thực hiện hành động và hệ thống phản hồi như thế nào",
-      "Để dễ dàng viết mã nguồn",
-      "Để mô tả hệ thống theo yêu cầu",
-      "Để giảm bớt sự phức tạp trong thiết kế"
+    "question": "Lợi ích lớn nhất của việc xây dựng thương hiệu số là gì?",
+    "options": [
+      "Giảm chi phí vận hành",
+      "Cải thiện hệ thống quản trị",
+      "Tăng doanh số bán hàng ngay lập tức",
+      "Tăng nhận diện thương hiệu và lòng trung thành của khách hàng"
     ],
-    answer: 0
+    "answer": 3
   },
   {
-    question: "Nếu mô hình miền thay đổi trong quá trình phát triển, điều gì cần thực hiện với use case?",
-    options: [
-      "Tạo sơ đồ trình tự mới",
-      "Cập nhật use case để phù hợp với mô hình miền mới",
-      "Bỏ qua mô hình miền",
-      "Thay đổi mô hình lớp"
+    "question": "Yếu tố nào giúp thương hiệu số duy trì sự chú ý của khách hàng?",
+    "options": [
+      "Tăng tần suất quảng cáo.",
+      "Nội dung hấp dẫn và có giá trị.",
+      "Tập trung vào khuyến mãi giảm giá.",
+      "Phát triển thêm nhiều sản phẩm mới."
     ],
-    answer: 1
+    "answer": 1
   },
   {
-    question: "Viết một đoạn văn bản mô tả một 'sunny-day scenario' cho chức năng Đăng nhập trong hệ thống bán hàng trực tuyến, sử dụng cấu trúc 'noun-verb-noun'.",
-    options: [
-      "Hệ thống hiển thị màn hình đăng nhập.",
-      "Người dùng nhập mật khẩu và đăng nhập thành công.",
-      "Người dùng nhập tên đăng nhập và mật khẩu, sau đó nhấn nút Đăng nhập. Hệ thống xác thực thông tin và đăng nhập người dùng.",
-      "Người dùng vào trang đăng nhập, kiểm tra thông tin và đăng nhập thành công."
+    "question": "Quy trình xây dựng thương hiệu số cần chú ý điều gì đầu tiên?",
+    "options": [
+      "Tăng cường ngân sách.",
+      "Xác định đối tượng mục tiêu.",
+      "Lựa chọn các công cụ quảng cáo.",
+      "Tạo tài khoản trên tất cả các nền tảng mạng xã hội."
     ],
-    answer: 2
+    "answer": 1
   },
   {
-    question: "Trong quá trình viết use case, bạn phát hiện hệ thống cần phản hồi khi người dùng nhập sai mật khẩu. Hãy mô tả một 'rainy-day scenario' cho tình huống này.",
-    options: [
-      "Hệ thống chấp nhận mọi đầu vào và cho phép người dùng đăng nhập.",
-      "Hệ thống hiển thị thông báo lỗi 'Mật khẩu không đúng' và yêu cầu người dùng nhập lại mật khẩu.",
-      "Hệ thống không phản hồi gì và yêu cầu người dùng nhập lại thông tin.",
-      "Hệ thống chuyển người dùng đến trang chính."
+    "question": "Một doanh nghiệp nhỏ muốn xây dựng thương hiệu số, họ nên tập trung vào đâu trước tiên?",
+    "options": [
+      "Phát triển ứng dụng di động.",
+      "Tăng cường đầu tư vào quảng cáo trên truyền hình.",
+      "Tạo tài khoản mạng xã hội và cung cấp nội dung phù hợp.",
+      "Mở rộng sản phẩm ra thị trường quốc tế."
     ],
-    answer: 1
+    "answer": 2
   },
   {
-    question: "Use case là gì trong quy trình ICONIX?",
-    options: [
-      "Một cách có cấu trúc để ghi lại các yêu cầu hành vi của hệ thống.",
-      "Một sơ đồ thể hiện các mối quan hệ giữa các lớp trong hệ thống.",
-      "Một công cụ kiểm thử phần mềm tự động.",
-      "Một báo cáo tài chính liên quan đến chi phí phát triển."
+    "question": "Điều gì làm nên sự khác biệt của thương hiệu số trên các nền tảng mạng xã hội?",
+    "options": [
+      "Khả năng tương tác và phản hồi nhanh chóng với khách hàng.",
+      "Giảm tần suất đăng bài.",
+      "Tăng ngân sách cho quảng cáo.",
+      "Số lượng bài đăng."
     ],
-    answer: 0
+    "answer": 0
   },
   {
-    question: "Use case cung cấp điều gì cho quá trình thiết kế hệ thống?",
-    options: [
-      "Một nền tảng để thiết kế và ước tính thời gian, công sức một cách đáng tin cậy.",
-      "Một danh sách các công cụ cần sử dụng trong dự án.",
-      "Một cách để dự đoán lỗi trong phần mềm.",
-      "Một phương pháp để viết tài liệu dự án theo cách tổng quát."
+    "question": "Tại sao chiến lược xây dựng thương hiệu số cần tính đến đối thủ cạnh tranh?",
+    "options": [
+      "Để giảm sự phát triển của đối thủ.",
+      "Để tăng cường chiến dịch phản biện.",
+      "Để tăng chi tiêu ngân sách.",
+      "Để xác định lợi thế cạnh tranh và cải thiện giá trị thương hiệu."
     ],
-    answer: 0
+    "answer": 3
   },
   {
-    question: "Khi mô hình miền và use case không khớp nhau, bạn nên làm gì?",
-    options: [
-      "Bỏ qua sự không khớp",
-      "Kiểm tra lại mô hình dữ liệu",
-      "Cập nhật mô hình miền hoặc use case để đảm bảo sự khớp nhau",
-      "Làm việc lại với khách hàng để thu thập thêm yêu cầu"
+    "question": "Điều nào sau đây không thuộc quy trình xây dựng chiến lược thương hiệu số?",
+    "options": [
+      "Xây dựng sản phẩm vật lý mới",
+      "Lập kế hoạch nội dung số.",
+      "Phân tích hiệu quả chiến dịch.",
+      "Xác định khách hàng mục tiêu."
     ],
-    answer: 2
+    "answer": 0
   },
   {
-    question: "Theo quy trình ICONIX, tại sao mô hình miền ban đầu thường được coi là không hoàn chỉnh?",
-    options: [
-      "Vì không thể bao gồm tất cả các chức năng trong mô hình đầu tiên.",
-      "Vì tất cả các yêu cầu đều phải được xác định rõ ràng trước khi bắt đầu xây dựng mô hình miền.",
-      "Vì mô hình miền ban đầu không liên quan đến use case.",
-      "Vì mô hình miền ban đầu chỉ là một bản sơ bộ và sẽ được cải tiến dần qua quá trình phát triển use case."
+    "question": "Mục tiêu cuối cùng của chiến lược thương hiệu số là gì?",
+    "options": [
+      "Xây dựng mối quan hệ lâu dài với khách hàng.",
+      "Tăng số lượng sản phẩm bán r",
+      "Giảm chi phí vận hành.",
+      "Tăng doanh thu nhanh chóng."
     ],
-    answer: 3
+    "answer": 0
   },
   {
-    question: "Hãy tạo một mô hình miền ban đầu cho một hệ thống bán sách trực tuyến. Bạn sẽ chọn những thực thể nào và tại sao?",
-    options: [
-      "Chọn các thực thể như Sách, Tác giả, và Giỏ hàng, vì đây là các thực thể chính của hệ thống bán sách trực tuyến và phù hợp với nhu cầu người dùng.",
-      "Chọn các thực thể liên quan đến hệ thống thanh toán và giao hàng, vì đó là phần quan trọng nhất trong hệ thống bán sách.",
-      "Chọn tất cả các thực thể có thể xuất hiện trong hệ thống, để không bỏ sót thông tin nào.",
-      "Chọn các thực thể liên quan đến quản trị hệ thống, vì nó giúp đảm bảo hệ thống vận hành đúng cách."
+    "question": "Điều gì quan trọng nhất khi thiết kế thông điệp cho thương hiệu số?",
+    "options": [
+      "Tính nhất quán và liên quan đến khách hàng mục tiêu.",
+      "Sử dụng nhiều thuật ngữ chuyên ngành.",
+      "Chứa nhiều yếu tố sáng tạo.",
+      "Phù hợp với đối thủ cạnh tranh."
     ],
-    answer: 0
+    "answer": 0
   },
   {
-    question: "Viết một đoạn văn bản mô tả một 'sunny-day scenario' cho chức năng Đăng nhập trong hệ thống bán hàng trực tuyến, sử dụng cấu trúc 'noun-verb-noun'.",
-    options: [
-      "Người dùng nhập tên đăng nhập và mật khẩu, sau đó nhấn nút Đăng nhập. Hệ thống xác thực thông tin và đăng nhập người dùng.",
-      "Người dùng nhập mật khẩu và đăng nhập thành công.",
-      "Hệ thống hiển thị màn hình đăng nhập.",
-      "Người dùng vào trang đăng nhập, kiểm tra thông tin và đăng nhập thành công."
+    "question": "Tại sao doanh nghiệp cần tối ưu hóa thương hiệu số trên nhiều nền tảng khác nhau?",
+    "options": [
+      "Để cạnh tranh trực tiếp với đối thủ trên từng nền tảng.",
+      "Để tiết kiệm chi phí cho từng nền tảng.",
+      "Để so sánh hiệu quả giữa các nền tảng.",
+      "Để tăng cường sự hiện diện và tiếp cận khách hàng ở mọi kênh."
     ],
-    answer: 0
+    "answer": 3
+  },
+  {
+    "question": "Yếu tố nào không thuộc về thương hiệu số?",
+    "options": [
+      "Logo truyền thống trên bao bì sản phẩm.",
+      "Truyền thông trên mạng xã hội.",
+      "Website chuyên nghiệp.",
+      "Chiến lược nội dung."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Một trong những thành tố tạo nên thương hiệu mạnh trên nền tảng số là:",
+    "options": [
+      "Tất cả các đáp án trên",
+      "Logo dễ nhớ",
+      "Chiến lược nội dung hiệu quả",
+      "Màu sắc nổi bật"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Thành tố nào quan trọng nhất để xây dựng thương hiệu số mạnh mẽ?",
+    "options": [
+      "Logo độc đáo và dễ nhớ",
+      "Số lượng quảng cáo nhiều nhất.",
+      "Giá cả cạnh tranh.",
+      "Đa dạng hóa sản phẩm."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao doanh nghiệp cần tối ưu hóa trải nghiệm người dùng trên website?",
+    "options": [
+      "Để cạnh tranh về giá cả với đối thủ.",
+      "Để cải thiện tốc độ tải dữ liệu.",
+      "Để giảm chi phí vận hành.",
+      "Để thu hút và giữ chân khách hàng."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một chiến lược nội dung hiệu quả cần gì để hỗ trợ thương hiệu số?",
+    "options": [
+      "Sử dụng nội dung nhất quán, có giá trị và phù hợp với đối tượng mục tiêu.",
+      "Tăng số lượng bài đăng quảng cáo.",
+      "Liên tục thay đổi phong cách để khách hàng luôn bất ngờ.",
+      "Giảm sự phụ thuộc vào hình ảnh sản phẩm."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Yếu tố nào giúp xây dựng niềm tin cho thương hiệu số?",
+    "options": [
+      "Giảm giá sản phẩm định kỳ.",
+      "Sử dụng hình ảnh thương hiệu phổ biến.",
+      "Nội dung đáng tin cậy và trải nghiệm khách hàng tốt.",
+      "Tăng cường quảng cáo trả phí."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Bước nào trong quy trình xây dựng chiến lược thương hiệu số giúp xác định thị trường mục tiêu?",
+    "options": [
+      "Tối ưu hóa trải nghiệm người dùng.",
+      "Xây dựng thông điệp thương hiệu.",
+      "Đo lường hiệu quả chiến lượ",
+      "Nghiên cứu thị trường và phân khúc khách hàng."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Kênh nào thường được sử dụng để xây dựng thương hiệu trên nền tảng số?",
+    "options": [
+      "Tài trợ sự kiện truyền thống.",
+      "Mạng xã hội như Facebook, Instagram.",
+      "Quảng cáo trên radio",
+      "Tờ rơi quảng cáo."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Công cụ nào thường được dùng để đo lường hiệu quả của thương hiệu số?",
+    "options": [
+      "Microsoft Word",
+      "Photoshop.",
+      "Google Analytics.",
+      "Excel."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tính nhất quán của thông điệp thương hiệu số có ý nghĩa gì?",
+    "options": [
+      "Tăng hiệu quả của SEO.",
+      "Giúp khách hàng dễ dàng nhận diện và ghi nhớ thương hiệu.",
+      "Đảm bảo thông tin không bị sao chép.",
+      "Giảm chi phí quảng cáo."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Doanh nghiệp cần gì để xây dựng thương hiệu số bền vững?",
+    "options": [
+      "Tập trung vào sản phẩm mà không cần quan tâm đến khách hàng.",
+      "Chi tiêu ngân sách cao cho tất cả các kênh quảng cáo.",
+      "Giảm số lượng sản phẩm để tập trung vào quảng cáo",
+      "Tạo nội dung chất lượng, nhất quán và tương tác tốt với khách hàng."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một doanh nghiệp muốn đo lường hiệu quả thương hiệu số trên mạng xã hội. Họ nên tập trung vào chỉ số nào?",
+    "options": [
+      "Tỷ lệ giảm giá sản phẩm trong quảng cáo.",
+      "Tần suất đăng bài viết.",
+      "Tỷ lệ tương tác (likes, shares, comments).",
+      "Số lượng bài đăng trên tuần."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Mục tiêu chính của việc xây dựng thương hiệu số là:",
+    "options": [
+      "Giảm chi phí vận hành",
+      "Hợp tác với đối tác lớn",
+      "Tăng doanh thu bằng mọi cách",
+      "Tăng nhận diện thương hiệu trên môi trường số"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một trong những rủi ro khi xây dựng thương hiệu số là gì?",
+    "options": [
+      "Thông điệp không nhất quán làm mất lòng tin khách hàng.",
+      "Chi phí quảng cáo số cao hơn các phương tiện truyền thống.",
+      "Đầu tư quá nhiều vào marketing truyền thống.",
+      "Tăng quá nhanh lượng khách hàng tiềm năng.\nCHƯƠNG 3"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Chiến lược Marketing được định nghĩa như thế nào theo Philip Kotler?",
+    "options": [
+      "Là hệ thống các chỉ đạo làm căn cứ thực hiện tại một đơn vị hay một tổ chức tính toán cách giải quyết những nhiệm vụ marketing của mình liên quan đến thị trường mục tiêu, hệ thống Marketing mix và mức chi phí cho Marketing.",
+      "Là các văn bản và quy trình triển khai cho hoạt động Marketing tổng thể.",
+      "Là hệ thống luận điểm logic, hợp lý làm căn cứ chỉ đạo một đơn vị hay một tổ chức tính toán cách giải quyết những nhiệm vụ trong kinh doanh và sản xuất của mình liên quan đến thị trường mục tiêu.",
+      "Là hệ thống các tài liệu làm căn cứ chỉ đạo một đơn vị hay một tổ chức tính toán cách giải quyết những nhiệm vụ marketing của mình liên quan đến thị trường mục tiêu, hệ thống Marketing mix và mức chi phí cho Marketing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Các kênh truyền thông nào được phân loại là Paid media?",
+    "options": [
+      "Các kênh truyền thông từ việc khách hàng tự chia sẻ, như bài viết, livestream trên mạng xã hội.",
+      "Cách kênh truyền thông qua các sự kiện (events) tại hội trợ, triển lãm, …",
+      "Các kênh truyền thông có trả phí như quảng cáo trực tuyến, TV, biển Quảng cáo.",
+      "Các kênh mà doanh nghiệp sở hữu, như website, blog, và trang mạng xã hội."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Bước đầu tiên trong quy trình xây dựng chiến lược Marketing số là gì?",
+    "options": [
+      "Xác định đúng khách hàng của chiến lược Marketing.",
+      "Xác định đúng mục tiêu của chiến lược Marketing.",
+      "Xác định đúng ngân sách của chiến lược Marketing.",
+      "Xác định đúng thị trường của chiến lược Marketing."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tại sao việc xác định thị trường mục tiêu lại quan trọng trong chiến lược Marketing?",
+    "options": [
+      "giúp doanh nghiệp tiết kiệm chi phí quảng cáo, xây dựng tệp khách hàng có giá trị, và tiếp cận hiệu quả hơn với những khách hàng tiềm năng.",
+      "giúp doanh nghiệp quản lý và quản trị hoạt động sản xuất và lưu kho để phục vụ khác hàng tốt hơn.",
+      "giúp doanh nghiệp tiết kiệm được ngân sách cho hoạt động quản trị nhân sự tiết kiệm chi phí quảng cáo, xây dựng tệp khách hàng có giá trị, và tiếp cận hiệu quả hơn với những khách hàng tiềm năng."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Chiến lược kéo trong Marketing số còn được gọi là gì?",
+    "options": [
+      "Outbound Marketing",
+      "Pull Marketing.",
+      "Push Marketing",
+      "Inbound Marketing."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Inbound Marketing được thực hiện qua mấy giai đoạn? Hãy liệt kê các giai đoạn này.",
+    "options": [
+      "4 giai đoạn, Attract (Thu hút), Convenience (Thuận tiện), Close (Chăm sóc), Delight (Làm hài lòng).",
+      "4 giai đoạn, Attract (Thu hút), Convert (Chuyển đổi), Service (Dịch vụ), Delight (Làm hài lòng).",
+      "4 giai đoạn: Attract (Thu hút), Experiecne (Trải nghiệm), Close (Chăm sóc), Delight (Làm hài lòng).",
+      "4 giai đoạn, Attract (Thu hút), Convert (Chuyển đổi), Close (Chăm sóc), Delight (Làm hài lòng)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Sự khác biệt giữa Outbound Marketing và Inbound Marketing về cách thức giao tiếp là gì?",
+    "options": [
+      "Outbound Marketing thường sử dụng giao tiếp một chiều, trong khi Inbound Marketing chú trọng vào giao tiếp bên trong, tạo ra sự tương tác và giúp khách hàng tìm thấy nội dung cần thiết.",
+      "Outbound Marketing thường sử dụng giao tiếp tổng hợp, trong khi Inbound Marketing chú trọng vào giao tiếp một chiều, tạo ra sự tương tác và giúp khách hàng tìm thấy nội dung cần thiết.",
+      "Outbound Marketing thường sử dụng giao tiếp một chiều, trong khi Inbound Marketing chú trọng vào giao tiếp hai chiều, tạo ra sự tương tác và giúp khách hàng tìm thấy nội dung cần thiết",
+      "Outbound Marketing thường sử dụng giao tiếp một chiều, trong khi Inbound Marketing chú trọng vào nội dung bên trong, tạo ra sự tương tác và giúp khách hàng tìm thấy nội dung cần thiết."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Hệ thống CRM có vai trò gì trong Inbound Marketing?",
+    "options": [
+      "giúp nâng cao khả năng tiếp cận và xúc tiến các hoạt động Marketing.",
+      "giúp tìm hiểu và phân tích hành vi khách hàng, đánh giá tiềm năng chuyển đổi của từng lead và tối ưu hóa các chiến dịch Marketing",
+      "giúp quản trị các mối quan hệ khách hàng tiềm năng.",
+      "Giúp quản trị và phân tích dữ liệu khách hàng, đánh giá tiềm năng chuyển đổi của từng lead và tối ưu hóa các chiến dịch Marketing."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tại sao không có phương pháp nào là hoàn hảo cho mọi bài toán trong Marketing?",
+    "options": [
+      "vì mỗi chiến lược có ưu và nhược điểm riêng, và hiệu quả sẽ phụ thuộc vào đội ngũ nhân sự của từng doanh nghiệp.",
+      "Vì mỗi chiến lược có ưu và nhược điểm riêng, và hiệu quả sẽ phụ thuộc vào mục tiêu, lĩnh vực và đặc điểm của từng doanh nghiệp.",
+      "vì mỗi chiến lược cần cần thời gian dài mới triển khai và đem lại hiệu quả tốt đượ",
+      "Vì mỗi chiến lược hiệu quả phải có ngân sách lớn và hiệu quả sẽ phụ thuộc vào mục tiêu, lĩnh vực và đặc điểm của từng doanh nghiệp."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tiếp thị lại là gì?",
+    "options": [
+      "Là phương pháp sử dụng các nền tảng truyền thông như website, mạng xã hội, email... để cung cấp nội dung nhằm gợi ý, nhắc nhở khách hàng về những thao tác họ đã thực hiện nhưng chưa hoàn thành, hoặc tăng cường khả năng chuyển đổi qua việc nhắm mục tiêu cá nhân hóa",
+      "Là phương pháp sử dụng các nền tảng truyền thông như website, mạng xã hội, email... để cung cấp nội dung nhằm tìm kiếm khách hàng dựa trên những thao tác họ đã thực hiện nhưng chưa hoàn thành, hoặc tăng cường khả năng chuyển đổi qua việc nhắm mục tiêu cá nhân hó",
+      "Là phương pháp sử dụng các nền tảng truyền thông như website, mạng xã hội, email... để cung cấp nội dung nhằm thu hút khách hàng về những thao tác họ đã thực hiện nhưng chưa hoàn thành, hoặc tăng cường khả năng chuyển đổi qua việc nhắm mục tiêu cá nhân hó",
+      "Là phương pháp sử dụng các nền tảng truyền thông như website, mạng xã hội, email... để thúc đẩy quá trình ra quyết định mua của khách hàng và tăng cường khả năng chuyển đổi qua việc nhắm mục tiêu cá nhân hó"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Các loại nội dung tiếp thị phổ biến theo chức năng là gì?",
+    "options": [
+      "Content tiện ích",
+      "Content thông tin",
+      "Tất cả phương án trên.",
+      "Content giải trí"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Remarketing giúp doanh nghiệp tăng nhận thức về thương hiệu bằng cách nào?",
+    "options": [
+      "triển khai lại các chiến dịch marketing đã thực hiện nhằm nhắc nhớ và hấp dẫn khách hàng, giúp thương hiệu xuất hiện nhiều lần trong tâm trí khách hàng.",
+      "giúp thương hiệu xuất hiện nhiều lần trong tâm trí khách hàng.",
+      "hiển thị quảng cáo đến những khách hàng đã từng truy cập trang web, ngay cả khi họ không có ý định mua hàng ngay, giúp thương hiệu xuất hiện nhiều lần trong tâm trí khách hàng",
+      "hiển thị quảng cáo thông qua các phương tiện truyền thông phổ biến như TV, Facebook, Tiktok,… giúp thương hiệu xuất hiện nhiều lần trong tâm trí khách hàng."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Lợi ích của việc sử dụng video trong tiếp thị nội dung là gì?",
+    "options": [
+      "hấp dẫn và thu hút khách hàng tốt hơn từ đó cải thiện tỷ lệ chuyển đổi và thúc đẩy mua hàng trực tiếp của khách hàng.",
+      "tăng thời gian người dùng ở lại website, cải thiện tỷ lệ chuyển đổi cao hơn so với các định dạng khá",
+      "tăng khả năng tiếp cận và tương tác của khách hàng và cải thiện tỷ lệ chuyển đổi cao so với các định dạng khá",
+      "tăng khả năng tiếp cận và tương tác, tăng thời gian người dùng ở lại website, cải thiện tỷ lệ chuyển đổi cao hơn so với các định dạng khác"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một doanh nghiệp có thể sử dụng Infographics hiệu quả trong tiếp thị nội dung như thế nào?",
+    "options": [
+      "Trình bày thông tin phức tạp một cách trực quan và dễ hiểu, giúp tăng lượt chia sẻ và tương tác, đồng thời truyền đạt thông điệp rõ ràng về sản phẩm/dịch vụ",
+      "Trình bày thông tin thông qua hình ảnh và chữ viết phục vụ các hoạt động tác nghiệp marketing, giúp tăng lượt chia sẻ và tương tác, đồng thời truyền đạt thông điệp rõ ràng về sản phẩm/dịch vụ.",
+      "Trình bày các đoạn videos hấp dẫn với các giải thích cụ thể , giúp tăng lượt chia sẻ và tương tác, đồng thời truyền đạt thông điệp rõ ràng về sản phẩm/dịch vụ.",
+      "Trình bày các quảng cáo outbound Marketing hiệu quả, đồng thời truyền đạt thông điệp rõ ràng về sản phẩm/dịch vụ."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Làm thế nào để Remarketing giúp tăng tỷ lệ chuyển đổi?",
+    "options": [
+      "cá nhân hóa thông điệp quảng cáo và cung cấp các giá trị tăng thêm cho sản phẩm để kích thích khách hàng, ví dụ nhắc nhở họ hoàn tất mua hàng hoặc cung cấp ưu đãi phù hợp với sở thích đã thể hiện.",
+      "cá nhân hóa thông điệp quảng cáo dựa trên hành vi cụ thể của người dùng trước đó, Ví dụ nhắc nhở họ hoàn tất mua hàng hoặc cung cấp ưu đãi phù hợp với sở thích đã thể hiện",
+      "cá nhân hóa thông điệp quảng cáo và nhắc nhở họ hoàn tất mua hàng hoặc cung cấp ưu đãi phù hợp với sở thích đã thể hiện.",
+      "cá nhân hóa thông điệp quảng cáo dựa trên thói quen và nhân khẩu học có được trước đó, ví dụ nhắc nhở họ hoàn tất mua hàng hoặc cung cấp ưu đãi phù hợp với sở thích đã thể hiện."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mô hình SMART dùng để xác định mục tiêu có ý nghĩa gì?",
+    "options": [
+      "Specific (tính cụ thể), Mean (tính có ý nghĩa), Achievable (tính có thể đạt được), Realistic (tính thực tế), Time-focused (tập trung vào yếu tố thời gian).",
+      "Specific (tính cụ thể), Measurable (tính có thể đo lường), Ability (khả năng), Realistic (tính thực tế), Time-focused (tập trung vào yếu tố thời gian).",
+      "Specific (tính cụ thể), Measurable (tính có thể đo lường), Achievable (tính có thể đạt được), Realistic (tính thực tế), Team-work (tính tập thể).",
+      "Specific (tính cụ thể), Measurable (tính có thể đo lường), Achievable (tính có thể đạt được), Realistic (tính thực tế), Time-focused (tập trung vào yếu tố thời gian)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Chiến lược đẩy trong Marketing số được biết đến với tên gọi nào khác?",
+    "options": [
+      "Outbound marketing.",
+      "Push Marketing",
+      "Inbound Marketing",
+      "Pull Marketing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao Outbound Marketing vẫn được ưa chuộng trong thời đại số hiện nay?",
+    "options": [
+      "vì khả năng tiếp cận khách hàng nhanh hơn, giúp tối ưu hóa hiệu quả chuyển đổi.",
+      "vì khả năng nhắm mục tiêu chính xác hơn nhờ vào các công cụ như Facebook và Google, giúp tối ưu hóa hiệu quả chuyển đổi.",
+      "vì khả năng nhắm mục tiêu đa dạng hơn nhờ vào các công cụ như Facebook và Google, giúp tối ưu hóa hiệu quả chuyển đổi",
+      "vì chi phí tiết kiệm hơn, giúp tối ưu hóa hiệu quả chuyển đổi."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Inbound Marketing tập trung vào điều gì để thu hút khách hàng?",
+    "options": [
+      "nghiên cứu hành vi khách hàng, giúp họ giải quyết vấn đề và xây dựng niềm tin với thương hiệu.",
+      "cung cấp nội dung nội tại bên trong của sản phẩm từ đó thu hút khác hàng tiềm năng.",
+      "Cung cấp nội dung hữu ích và giá trị cho khách hàng, giúp họ giải quyết vấn đề và xây dựng niềm tin với thương hiệu.",
+      "quảng cáo trong nhà hiệu quả và việc cung cấp nội dung hữu ích và giá trị cho khách hàng, giúp họ giải quyết vấn đề và xây dựng niềm tin với thương hiệu."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Định nghĩa tiếp thị nội dung là gì?",
+    "options": [
+      "Là chiến lược tiếp cận đối tượng mục tiêu thông qua những nội dung giá trị, nhất quán và hài hòa cùng mối quan tâm của họ để thu hút và điều hướng họ tới những hành động mang lại lợi ích cho Doanh nghiệp.",
+      "Là chiến lược tiếp cận đối tượng mục tiêu thông qua những chiến lược 4P phổ biến của Marketing để thu hút và điều hướng họ tới những hành động mang lại lợi ích cho doanh nghiệp.",
+      "Là chiến lược tiếp cận đối tượng mục tiêu thông hoạt động xây dựng kênh để thu hút và điều hướng họ tới những hành động mang lại lợi ích cho doanh nghiệp.",
+      "Là chiến lược tiếp cận đối tượng mục tiêu thông qua hoạt động quản bá mạnh mẽ trên TV để thu hút và điều hướng họ tới những hành động mang lại lợi ích cho doanh nghiệp."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao Content Marketing được coi là một chiến lược dài hạn thay vì chỉ tập trung vào việc bán hàng ngay lập tức?",
+    "options": [
+      "tạo mối quan hệ tin tưởng với khách hàng và tạo giá trị tăng thêm thông qua các hoạt động khuyến mại khá",
+      "hấp dẫn khách hàng bằng các nội dung hấp dẫn và đem lại giá trí cho khách hàng để giải quyết vấn đề của họ.",
+      "tạo mối quan hệ tin tưởng với khách hàng thông qua những trải nghiệm dễ chịu và cung cấp nội dung hữu ích, giải quyết vấn đề của họ.",
+      "chỉ thúc đẩy quá trình ra quyết định mua và chi tiền của khách hàng."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Phân biệt cách tiếp cận của Content Marketing và quảng cáo truyền thống?",
+    "options": [
+      "Content Marketing tập trung vào cung cấp giá trị hữu ích và giải quyết vấn đề của khách hàng, không mang tính quảng cáo lộ liễu. Ngược lại, quảng cáo truyền thống chủ yếu nhấn mạnh vào việc thúc đẩy mua hàng",
+      "Content Marketing tập trung vào nội dung viết trên các videos online. Ngược lại, quảng cáo truyền thống chủ yếu nhấn mạnh vào việc thúc đẩy mua hàng.",
+      "Content Marketing tập trung vào các hoạt động viết thư hoặc marketing trực tiếp. Ngược lại, quảng cáo truyền thống chủ yếu nhấn mạnh vào việc thúc đẩy mua hàng.",
+      "Content Marketing tập trung vào thúc đẩy mua hàng. Trong khi đó, quảng cáo truyền thống đi sâu cung cấp giá trị hữu ích và giải quyết vấn đề của khách hàng."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Khi nào doanh nghiệp nên sử dụng Content tiện ích thay vì Content thông tin hay giải trí?",
+    "options": [
+      "Khi mục tiêu là giải quyết các vấn đề hàng ngày của khách hàng thông qua các công cụ và ứng dụng như Email marketing hay bài viết trên mạng xã hội.",
+      "Khi mục tiêu là duy trì sự hiện diện của thương hiệu qua các công cụ hoặc ứng dụng có giá trị thực tiễn.",
+      "Mục tiêu là giải quyết các vấn đề cấp thiết và hữu ích của khách hàng, duy trì sự hiện diện của thương hiệu qua các công cụ hoặc ứng dụng có giá trị thực tiễn.",
+      "khi mục tiêu là giải quyết các vấn đề hàng ngày của khách hàng, duy trì sự hiện diện của thương hiệu qua các công cụ hoặc ứng dụng có giá trị thực tiễn."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Các kênh truyền thông nào được phân loại là Owned media?",
+    "options": [
+      "Các kênh mà doanh nghiệp sở hữu, như website, blog, và trang Mạng xã hội.",
+      "Các kênh truyền thông từ việc khách hàng tự chia sẻ, như bài viết, livestream trên mạng xã hội.",
+      "Các kênh truyền thông có trả phí như quảng cáo trực tuyến, TV, biển quảng cáo.",
+      "Cách kênh truyền thông qua các sự kiện (events) tại hội trợ, triển lãm, …"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Nhận diện chân dung khách hàng có ảnh hưởng như thế nào đến sự thành công của một chiến dịch Marketing?",
+    "options": [
+      "giúp doanh nghiệp hiểu rõ về nhu cầu, sở thích và hành vi của khách hàng, từ đó xây dựng các chiến lược giá phù hợp hơn nhằm thu hút hơn và gia tăng tỷ lệ chuyển đổi.",
+      "giúp doanh nghiệp hiểu rõ về nhu cầu, sở thích và hành vi của khách hàng, từ đó xây dựng các chiến dịch Marketing phù hợp, thu hút hơn và gia tăng tỷ lệ chuyển đổi.",
+      "giúp doanh nghiệp hiểu rõ về nhu cầu, sở thích và hành vi của khách hàng, từ đó phát triển hệ thống phân phối đến gần khách hàng hơn và giúp tăng doanh thu lợi nhuận.",
+      "giúp doanh nghiệp hiểu rõ về nhu cầu, sở thích và hành vi của khách hàng, từ đó xây dựng các sản phẩm trong hoạt động sản xuất phù hợp, thu hút hơn và gia tăng tỷ lệ chuyển đổi."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Một trong những nhược điểm của Inbound Marketing so với Outbound Marketing là gì?",
+    "options": [
+      "có thể có ít quyền kiểm soát hơn đối với các tương tác và không có khả năng tiếp cận khách hàng so với Outbound Marketing.",
+      "không có quyền kiểm soát hơn đối với các tương tác và khả năng tiếp cận khách hàng so với Outbound Marketing.",
+      "có ít quyền kiểm soát hơn đối với các tương tác và khả năng tiếp cận khách hàng so với Outbound Marketing",
+      "không thể tiếp cận tiếp cận khách hàng so với Outbound Marketing."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao việc xây dựng chân dung khách hàng lý tưởng lại quan trọng trong chiến dịch Inbound Marketing?",
+    "options": [
+      "giúp đánh giá tổng thể khác hàng có cùng đặc tính, từ đó tạo ra nội dung và chiến lược phù hợp hơn, gia tăng khả năng chuyển đổi.",
+      "giúp phân chia đối tượng mục tiêu thành các nhóm nhỏ có cùng đặc tính, từ đó tạo ra nội dung và chiến lược phù hợp hơn, gia tăng khả năng chuyển đổi",
+      "giúp phân chia đối tượng mục tiêu thành các nhóm nhỏ có cùng sở thích và thu nhập, từ đó tạo ra nội dung và chiến lược phù hợp hơn, gia tăng khả năng chuyển đổi.",
+      "giúp đánh giá tổng thể khác hàng, từ đó tạo ra nội dung và chiến lược phù hợp hơn, gia tăng khả năng chuyển đổi."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Có bao nhiêu bước quan trọng để xây dựng một chiến lược Marketing số thành công?",
+    "options": [
+      "8 bước",
+      "10 bước",
+      "9 bước",
+      "6 bước"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Các kênh truyền thông nào được phân loại là Earned Media?",
+    "options": [
+      "Các kênh mà doanh nghiệp sở hữu, như website, blog, và trang Mạng xã hội.",
+      "Các kênh truyền thông từ việc khách hàng tự chia sẻ, như bài viết, livestream trên mạng xã hội.",
+      "Các kênh truyền thông có trả phí như quảng cáo trực tuyến, TV, biển quảng cáo.",
+      "Cách kênh truyền thông qua các sự kiện (events) tại hội trợ, triển lãm, …\nCHƯƠNG 4"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Vì sao việc xác định mục tiêu rõ ràng trong kế hoạch Marketing số lại cần thiết?",
+    "options": [
+      "Vì đảm bảo cân bằng doanh thu và lợi nhuận",
+      "Vì mục tiêu giúp doanh nghiệp định hướng các hoạt động Marketing và đảm bảo các nguồn lực được sử dụng hiệu quả, tránh tình trạng lãng phí hoặc thiếu hụt.",
+      "Vì đây cũng là một kế hoạch thông thường của doanh nghiệp.",
+      "Tất cả sai"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Làm thế nào để doanh nghiệp phân tích đối thủ cạnh tranh hiệu quả trong kế hoạch Marketing số?",
+    "options": [
+      "Bằng cách phân tích các nhân tố bên ngoài và bên trong doanh nghiệp như chính sách, môi trường, thị trường lao động việc làm và thực tế hoạt động kinh doanh của đối thủ.",
+      "Bằng cách thu thập tự động thông qua quá trình khảo sát và quan sát các hoạt động bán hàng hằng ngày.",
+      "Bằng cách phân tích điểm mạnh, điểm yếu của đối thủ thông qua công cụ SWOT và hiểu rõ cách khách hàng nhìn nhận ưu nhược điểm của đối thủ.",
+      "Tất cả sai"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao các doanh nghiệp cần tập trung vào chiến lược ngắn hạn khi lập kế hoạch Marketing số?",
+    "options": [
+      "Vì dòng đời của sản phẩm dịch vụ trong thời đại số là rất ngắn.",
+      "Vì kinh doanh trên phương tiện điện tử và công nghệ thông tin hiện đại.",
+      "Vì điều này sẽ giúp doanh nghiệp kinh doanh hiệu quả, thu hồi vốn nhanh và có lợi nhuận.",
+      "Vì môi trường kỹ thuật số biến đổi nhanh chóng, doanh nghiệp cần chiến lược linh hoạt để thích nghi.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Lập kế hoạch Marketing số ảnh hưởng thế nào đến quản lý nhân sự?",
+    "options": [
+      "Nhân sự phụ thuộc lớn vào Marketing.",
+      "Không ảnh hưởng vì là hai hoạt động tách biệt nhau.",
+      "Cả hai đều phát triển độc lập nhau và đi theo chiến lược và đối tượng riêng.",
+      "Nó giúp phân bổ vai trò và trách nhiệm rõ ràng, từ đó nâng cao hiệu quả làm việc và tránh xung đột nội bộ."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Yếu tố nào thuộc mô hình SOSTAC?",
+    "options": [
+      "Sales, Objectives, Tactics, Activities, Control",
+      "SWOT, Planning, Execution, Feedback",
+      "Analysis, Objectives, Strategy, Tactics, Actions, Control",
+      "Strategy, Planning, Actions, Measurement, Control"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Giai đoạn “Control” trong SOSTAC có vai trò gì?",
+    "options": [
+      "Lập chiến lược Marketing số",
+      "Phân tích khách hàng mục tiêu",
+      "Triển khai chiến dịch truyền thông",
+      "Đo lường và giám sát các KPI"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Mô hình AIDA có thêm hai giai đoạn mới nào trong thời đại số?",
+    "options": [
+      "Desire và Action",
+      "Interest và Advocacy",
+      "Awareness và Loyalty",
+      "Loyalty và Advocacy"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Phương tiện truyền thông hưởng lợi (Earned Media) có đặc điểm gì?",
+    "options": [
+      "Liên quan đến quảng cáo trả phí",
+      "Được tạo ra từ người tiêu dùng như đánh giá, chia sẻ",
+      "Doanh nghiệp tự kiểm soát nội dung",
+      "Chỉ xuất hiện trên mạng xã hội"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Vì sao mô hình SOSTAC phù hợp để lập kế hoạch Marketing số?",
+    "options": [
+      "Tất cả sai",
+      "Cấu trúc rõ ràng, từ phân tích đến kiểm soát, giúp doanh nghiệp theo dõi hiệu quả từng giai đoạn.",
+      "Vì đây là mô hình chuyên dùng cho phân tích hoạt động kinh doanh và marketing của tổ chức và doanh nghiệp.",
+      "Là một mô hình hiện đại."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tại sao AIDA cần bổ sung giai đoạn Loyalty và Advocacy?",
+    "options": [
+      "Vì khách hàng thời đại kinh tế số chủ yếu là giới trẻ.",
+      "Tất cả sai",
+      "Vì việc giữ chân và tạo niền tin với khách hàng là quan trọng.",
+      "Vì giữ chân khách hàng và khuyến khích họ giới thiệu sản phẩm là yếu tố quan trọng để xây dựng lòng trung thành và phát triển thương hiệu."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Lợi ích nào từ việc sử dụng Google Analytics?",
+    "options": [
+      "Theo dõi hiệu suất trang web",
+      "Thiết kế đồ họa",
+      "Quản lý ngân sách",
+      "Xây dựng nội dung quảng cáo"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Phân bổ nguồn lực hiệu quả giúp gì cho doanh nghiệp?",
+    "options": [
+      "Tăng khả năng cạnh tranh",
+      "Đảm bảo thực hiện kế hoạch đúng tiến độ",
+      "Giảm lãng phí tài nguyên",
+      "Tất cả các đáp án trên"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Công cụ nào hỗ trợ tối ưu hóa SEO?",
+    "options": [
+      "SEMrush",
+      "Canva",
+      "Hootsuite",
+      "Trello"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Làm thế nào để đánh giá hiệu quả chiến dịch Marketing số?",
+    "options": [
+      "Chỉ xem xét doanh thu",
+      "Dựa vào cảm nhận đội ngũ Marketing",
+      "Theo dõi KPI và phản hồi khách hàng",
+      "Tăng chi phí quảng cáo"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Làm thế nào để sử dụng công cụ như Google Analytics giúp tối ưu hóa chi phí Marketing?",
+    "options": [
+      "Bằng cách theo dõi dữ liệu khách hàng và phân tích hành vi, doanh nghiệp có thể điều chỉnh chiến dịch phù hợp, tránh lãng phí nguồn lự",
+      "Vì Google Analytics dựa trên công cụ mạnh mẽ là AI và điện toán đám mây.",
+      "Tất cả phương án đều sai.",
+      "Bằng cách tối ưu hóa thuật toán và nghiên cứu thói quen mua hàng của khách hàng."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao cần lồng ghép giữa các mục tiêu kinh doanh và mục tiêu Marketing trong kế hoạch số?",
+    "options": [
+      "Vì điều này giúp đồng bộ các hoạt động kinh doanh với chiến lược Marketing, tối ưu hóa hiệu quả kinh doanh và xây dựng thương hiệu.",
+      "Vì các hoạt động quan trọng khác của doanh nghiệp như sản xuất và nhân sự cũng rất quan trọng.",
+      "Vì cần đảm bảo lợi nhuận cao và doanh thu lớn.",
+      "Vì Marketing là hoạt động trung tâm trong thời đại kinh doanh số ngày nay."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Nếu không có kế hoạch Marketing số, điều gì có thể xảy ra với doanh nghiệp?",
+    "options": [
+      "Doanh nghiệp sẽ bị đối thủ qua mặt và chiếm lĩnh thị trường.",
+      "Doanh nghiệp có thể đối mặt với khủng hoảng tài chính, không có định hướng rõ ràng, và khó kiểm soát hiệu quả hoạt động.",
+      "Việc vay vốn đầu tư từ Ngân hàng thương mại sẽ đảm bảo nguồn tiền cho hoạt động hiệu quả của doanh nghiệp.",
+      "Không ảnh hưởng tới hoạt động sản xuất kinh doanh của doanh nghiệp."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mô hình SOSTAC bao gồm bao nhiêu giai đoạn?",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "5"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Làm thế nào để doanh nghiệp kết hợp ba loại phương tiện truyền thông (Owned, Earned, Paid) hiệu quả?",
+    "options": [
+      "Tăng đầu tư ngân sách cho hoạt động Marketing mạng xã hội.",
+      "Tập trung vào giá trị và chất lượng sản phẩm thông qua quản trị sản xuất và nhân sự.",
+      "Tung nhiều chiến dịch quảng cáo trên các phương tiện đại chúng và mạng xã hội.",
+      "Kết hợp nội dung do doanh nghiệp kiểm soát, khuyến khích người tiêu dùng tạo nội dung, và sử dụng quảng cáo trả phí để tăng phạm vi tiếp cận."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Yếu tố nào cần được xem xét khi xác định ngân sách Marketing số?",
+    "options": [
+      "Chi phí quảng cáo và nhân lực",
+      "Tất cả các yếu tố trên",
+      "Các kênh phân phối phù hợp",
+      "Lợi nhuận từ đầu tư\n---------------------------------------------"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mô hình SWOT hỗ trợ thế nào trong phân tích kế hoạch Marketing số?",
+    "options": [
+      "Tất cả sai",
+      "Giúp doanh nghiệp xác định và dễ dàng nhận biết được thế mạnh, điểm yếu của đối thủ kinh doanh.",
+      "giúp doanh nghiệp nhận biết các yếu tố trực tiếp và gián tiếp tác động lên hoạt động sản xuất kinh doanh của doanh nghiệp.",
+      "giúp doanh nghiệp nhận biết điểm mạnh, điểm yếu, cơ hội và thách thức để định hướng chiến lược hiệu quả."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Đặc điểm nổi bật của mô hình AIDA là gì?",
+    "options": [
+      "Tăng cường quảng bá trên mạng xã hội",
+      "Tối ưu hóa hoạt động B2B",
+      "Mô tả hành trình khách hàng từ nhận thức đến hành động",
+      "Tập trung vào quảng cáo trực tiếp"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Ví dụ về công cụ hỗ trợ lập kế hoạch Marketing số là gì?",
+    "options": [
+      "Google Analytics",
+      "Tất cả các công cụ trên",
+      "Trello",
+      "Canva"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tại sao cần thường xuyên đánh giá và điều chỉnh ngân sách Marketing số?",
+    "options": [
+      "Vì vòng đời của sản phẩm thường ngắn nên chiến lược Marketing cũng phải thay đổi nhanh theo.",
+      "Tất cả phương án trên.",
+      "Vì môi trường số thay đổi nhanh chóng, doanh nghiệp cần linh hoạt để đảm bảo hiệu quả tối ưu của chiến lượ",
+      "Vì hầu hết doanh nghiệp muốn thu hồi vốn nhanh và kiếm lợi nhuận.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Các loại mục tiêu trong Marketing số thường bao gồm?",
+    "options": [
+      "Mạng xã hội, SEO, Email Marketing",
+      "Kế hoạch ngắn hạn, dài hạn",
+      "Doanh thu, chi phí, nhân sự",
+      "Phạm vi, hoạt động, chuyển đổi, trung thành",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Ngân sách Marketing số cần chú ý điều gì trong dài hạn?",
+    "options": [
+      "Tăng nhân lực liên tục",
+      "Chỉ tập trung vào mạng xã hội",
+      "Đầu tư vào nghiên cứu và công nghệ",
+      "Cắt giảm các chi phí không cần thiết\nCHƯƠNG 5",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao Social Marketing được coi là \"Marketing truyền miệng trên Internet\"?",
+    "options": [
+      "Vì cộng đồng mạng xã hội rất đông.",
+      "Vì nó dựa trên sự lan truyền thông tin giữa các người dùng qua mạng xã hội, giống như cách truyền miệng trong đời thự",
+      "Vì nó chủ yếu sử dụng với mạng Facebook.",
+      "Tất cả đúng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tại sao doanh nghiệp nhỏ có thể tận dụng Social Marketing hiệu quả?",
+    "options": [
+      "Vì chi phí thấp và khả năng tiếp cận nhanh đối tượng khách hàng mục tiêu.",
+      "Vì không phụ thuộc nhiều vào các quy định của pháp luật về các nội dung liên quan.",
+      "Vì không cần phải đầu tư tài chính và nhân lự",
+      "Tất cả sai.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao hình ảnh thương hiệu trong Social Marketing dễ bị ảnh hưởng?",
+    "options": [
+      "Các cộng đồng trên mạng xã hội là cùng chung sở thích và nhân khẩu họ",
+      "Nội dung trên mạng xã hội thường do nhiều cá nhân hoặc nhóm quản lý, dẫn đến sự không nhất quán.",
+      "Có nhiều sự gian lận và thay đổi hình ảnh trên mạng xã hội.",
+      "Mạng xã hội có sự kiểm định và nhất quán về nội dung truyền tải.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Đâu là mạng xã hội có thể sử dụng cho Social Marketing?",
+    "options": [
+      "Tất cả phương án đều đúng",
+      "Youtube",
+      "Facebook",
+      "TikTok",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Bạn sẽ tư vấn doanh nghiệp xử lý thế nào nếu gặp phải một chiến dịch Social Marketing có phản hồi tiêu cực từ cộng đồng?",
+    "options": [
+      "Liên hệ với nhà quản trị mạng xã hội để tìm hiểu về khách hàng hay nguồn gốc phản hồi tiêu cựu đó.",
+      "Doanh nghiệp nên lập tức phân tích vấn đề, phản hồi minh bạch, đề xuất giải pháp khắc phục, đồng thời cải thiện chất lượng sản phẩm/dịch vụ để lấy lại niềm tin khách hàng.",
+      "Không cần làm gì, các phản hồi rồi sẽ tạm lắng đi theo dòng thời gian.",
+      "Doanh nghiệp lên kế hoạch tập hợp cuộc họp với các bộ phân liên quan để lên phương án nghiên cứu phân tích vấn đề, phản hồi minh bạch, đề xuất giải pháp khắc phục, đồng thời cải thiện chất lượng sản phẩm/dịch vụ để lấy lại niềm tin khách hàng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Social Marketing Network là gì?",
+    "options": [
+      "Nền tảng mạng xã hội tập trung vào chia sẻ nội dung ngắn",
+      "Hệ thống quản lý nội dung thương hiệu",
+      "Mạng xã hội kết nối và chia sẻ thông tin trong cộng đồng",
+      "Ứng dụng chỉ dành cho doanh nghiệp lớn",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Mạng xã hội Twitter nổi bật với tính năng nào?",
+    "options": [
+      "Lưu trữ và đánh dấu nội dung",
+      "Tích hợp mua sắm trực tiếp",
+      "Chia sẻ video dài",
+      "Độ tương tác cao và theo dõi đối thủ cạnh tranh",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Ví dụ về nền tảng Social Sharing là gì?",
+    "options": [
+      "Facebook",
+      "Instagram",
+      "Pinterest",
+      "LinkedIn",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Social Bookmarking tập trung vào yếu tố nào?",
+    "options": [
+      "Chia sẻ và lan truyền video",
+      "Bán hàng trực tiếp",
+      "Tương tác và phản hồi cộng đồng",
+      "Lưu trữ và đánh dấu nội dung",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tại sao Social Bookmarking như Pinterest là công cụ quan trọng cho các doanh nghiệp sáng tạo?",
+    "options": [
+      "Vì nội dung hấp dẫn.",
+      "Tiết kiệm chi phí.",
+      "Vì nó cho phép tạo những clip ngắn và hấp dẫn.",
+      "Vì nó cho phép lưu trữ và trình bày nội dung trực quan, dễ dàng thu hút khách hàng bằng hình ảnh bắt mắt.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Xu hướng Social Commerce là gì?",
+    "options": [
+      "Sử dụng Metaverse để tổ chức sự kiện",
+      "Phát triển chiến lược dài hạn",
+      "Kết hợp mạng xã hội và thương mại điện tử",
+      "Tăng cường quảng cáo truyền thống",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao nội dung ngắn tiếp tục là xu hướng Social Marketing?",
+    "options": [
+      "Vì không yêu cầu sáng tạo",
+      "Vì chi phí sản xuất thấp",
+      "Vì dễ dàng đo lường hiệu quả",
+      "Vì dễ tiếp cận và có khả năng lan truyền cao",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Metaverse hỗ trợ doanh nghiệp như thế nào trong Marketing?",
+    "options": [
+      "Hỗ trợ quản lý chuỗi cung ứng",
+      "Tăng doanh số ngay lập tức",
+      "Tạo ra không gian ảo cho trải nghiệm tương tác",
+      "Phân tích dữ liệu khách hàng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Marketing cộng đồng tập trung vào điều gì?",
+    "options": [
+      "Phát triển công nghệ Metaverse",
+      "Quảng bá qua mạng xã hội",
+      "Tăng cường bán hàng trực tiếp",
+      "Xây dựng và duy trì cộng đồng khách hàng trung thành",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Làm thế nào để tích hợp AI và dữ liệu cá nhân hóa vào Social Marketing?",
+    "options": [
+      "Tự xây dựng chương trình AI trên cơ sở các công cụ lập trình.",
+      "Sử dụng các thuật toán để xây dựng phần mềm AI phục vụ cho Social Marketing của doanh nghiệp.",
+      "Tất cả sai.",
+      "Sử dụng AI để phân tích hành vi người dùng, từ đó tạo nội dung và chiến lược phù hợp với từng cá nhân.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Làm thế nào doanh nghiệp có thể hạn chế rủi ro từ E-WOM tiêu cực trong Social Marketing?",
+    "options": [
+      "Bằng cách kiểm soát nội dung thông tin lan truyền.",
+      "xây dựng đội ngũ phản hồi nhanh",
+      "Tất cả phương án đều đúng.",
+      "Duy trì hình ảnh thương hiệu tích cực",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao Social Marketing được coi là đơn giản hơn các hình thức khác?",
+    "options": [
+      "Vì nó không yêu cầu chuyên môn công nghệ cao và có thể thực hiện qua các nền tảng phổ biến.",
+      "Tất cả đúng",
+      "Vì chi phí thấp.",
+      "Vì triển khai đơn giản và tiện dụng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pinterest phù hợp với loại hình sản phẩm nào?",
+    "options": [
+      "Sản phẩm giáo dục",
+      "Dịch vụ phần mềm",
+      "Sản phẩm Thời trang và Thiết kế",
+      "Sản phẩm công nghiệp",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Làm thế nào doanh nghiệp có thể tối ưu hóa chiến dịch trên Instagram?",
+    "options": [
+      "Tất cả đều sai.",
+      "Tập trung vào clip gắn và độc đáo.",
+      "Tập trung vào nội dung hấp dẫn và video thời gian dài.",
+      "Tập trung vào hình ảnh chất lượng cao, nội dung sáng tạo, và sử dụng hashtag để tăng khả năng tiếp cận.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một bài học quan trọng từ chiến dịch \"Just Do It\" của Nike là gì?",
+    "options": [
+      "Sử dụng công cụ AI để phân tích hành vi khách hàng",
+      "Tích hợp công nghệ Metaverse",
+      "Tăng cường bán hàng trực tuyến",
+      "Tập trung vào giá trị cốt lõi và tạo cảm hứng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Spotify Wrapped thành công nhờ yếu tố nào?",
+    "options": [
+      "Kết hợp Metaverse",
+      "Nội dung dài và chuyên sâu",
+      "Phát triển sản phẩm mới",
+      "Chiến dịch cá nhân hóa nội dung người dùng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tại sao tính chân thực ngày càng quan trọng trong Social Marketing?",
+    "options": [
+      "Mạng xã hội có những thông tin và sản phẩm không đáng tin cậy và chưa được kiểm chứng.",
+      "Vì người tiêu dùng ưu tiên những nội dung mộc mạc, minh bạch, giúp tăng độ tin cậy và kết nối với thương hiệu.",
+      "Vì xuất hiện các vụ lừa đào lớn trên mạng xã hội.",
+      "Các mạng xã hội không phải là xu hướng hiện tại và tương lai cho Social Marketing.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tính năng nổi bật của TikTok là gì?",
+    "options": [
+      "Video ngắn với nội dung sáng tạo và độc đáo",
+      "Chia sẻ tin tức nhanh",
+      "Mạng xã hội lưu trữ nội dung",
+      "Phân tích dữ liệu hành vi người dùng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Coca-Cola tận dụng yếu tố nào trong các chiến dịch Social Marketing?",
+    "options": [
+      "AI cá nhân hóa",
+      "Livestream bán hàng",
+      "Influencer Marketing",
+      "Video dài",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Mạng xã hội nào phổ biến nhất tại Việt Nam theo tài liệu tính đến thời điểm hiện nay (2024)?",
+    "options": [
+      "Pinterest",
+      "Instagram",
+      "TikTok",
+      "Facebook",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Social Marketing có thể giúp doanh nghiệp giải quyết vấn đề về thời gian như thế nào?",
+    "options": [
+      "Tất cả đều sai.",
+      "Tạo ra các cửa hàng trực tuyến hoạt động 24/7, giảm áp lực gặp gỡ khách hàng ngoài giờ.",
+      "Các cuộc gặp với khách hàng tiêu tốn nhiều thời gian.",
+      "Không được lợi về thời gian vì các tương tác mạng xã hội là 24/7.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mạng xã hội nào giúp doanh nghiệp tăng cường nhận diện thương hiệu qua Bookmarking?",
+    "options": [
+      "Facebook",
+      "YouTube",
+      "Twitter",
+      "Pinterest",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Điểm hạn chế chính của Social Marketing, với các lựa chọn sau:",
+    "options": [
+      "Không có khả năng lan truyền nhanh",
+      "Không thể nhắm đến đối tượng mục tiêu cụ thể",
+      "Chỉ áp dụng được cho các thương hiệu lớn",
+      "Phải mất thời gian dài để xây dựng lòng tin và mối quan hệ\nCHƯƠNG 6",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Email Marketing là gì?",
+    "options": [
+      "Tiếp thị bằng quảng cáo truyền hình",
+      "Hình thức tiếp thị sử dụng email để gửi thông điệp đến khách hàng mục tiêu",
+      "Phương pháp truyền tải thông tin qua mạng xã hội",
+      "Hình thức bán hàng qua điện thoại",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Một trong những lợi ích chính của Email Marketing là:",
+    "options": [
+      "Cạnh tranh trực tiếp với quảng cáo truyền hình",
+      "Hỗ trợ xây dựng thương hiệu trên TikTok",
+      "Chi phí thấp và tiếp cận khách hàng mục tiêu nhanh chóng",
+      "Tăng cường khả năng phát tán nội dung",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao dòng tiêu đề của email lại quan trọng?",
+    "options": [
+      "Thúc đẩy doanh thu tức thì",
+      "Tăng khả năng khách hàng mở email",
+      "Giúp giảm chi phí gửi email",
+      "Xây dựng mối quan hệ dài hạn với khách hàng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Đặc điểm nào không đúng về Email Marketing?",
+    "options": [
+      "Hiệu quả với chi phí thấp",
+      "Khó đo lường kết quả chiến dịch",
+      "Tạo dựng mối quan hệ lâu dài",
+      "Tiếp cận khách hàng mục tiêu trực tiếp",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tại sao việc phân khúc danh sách email lại quan trọng?",
+    "options": [
+      "Giảm thiểu rủi ro vi phạm quyền riêng tư",
+      "Tăng tốc độ gửi email",
+      "Tăng hiệu quả khi gửi nội dung phù hợp đến từng nhóm khách hàng",
+      "Giúp tối ưu chi phí gửi email",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Yếu tố nào ảnh hưởng đến tỷ lệ nhấp vào liên kết trong email?",
+    "options": [
+      "Thời gian gửi email",
+      "Độ dài của email",
+      "Số lượng người nhận email",
+      "Tính hấp dẫn của nội dung và thiết kế liên kết",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tính năng nào của GetResponse giúp doanh nghiệp tối ưu hóa chiến dịch Email Marketing?",
+    "options": [
+      "Tạo biểu mẫu đăng ký miễn phí cho khách hàng.",
+      "Cung cấp bộ lọc spam chuyên sâu.",
+      "Phân khúc danh sách khách hàng dựa trên hành vi và sở thích.",
+      "Kết nối với các nền tảng mua sắm trực tuyến.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi sử dụng Outlook để gửi Email Marketing, doanh nghiệp cần lưu ý gì để tăng hiệu quả?",
+    "options": [
+      "Thiết kế nội dung email ngắn gọn và kèm CTA rõ ràng.",
+      "Gửi tất cả email vào cùng một thời điểm trong ngày",
+      "Tránh sử dụng các hình ảnh trong nội dung email",
+      "Chỉ sử dụng Outlook cho các chiến dịch nhỏ lẻ",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Làm thế nào để kiểm tra tỷ lệ mở email trong Mailchimp?",
+    "options": [
+      "Tích hợp Mailchimp với phần mềm CRM của doanh nghiệp.",
+      "Sử dụng công cụ báo cáo chi tiết của Mailchimp",
+      "Gửi email thử nghiệm trước khi triển khai chiến dịch.",
+      "Tính toán thủ công dựa trên số lượng email gửi đi và số phản hồi nhận đượ",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Tình huống: Bạn quản lý một cửa hàng online và muốn gửi email thông báo về đợt giảm giá cuối năm. Để đạt hiệu quả cao nhất, bạn nên làm gì?",
+    "options": [
+      "Gửi email đến tất cả khách hàng trong danh sách",
+      "Phân khúc danh sách khách hàng và cá nhân hóa nội dung email",
+      "Sử dụng một dòng tiêu đề chung chung",
+      "Chỉ gửi email đến khách hàng mới",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Influencer thường được phân loại dựa trên:",
+    "options": [
+      "Ngành nghề họ đang hoạt động",
+      "Độ tuổi",
+      "Số bài đăng trên blog cá nhân",
+      "Số lượng người theo dõi trên mạng xã hội",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Micro-influencer thường có số lượng người theo dõi trong khoảng:",
+    "options": [
+      "10.000 - 50.000.",
+      "50.000 - 1 triệu",
+      "1.000 - 10.000",
+      "Trên 1 triệu",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Influencer Marketing hiệu quả nhất với loại đối tượng khách hàng nào?",
+    "options": [
+      "Khách hàng trung thành của thương hiệu.",
+      "Khách hàng nội bộ của doanh nghiệp.",
+      "Khách hàng trẻ, thường xuyên sử dụng mạng xã hội.",
+      "Những người không sử dụng mạng xã hội.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Lợi ích lớn nhất của việc hợp tác với micro-influencers là gì?",
+    "options": [
+      "Đảm bảo tăng doanh thu ngay lập tức",
+      "Tạo nội dung chất lượng cao cho các kênh truyền thông chính thức",
+      "Tiết kiệm chi phí hơn so với Macro-influencers.",
+      "Thu hút được sự chú ý của giới truyền thông",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Làm thế nào để doanh nghiệp đánh giá ROI của Influencer Marketing?",
+    "options": [
+      "Dựa trên lượt xem nội dung mà influencer đăng tải.",
+      "Thông qua tỷ lệ tương tác và Doanh thu tạo ra từ chiến dịch.",
+      "So sánh số lượng người theo dõi của influencer trước và sau chiến dịch.",
+      "Đánh giá phản hồi từ các nhân viên nội bộ.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Email phản hồi tự động (Auto-response Email) thường được gửi khi nào?",
+    "options": [
+      "Khi có chương trình khuyến mãi",
+      "Sau khi khách hàng mua hàng",
+      "Khi khách hàng đăng ký nhận bản tin",
+      "Khi khách hàng yêu cầu hủy dịch vụ",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Điểm mạnh của Outlook so với các nền tảng Email Marketing khác trong hoạt động doanh nghiệp là gì?",
+    "options": [
+      "Đảm bảo tỷ lệ mở email cao hơn các nền tảng khá",
+      "Hỗ trợ nhiều mẫu thiết kế email đa dạng",
+      "Tự động tối ưu nội dung email theo thói quen của người nhận.",
+      "Dễ dàng quản lý danh bạ và tích hợp với Lịch làm việ",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Trong Influencer Marketing, việc theo dõi hiệu quả chiến dịch có thể thực hiện như thế nào?",
+    "options": [
+      "Phân tích cảm nhận của khách hàng thông qua khảo sát.",
+      "So sánh số lượt theo dõi trước và sau chiến dịch.",
+      "Đo lường tỷ lệ tương tác (likes, shares, comments) và sử dụng mã giảm giá riêng của influencer.",
+      "Tính tổng số bài đăng influencer đã thực hiện.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Doanh nghiệp muốn thúc đẩy doanh số sản phẩm mới thông qua Influencer Marketing. Nội dung hợp tác nào sẽ hiệu quả nhất?",
+    "options": [
+      "Hợp tác với influencer đăng tải nội dung ngẫu nhiên liên quan đến thương hiệu.",
+      "Yêu cầu influencer đăng hình ảnh sản phẩm mà không cần mô tả.",
+      "Đánh giá sản phẩm chân thực từ Influencer, kết hợp mã giảm giá dành riêng cho họ.",
+      "Chỉ tập trung vào việc tăng số lượng bài đăng của influencer.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tỷ lệ mở email được hiểu là:",
+    "options": [
+      "Số lần email được chia sẻ",
+      "Tỷ lệ email bị từ chối",
+      "Số email đã gửi đi",
+      "Tỷ lệ người nhận email thực sự mở email",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Tại sao tỷ lệ từ chối (unsubscribe rate) cao lại là dấu hiệu đáng lo ngại?",
+    "options": [
+      "Chứng tỏ nội dung email không phù hợp hoặc quá tần suất",
+      "Chứng tỏ chiến dịch quảng cáo không hiệu quả",
+      "Chứng tỏ danh sách email không được làm mới",
+      "Chứng tỏ không có nhiều khách hàng mới",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Lợi ích của việc áp dụng phương pháp test A/B trong Email Marketing là gì?",
+    "options": [
+      "Tăng số lượng khách hàng mới.",
+      "Xác định phiên bản email hiệu quả nhất dựa trên dữ liệu thực tế.",
+      "Giảm thiểu chi phí vận hành chiến dịch email.",
+      "Đảm bảo email luôn đạt tỷ lệ mở cao nhất",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Influencer Marketing là gì?",
+    "options": [
+      "Quảng cáo tự động bằng công cụ AI",
+      "Hình thức tiếp thị tại sự kiện offline",
+      "Tiếp thị dựa vào các nhân vật nổi tiếng hoặc có sức ảnh hưởng để quảng bá sản phẩm",
+      "Tiếp thị truyền thống trên truyền hình",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Doanh nghiệp nên làm gì để tối ưu hóa chi phí khi triển khai Influencer Marketing?",
+    "options": [
+      "Hợp tác với nhiều influencer ở các lĩnh vực khác nhau.",
+      "Sử dụng micro-influencers với chi phí thấp và hiệu quả tập trung vào khách hàng mục tiêu.",
+      "Giới hạn chiến dịch chỉ trong thời gian ngắn.",
+      "Chỉ làm việc với các influencer nổi tiếng trong ngành.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Lợi ích chính khi sử dụng Mailchimp trong các chiến dịch Email Marketing là gì?",
+    "options": [
+      "Tự động hóa toàn bộ quá trình viết nội dung email",
+      "Miễn phí hoàn toàn cho mọi quy mô doanh nghiệp.",
+      "Cung cấp nội dung email mẫu cho từng ngành cụ thể.",
+      "Tích hợp dễ dàng với mạng xã hội và Công cụ phân tích.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Công cụ nào sau đây thường được sử dụng để quản lý chiến dịch Email Marketing?",
+    "options": [
+      "Canva",
+      "Google Ads",
+      "Mailchimp",
+      "WordPress",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Một trong những loại Email Marketing phổ biến là:",
+    "options": [
+      "Podcast",
+      "Quảng cáo truyền hình",
+      "Banner quảng cáo",
+      "Email giao dịch.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Mục tiêu chính của Email chăm sóc khách hàng (Nurturing Email) là:",
+    "options": [
+      "Gửi thông tin khuyến mãi",
+      "Tăng doanh số tức thì",
+      "Xây dựng mối quan hệ lâu dài với Khách hàng",
+      "Giảm số lượng hủy đăng ký",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Email chào mừng (Welcome Email) thường được gửi:",
+    "options": [
+      "Sau khi khách hàng thực hiện một giao dịch",
+      "Khi khách hàng lần đầu tiên đăng ký dịch vụ.",
+      "Khi khách hàng hủy dịch vụ",
+      "Khi có chương trình giảm giá",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Trong một chiến dịch Email Marketing, doanh nghiệp muốn cải thiện dòng tiêu đề email. Họ nên áp dụng phương pháp test A/B như thế nào?",
+    "options": [
+      "Sử dụng một dòng tiêu đề duy nhất nhưng thay đổi nội dung email.",
+      "Thay đổi hình ảnh trong email mà không cần thử nghiệm dòng tiêu đề.",
+      "Tập trung vào tăng số lượng người nhận email mà không cần thử nghiệm.",
+      "Gửi hai phiên bản email với hai dòng tiêu đề khác nhau và Đo lường tỷ lệ mở.\nCHƯƠNG 7",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Ai là đối tượng cuối cùng trong mô hình Affiliate Marketing?",
+    "options": [
+      "Nhà phân phối liên kết.",
+      "Nền tảng trung gian.",
+      "Nhà cung cấp sản phẩm/dịch vụ.",
+      "Khách hàng/người dùng cuối.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Mục tiêu chính của Affiliate Marketing là gì?",
+    "options": [
+      "Hạn chế rủi ro trong tiếp thị.",
+      "Đẩy mạnh thương mại truyền thống.",
+      "Tăng cường tiếp cận khách hàng và chia sẻ lợi nhuận.",
+      "Tăng số lượng đối tác liên kết.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Affiliate Marketing hoạt động dựa trên nguyên tắc nào?",
+    "options": [
+      "Phân phối trực tiếp qua cửa hàng.",
+      "Đầu tư lớn ban đầu.",
+      "Bán sản phẩm qua hội chợ.",
+      "Chia sẻ Lợi nhuận.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Cookies và Pixel Tracking được sử dụng trong Affiliate Marketing để làm gì?",
+    "options": [
+      "Theo dõi hành động của người tiêu dùng.",
+      "Gửi email marketing tự động.",
+      "Lưu trữ sản phẩm của khách hàng.",
+      "Tăng dung lượng website.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Affiliate Marketing phù hợp với đối tượng nào?",
+    "options": [
+      "Doanh nghiệp nhỏ và vừa",
+      "Cá nhân có sản phẩm",
+      "Tất cả các đối tượng trên.",
+      "Doanh nghiệp lớn",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Sự phát triển của Affiliate Marketing phụ thuộc vào yếu tố nào?",
+    "options": [
+      "Công nghệ và Dữ liệu.",
+      "Đầu tư cơ sở hạ tầng.",
+      "Thị trường truyền thống",
+      "Khả năng chi trả của khách hàng",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Mô hình CPS (Cost Per Sale) trong Affiliate Marketing nghĩa là gì?",
+    "options": [
+      "Nhà cung cấp trả hoa hồng dựa trên số lượt nhấp chuột.",
+      "Nhà phân phối được trả tiền cho mỗi hành động.",
+      "Hoa hồng được trả dựa trên lượt xem nội dung.",
+      "Nhà cung cấp trả hoa hồng khi Sản phẩm được bán",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Điểm khác biệt giữa nhà cung cấp và nhà phân phối là gì?",
+    "options": [
+      "Cả hai đều không tương tác với khách hàng.",
+      "Nhà cung cấp tập trung vào khách hàng, nhà phân phối tập trung vào đối tác",
+      "Nhà cung cấp chịu trách nhiệm sản xuất, nhà phân phối chịu trách nhiệm quảng bá.",
+      "Nhà phân phối tạo ra sản phẩm, nhà cung cấp quảng bá",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Nếu một nhà phân phối muốn tăng hoa hồng thì nhà phân phối nên tập trung vào mô hình nào??",
+    "options": [
+      "CPI",
+      "CPS",
+      "CPM",
+      "CPC",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Một blogger muốn được trả tiền dựa trên số lượng lượt nhấp vào liên kết trên blog của mình. Anh ta nên chọn mô hình nào?",
+    "options": [
+      "CPS",
+      "CPA",
+      "CPM",
+      "CP C",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một nền tảng ứng dụng di động chỉ trả hoa hồng khi người dùng tải ứng dụng. Mô hình phù hợp là gÌ?",
+    "options": [
+      "CPM.",
+      "CPI.",
+      "CP",
+      "CPS.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Nhà phân phối liên kết (Publisher) thực hiện công việc gì?",
+    "options": [
+      "Sản xuất sản phẩm.",
+      "Mua sản phẩm từ nhà cung cấp.",
+      "Quảng bá sản phẩm đến người tiêu dùng.",
+      "Đóng vai trò trung gian giữa các bên.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Affiliate Network đóng vai trò gì trong mô hình này?",
+    "options": [
+      "Bán trực tiếp sản phẩm cho khách hàng.",
+      "Kết nối nhà cung cấp và Đối tác liên kết.",
+      "Xử lý phản hồi của khách hàng.",
+      "Sản xuất sản phẩm/dịch vụ.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Affiliate Network cung cấp những công cụ gì?",
+    "options": [
+      "Hệ thống theo dõi, phân tích và thanh toán hoa hồng.",
+      "Dịch vụ vận chuyển sản phẩm.",
+      "Công cụ tăng tốc sản xuất.",
+      "Dịch vụ tư vấn pháp lý.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Nhà phân phối thường sử dụng kênh nào để quảng bá sản phẩm?",
+    "options": [
+      "Điện thoại trực tiếp.",
+      "Các cửa hàng offline.",
+      "Tờ rơi và biển quảng cáo.",
+      "Mạng xã hội, blog, và email marketing.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Affiliate Marketing là gì?",
+    "options": [
+      "Quảng cáo sản phẩm trên TV.",
+      "Một hình thức tiếp thị qua email.",
+      "Một cách bán hàng qua hội chợ.",
+      "Mô hình tiếp thị liên kết dựa trên chia sẻ lợi nhuận",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Đâu là ưu điểm nổi bật của Affiliate Marketing?",
+    "options": [
+      "Tiêu tốn nhiều chi phí quản lý.",
+      "Chỉ trả tiền cho Kết quả đạt được",
+      "Không phù hợp với doanh nghiệp nhỏ.",
+      "Khó khăn trong việc theo dõi hiệu quả.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Đối tượng nào trong mô hình chịu trách nhiệm quảng bá sản phẩm?",
+    "options": [
+      "Nhà phân phối liên kết.",
+      "Nhà cung cấp",
+      "Khách hàng",
+      "Nền tảng tiếp thị liên kết",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Một trong những nhược điểm chính của Affiliate Marketing là gì?",
+    "options": [
+      "Phạm vi tiếp cận bị giới hạn",
+      "Không có sự tham gia của khách hàng.",
+      "Không hỗ trợ thương mại điện tử.",
+      "Chi phí khởi đầu quá cao.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Lợi ích chính của Affiliate Network là gì?",
+    "options": [
+      "Tăng số lượng sản phẩm bán r",
+      "Thực hiện quảng cáo thay nhà phân phối.",
+      "Đơn giản hóa quy trình hợp tác giữa nhà cung cấp và nhà phân phối.",
+      "Cung cấp dữ liệu khách hàng cho nhà cung cấp.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Một công ty muốn tối ưu hóa chi phí quảng cáo chỉ khi khách hàng mua sản phẩm. Mô hình nào phù hợp nhất?",
+    "options": [
+      "CPA",
+      "CPM",
+      "CPC",
+      "CPS",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Muốn doanh nghiệp muốn tăng nhận diện thương hiệu Mà không yêu cầu hành động cụ thể từ khách hàng. Mô hình nào nên áp dụng?",
+    "options": [
+      "CPA",
+      "CPS",
+      "CPC",
+      "CPM",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Ai cung cấp sản phẩm trong Affiliate Marketing?",
+    "options": [
+      "Nhà cung cấp (Advertiser/Merchant).",
+      "Khách hàng.",
+      "Nền tảng tiếp thị liên kết.",
+      "Nhà phân phối liên kết.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Vai trò chính của nhà cung cấp trong hệ sinh thái là gì?",
+    "options": [
+      "Đặt chính sách hoa hồng và cung cấp Sản phẩm.",
+      "Tăng lưu lượng truy cập cho website.",
+      "Tạo điều kiện tối ưu hóa các chiến dịch.",
+      "Giám sát hành động khách hàng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Vai trò của nhà cung cấp trong Affiliate Marketing là gì?",
+    "options": [
+      "Cung cấp sản phẩm và Chính sách hoa hồng.",
+      "Chạy quảng cáo trực tiếp.",
+      "Phân phối sản phẩm qua các kênh offline.",
+      "Làm việc với khách hàng để giao hàng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao khách hàng là đối tượng quan trọng trong Affiliate Marketing?",
+    "options": [
+      "Vì họ là người quản lý các chiến dịch quảng bá.",
+      "Vì họ cung cấp sản phẩm và dịch vụ.",
+      "Vì khách hàng quyết định lợi nhuận của cả Hệ sinh thái.",
+      "Vì họ tạo ra các Affiliate Network.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Một chiến dịch quảng cáo muốn đo lường hiệu quả dựa trên tỷ lệ chuyển đổi từ nhấp chuột sang mua hàng. Mô hình nào là tốt nhất?",
+    "options": [
+      "CPI",
+      "CPC",
+      "CPM",
+      "CPA",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Đối tượng cuối cùng trong Affiliate Marketing là ai?",
+    "options": [
+      "Nhà phân phối",
+      "Nhà cung cấp.",
+      "Khách hàng.",
+      "Nền tảng trung gian",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Tại sao mô hình CPA (Cost Per Action) thường được các nhà cung cấp ưu tiên?",
+    "options": [
+      "Vi mô hình này không yêu cầu theo dõi dữ liệu.",
+      "Vì nó không phụ thuộc vào hiệu suất của nhà phân phối",
+      "Vì chi phí thấp hơn so với các mô hình khác",
+      "Vì chi phí được tối ưu khi chỉ trả hoa hồng cho hành động cụ thể.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một blogger muốn kiếm tiền từ Affiliate Marketing. Anh ta nên làm gì để tăng tỷ lệ chuyển đổi?",
+    "options": [
+      "Chọn mọi sản phẩm bất kể chất lượng.",
+      "Viết nội dung hấp dẫn và sử dụng mã giảm giá.",
+      "Chèn càng nhiều liên kết càng tốt.",
+      "Chỉ sử dụng quảng cáo Google Ads.\nCHƯƠNG 8",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Google Ads hoạt động dựa trên cơ chế nào?",
+    "options": [
+      "Đấu giá theo thời gian thự",
+      "Lựa chọn ngẫu nhiên quảng cáo.",
+      "Ưu tiên quảng cáo có từ khóa dài.",
+      "Lượt xem trung bình của trang we",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quảng cáo hiển thị (Display Ads) thường xuất hiện ở đâu?",
+    "options": [
+      "Trong video YouTube.",
+      "Trong kết quả tìm kiếm của Google.",
+      "Chỉ trong hộp thư Gmail.",
+      "Trên các trang web và ứng dụng thuộc Google Display Network.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Đâu là thành phần thuộc hệ sinh thái Google cho marketing số?",
+    "options": [
+      "Google Analytics và Google Ads.",
+      "Facebook Ads và TikTok Ads.",
+      "Instagram Analytics.",
+      "Pinterest Ads.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Google Ads hoạt động dựa trên cơ chế nào?",
+    "options": [
+      "Đánh giá lượt truy cập website.",
+      "Đánh giá lượt truy cập website.",
+      "Phân bổ ngẫu nhiên.",
+      "Hệ thống đấu giá theo thời gian thự",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Khi thiết lập chiến dịch Google Ads, yếu tố nào cần được ưu tiên?",
+    "options": [
+      "Chọn từ khóa liên quan và phù hợp với khách hàng mục tiêu.",
+      "Định dạng hình ảnh của quảng cáo.",
+      "Tăng chi phí CPC lên mức cao nhất.",
+      "Tối ưu hóa thời gian hiển thị quảng cáo.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Việc phân tích đối thủ trong Google Ads mang lại lợi ích gì?",
+    "options": [
+      "Loại bỏ các quảng cáo không hiệu quả.",
+      "Tăng ngân sách chiến dịch so với đối thủ.",
+      "Hiểu cách đối thủ sử dụng từ khóa và quảng cáo để tối ưu chiến dịch của bạn.",
+      "Sao chép hoàn toàn chiến dịch của đối thủ.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Chi phí quảng cáo trên Facebook có thể được tính dựa trên hình thức nào?",
+    "options": [
+      "Số lượng tài khoản theo dõi trang.",
+      "Số lượng bài đăng được chia sẻ.",
+      "Thời gian quảng cáo xuất hiện.",
+      "CPC (Cost Per Click) và CPM (Cost Per Impression).",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Làm thế nào để tối ưu hóa tỷ lệ nhấp chuột (CTR) trong quảng cáo Facebook?",
+    "options": [
+      "Chọn nội dung quảng cáo hấp dẫn và sử dụng lời kêu gọi hành động rõ ràng.",
+      "Giảm ngân sách hàng ngày của chiến dịch.",
+      "Sử dụng hình ảnh không liên quan để thu hút sự chú ý.",
+      "Chạy quảng cáo vào bất kỳ thời gian nào trong ngày.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Khi nào nên sử dụng hình thức quảng cáo Carousel trên Facebook?",
+    "options": [
+      "Khi chạy quảng cáo cho khách hàng quốc tế.",
+      "Khi chỉ cần nhấn mạnh một sản phẩm duy nhất.",
+      "Khi muốn tiết kiệm chi phí quảng cáo.",
+      "Khi muốn hiển thị nhiều sản phẩm hoặc dịch vụ trong cùng một quảng cáo.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Điều chỉnh gì giúp tối ưu hóa tần suất hiển thị quảng cáo trên Facebook?",
+    "options": [
+      "Chạy quảng cáo liên tục mà không kiểm soát tần suất.",
+      "Tạo nhiều biến thể quảng cáo khác nhau và luân phiên hiển thị",
+      "Giảm chi phí quảng cáo xuống thấp nhất.",
+      "Tăng số lần hiển thị một quảng cáo đến cùng một khách hàng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Trong chiến dịch quảng cáo Facebook, khi nào nên sử dụng A/B Testing?",
+    "options": [
+      "Khi chỉ có một loại sản phẩm duy nhất để quảng cáo.",
+      "Khi muốn thử nghiệm các nội dung hoặc hình thức quảng cáo khác nhau để tìm ra phương án hiệu quả nhất.",
+      "Khi không có dữ liệu khách hàng mục tiêu.",
+      "Khi chiến dịch quảng cáo hoạt động hiệu quả ngay từ đầu.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Lý do nào khiến TikTok Ads trở nên hiệu quả trong việc tiếp cận khách hàng mục tiêu?",
+    "options": [
+      "TikTok không cho phép người dùng bỏ qua quảng cáo.",
+      "TikTok có lượng người dùng lớn và thuật toán AI tối ưu hiển thị quảng cáo.",
+      "TikTok chỉ tập trung vào quảng cáo qua hình ảnh tĩnh.",
+      "TikTok hạn chế thời gian chạy quảng cáo cho từng chiến dịch.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Làm thế nào để tối ưu hóa quảng cáo YouTube nếu tỷ lệ nhấp (CTR) quá thấp?",
+    "options": [
+      "Tăng ngân sách hàng ngày cho chiến dịch.",
+      "Hiển thị quảng cáo nhiều lần trên một video duy nhất.",
+      "Kéo dài thời lượng video để cung cấp thêm thông tin.",
+      "Thay đổi nội dung video và lời kêu gọi hành động (CTA) để thu hút người xem hơn.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Để tăng hiệu quả quảng cáo TikTok hướng đến đối tượng mục tiêu, doanh nghiệp cần tập trung vào yếu tố nào?",
+    "options": [
+      "Tăng thời lượng video lên trên 60 giây.",
+      "Sử dụng nội dung sáng tạo, phù hợp với xu hướng và sở thích của đối tượng mục tiêu.",
+      "Chỉ sử dụng hình ảnh tĩnh để giảm thời gian tải quảng cáo.",
+      "Giảm ngân sách quảng cáo để tiết kiệm chi phí.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Muốn thử nghiệm hai nội dung quảng cáo khác nhau trên TikTok thì nên sử dụng phương pháp nào?",
+    "options": [
+      "Tăng ngân sách để quảng cáo cả hai nội dung cùng lú",
+      "Phân bổ quảng cáo đến các đối tượng khác nhau mà không cần phân tích.",
+      "Tạo A/B Testing để so sánh hiệu quả giữa hai nội dung.",
+      "Chỉ chọn nội dung đầu tiên và chạy thử nghiệm.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Google Ads cho phép hiển thị quảng cáo ở đâu?",
+    "options": [
+      "Trên YouTube, mạng hiển thị và công cụ tìm kiếm của Google.",
+      "Chỉ trên công cụ tìm kiếm của Google.",
+      "Chỉ trên các ứng dụng di động.",
+      "Chỉ trên các trang web đối tác của Google.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao nên sử dụng Google Analytics trong marketing số?",
+    "options": [
+      "Để theo dõi hành vi người dùng và hiệu quả chiến dịch.",
+      "Để tăng tốc độ tải trang we",
+      "Để giảm chi phí thiết kế we",
+      "Để giảm thời gian phát triển sản phẩm.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Tại sao chất lượng quảng cáo lại ảnh hưởng đến vị trí hiển thị trên Google Ads?",
+    "options": [
+      "Vì quảng cáo chất lượng thấp sẽ bị xó",
+      "Vì quảng cáo chất lượng cao có thể vượt qua đối thủ dù giá thầu thấp hơn.",
+      "Vì chất lượng quảng cáo quyết định tỷ lệ nhấp chuột.",
+      "Vì chất lượng không quan trọng bằng ngân sách.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Để tăng hiệu quả chiến dịch Facebook Ads, thời điểm chạy quảng cáo nên được quyết định dựa trên yếu tố nào?",
+    "options": [
+      "Thời gian khách hàng mục tiêu thường xuyên truy cập mạng xã hội.",
+      "Loại hình quảng cáo đang sử dụng.",
+      "Số lượng bài viết trên trang fanpage.",
+      "Lịch sử chi tiêu quảng cáo.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Facebook Pixel hỗ trợ gì trong việc tối ưu hóa quảng cáo?",
+    "options": [
+      "Đặt ngân sách quảng cáo tự động.",
+      "Thay đổi đối tượng khách hàng mục tiêu.",
+      "Hiển thị thông báo lỗi trong chiến dịch.",
+      "Thu thập dữ liệu khách hàng đã tương tác với website để tạo chiến dịch nhắm lại (Remarketing).",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Khi doanh nghiệp muốn tăng mức độ nhận diện thương hiệu trên TikTok Ads, yếu tố nào cần được ưu tiên?",
+    "options": [
+      "Giới hạn quảng cáo trong một khu vực địa lý nhỏ.",
+      "Chọn định dạng quảng cáo chỉ có văn bản thay vì video.",
+      "Sử dụng nội dung video sáng tạo và dễ nhớ để thu hút sự chú ý.",
+      "Tập trung vào việc giảm chi phí mỗi lượt nhấp chuột (CPC).",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Nên làm gì để tối ưu hóa chi phí quảng cáo trên TikTok?",
+    "options": [
+      "Tắt mọi tính năng tối ưu hóa để chạy quảng cáo thủ công.",
+      "Giảm ngân sách hàng ngày để tiết kiệm chi phí.",
+      "Tăng chi phí mỗi lượt nhấp để cạnh tranh với đối thủ.",
+      "Sử dụng tính năng Smart Optimization để TikTok tự động điều chỉnh giá thầu.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Facebook Ads sử dụng dữ liệu nào để xác định khách hàng tiềm năng?",
+    "options": [
+      "Địa chỉ email của khách hàng.",
+      "Chỉ dựa vào lịch sử tìm kiếm trên Google.",
+      "Hành vi, giới tính và sở thích của người dùng.",
+      "Thông tin tài khoản ngân hàng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi doanh nghiệp muốn tăng doanh số bán hàng từ khách hàng cũ, chiến lược nào trên Facebook Ads phù hợp nhất?",
+    "options": [
+      "Quảng cáo video.",
+      "Sử dụng chiến dịch Remarketing để nhắm mục tiêu lại khách hàng cũ.",
+      "Chạy quảng cáo trên Instagram thay vì Facebook.",
+      "Tăng ngân sách cho các quảng cáo mới.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Khi muốn tăng tỷ lệ chuyển đổi trên TikTok Ads, nên thực hiện bước nào đầu tiên?",
+    "options": [
+      "Sử dụng tỷ lệ khung hình tiêu chuẩn 9:16 cho video.",
+      "Chạy quảng cáo ở tất cả các vị trí hiển thị của TikTok.",
+      "Cài đặt và gắn TikTok Pixel vào URL trang đích.",
+      "Đặt ngân sách quảng cáo ở mức thấp nhất để thử nghiệm.",
+      "E.ngân sách quảng cáo để tiết kiệm chi phí.",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Công cụ nào thuộc Google giúp đo lường hiệu quả các chiến dịch marketing?",
+    "options": [
+      "Google Ads.",
+      "Google Search Console.",
+      "Google Analytics.",
+      "Google My Business.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi nào nên sử dụng quảng cáo Bumper Ads trên YouTube?",
+    "options": [
+      "Khi muốn truyền tải thông điệp ngắn gọn trong thời gian tối đa 6 giây.",
+      "Khi cần tăng lượt truy cập vào website.",
+      "Khi muốn người xem tương tác với quảng cáo sau 30 giây.",
+      "Khi muốn người dùng tải xuống ứng dụng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Google hỗ trợ gì quan trọng nhất trong marketing số?",
+    "options": [
+      "Quản lý nội dung trang web",
+      "Cung cấp công cụ phát triển ứng dụng di động.",
+      "Tăng tốc độ tải trang we",
+      "Giúp tiếp cận đúng khách hàng mục tiêu và tối ưu chi phí quảng cáo.\nCHƯƠNG 9",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Công nghệ nào được sử dụng để tạo nội dung tự động trong marketing số?",
+    "options": [
+      "Công nghệ Internet of Things (IoT).",
+      "Công nghệ nhận diện hình ảnh (CV).",
+      "Blockchain.",
+      "Xử lý ngôn ngữ Tự nhiên (NLP).",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Nếu muốn phản hồi tự động các câu hỏi phổ biến từ khách hàng trên mạng xã hội, bạn cần thực hiện bước nào?",
+    "options": [
+      "Chỉ đăng bài viết trả lời chung trên trang chủ.",
+      "Thu thập danh sách câu hỏi thường gặp và soạn các phản hồi mẫu.",
+      "Tắt tính năng bình luận để hạn chế câu hỏi.",
+      "Tăng số lượng nhân sự hỗ trợ trực tiếp.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Công cụ tự động hóa nội dung có thể giúp tối ưu hóa hiệu quả quảng cáo bằng cách nào?",
+    "options": [
+      "Phân tích hành vi khách hàng để gợi ý nội dung phù hợp.",
+      "Giảm số lượng nội dung trong chiến dịch quảng cáo.",
+      "Đăng nội dung vào các khung giờ ngẫu nhiên.",
+      "Tự động tăng ngân sách quảng cáo mỗi ngày.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Để cải thiện hiệu quả chiến dịch mạng xã hội, cần tối ưu hóa nội dung theo yếu tố nào?",
+    "options": [
+      "Giảm tần suất đăng bài",
+      "Tập trung vào từ khóa dài mà không quan tâm đến nội dung",
+      "Sử dụng hình ảnh tĩnh thay vì video",
+      "Đúng thời gian đăng bài, đúng đối tượng Mục tiêu.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Trong chiến lược dài hạn, sử dụng công cụ AI để tự động hóa nội dung mạng xã hội sẽ mang lại lợi ích gì?",
+    "options": [
+      "Tăng tỷ lệ từ chối từ khách hàng tiềm năng.",
+      "Giảm sự cá nhân hóa nội dung.",
+      "Tăng tính nhất quán trong nội dung và tiết kiệm thời gian sản xuất.",
+      "Tăng chi phí nhân sự cho các công việc lặp lại.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Công cụ nào sau đây được sử dụng phổ biến để tạo video bằng AI?",
+    "options": [
+      "Photoshop",
+      "Slack",
+      "Synthesia",
+      "Excel",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi cần sản xuất hàng loạt video quảng cáo cho một chiến dịch marketing mạng xã hội, doanh nghiệp nên làm gì để tối ưu chi phí?",
+    "options": [
+      "Thuê đội quay phim chuyên nghiệp để sản xuất từng video riêng biệt.",
+      "Sử dụng chỉ hình ảnh tĩnh thay vì video.",
+      "Sử dụng AI để tạo video từ một nội dung gốc và tùy chỉnh theo từng nhóm khách hàng.",
+      "Tăng ngân sách quảng cáo để cải thiện hiệu quả.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi tối ưu hóa nội dung video trên nhiều nền tảng mạng xã hội, điều gì quan trọng nhất?",
+    "options": [
+      "Sử dụng cùng một định dạng video cho tất cả các nền tảng.",
+      "Tập trung vào một nền tảng để tiết kiệm thời gian.",
+      "Tùy chỉnh nội dung và phong cách video phù hợp với từng nền tảng như TikTok, YouTube, Instagram.",
+      "Chỉ sử dụng hình ảnh thay vì video.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Doanh nghiệp có thể tận dụng tính năng \"cá nhân hóa video\" bằng AI để làm gì?",
+    "options": [
+      "Sử dụng ảnh tĩnh thay vì video động.",
+      "Tạo video hướng dẫn kỹ thuật chung chung.",
+      "Sản xuất video dài để quảng cáo truyền hình.",
+      "Tạo video cảm ơn khách hàng kèm tên riêng và thông điệp tùy chỉnh.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Trong việc sửa đổi video, tính năng nào của AI giúp doanh nghiệp tiết kiệm thời gian?",
+    "options": [
+      "Tự động chỉnh sửa văn bản và hình ảnh trong video mà không cần làm lại từ đầu.",
+      "Tự động giảm chất lượng để tiết kiệm dung lượng.",
+      "Tự động xóa toàn bộ nội dung video.",
+      "Tăng tốc độ phát lại video.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Vì sao AI được xem là công cụ hỗ trợ mang nhiều lợi ích trong marketing trên mạng xã hội?",
+    "options": [
+      "Vì AI chỉ hỗ trợ quản lý tài khoản mạng xã hội.",
+      "Vì AI chỉ tập trung vào tạo nội dung video.",
+      "Vì AI thay thế hoàn toàn các chiến dịch marketing truyền thống.",
+      "Vì AI giúp tự động hóa, tối ưu hóa và cá nhân hóa nội dung tiếp cận khách hàng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Một doanh nghiệp cần tăng mức độ tương tác trên Facebook, AI sẽ hỗ trợ như thế nào?",
+    "options": [
+      "Không cần AI, chỉ cần tăng ngân sách quảng cáo.",
+      "Đăng nội dung ngẫu nhiên với tần suất cao.",
+      "Phân tích thời gian hoạt động của người dùng và lên lịch bài đăng tự động.",
+      "Giảm nội dung video và chỉ đăng ảnh tĩnh.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Khi sử dụng AI để quản lý quảng cáo mạng xã hội, điều gì cần được tối ưu hóa trước tiên?",
+    "options": [
+      "Số lần nhấp vào nội dung không liên quan.",
+      "Đối tượng mục tiêu và nội dung Quảng cáo.",
+      "Số lượng bình luận của khách hàng.",
+      "Chi phí quảng cáo cố định cho mỗi chiến dịch.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Khi sử dụng AI để phân tích dữ liệu mạng xã hội, doanh nghiệp cần làm gì để tối ưu chiến lược?",
+    "options": [
+      "Tập trung phân tích nội dung có mức độ tương tác cao để cải thiện và nhân rộng.",
+      "Dừng sử dụng các kênh không có tương tá",
+      "Loại bỏ tất cả nội dung không có lượt thích.",
+      "Tạo thêm nội dung không liên quan để tăng số lượng bài đăng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Điều gì làm cho AI trở thành công cụ quan trọng trong việc nghiên cứu khách hàng?",
+    "options": [
+      "Loại bỏ các nội dung không liên quan từ khách hàng.",
+      "Khả năng thu thập và phân tích dữ liệu lớn từ nhiều nguồn để tạo báo cáo chi tiết.",
+      "Giảm chi phí phân tích bằng cách không thực hiện nghiên cứu.",
+      "Chỉ tập trung vào các bài đăng có lượt chia sẻ cao",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Khi lên chiến lược nội dung cho nhiều khu vực khác nhau, điều gì là yếu tố quan trọng nhất?",
+    "options": [
+      "Tăng ngân sách quảng cáo ở tất cả khu vự",
+      "Sử dụng cùng một nội dung cho mọi nơi để đồng nhất.",
+      "Chỉ tập trung vào khu vực có lượng khách hàng lớn nhất",
+      "Sử dụng ngôn ngữ và văn hóa phù hợp với từng Khu vự",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Điều gì quan trọng nhất khi chọn công cụ AI tự động hóa nội dung cho marketing mạng xã hội?",
+    "options": [
+      "Chi phí thấp hơn so với các công cụ khá",
+      "Tính năng tạo hình ảnh động cao cấp.",
+      "Dễ sử dụng nhưng không quan tâm đến chất lượng nội dung.",
+      "Khả năng tạo nội dung phù hợp với phong cách Thương hiệu.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Nếu doanh nghiệp muốn chuyển một bài blog dài thành video, công cụ AI nào có thể hỗ trợ?",
+    "options": [
+      "Slack",
+      "Canva Pro",
+      "Adobe Illustrator",
+      "Lumen5.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Khi sử dụng AI để tạo video quảng cáo sản phẩm, doanh nghiệp cần cung cấp gì?",
+    "options": [
+      "Một kế hoạch chi tiết của đội sản xuất.",
+      "Một bộ phim hoàn chỉnh.",
+      "Mã nguồn của phần mềm AI.",
+      "Đoạn văn bản hoặc hình ảnh liên quan đến sản phẩm.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Trong việc phân tích dữ liệu mạng xã hội, vai trò chính của AI là gì?",
+    "options": [
+      "Phân tích hành vi khách hàng và cung cấp thông tin chi tiết về Xu hướng.",
+      "Đo lường hiệu quả quảng cáo mà không cần báo cáo chi tiết.",
+      "Lưu trữ toàn bộ dữ liệu của khách hàng.",
+      "Thu thập và trình bày dữ liệu một cách ngẫu nhiên.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Doanh nghiệp muốn cải thiện trải nghiệm khách hàng trên mạng xã hội, AI có thể hỗ trợ gì?",
+    "options": [
+      "Tự động phản hồi các câu hỏi thường gặp bằng chatbot.",
+      "Loại bỏ các bình luận tiêu cực trên bài đăng",
+      "Sử dụng AI để quản lý ngân sách tài chính",
+      "Tăng chi phí cho mỗi quảng cáo để cải thiện hiệu quả",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Một chiến dịch quảng cáo trên mạng xã hội yêu cầu tạo nội dung tương tá Làm thế nào để AI có thể hỗ trợ?",
+    "options": [
+      "Sử dụng nội dung cũ và không cần thay đổi.",
+      "Chỉ tập trung vào một kênh mạng xã hội duy nhất.",
+      "Tạo nội dung video và văn bản phù hợp với từng nền tảng mạng xã hội.",
+      "Tăng số lượng bài đăng nhưng giữ nguyên chất lượng.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Trong chiến lược cá nhân hóa nội dung, việc tập trung vào điều gì sẽ mang lại hiệu quả tốt nhất?",
+    "options": [
+      "Tạo nội dung phù hợp với từng nhóm Khách hàng dựa trên sở thích.",
+      "Sử dụng cùng một nội dung cho tất cả đối tượng.",
+      "Tăng chi phí quảng cáo để thu hút khách hàng.",
+      "Đăng bài viết vào các khung giờ ngẫu nhiên.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "AI có thể giúp gì khi doanh nghiệp cần xây dựng chiến lược quảng cáo cá nhân hóa?",
+    "options": [
+      "Chỉ sử dụng nội dung video và bỏ qua văn bản.",
+      "Phân tích sở thích và hành vi của khách hàng để điều chỉnh nội dung quảng cáo phù hợp.",
+      "Tạo quảng cáo giống nhau cho tất cả đối tượng khách hàng.",
+      "Giảm số lượng quảng cáo để tiết kiệm chi phí.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Khi cần thử nghiệm nhiều phiên bản nội dung quảng cáo trên mạng xã hội, AI sẽ hỗ trợ bằng cách nào?",
+    "options": [
+      "Tự động tạo các phiên bản nội dung khác nhau và phân tích hiệu quả từng phiên bản.",
+      "Giảm tần suất thử nghiệm để tiết kiệm thời gian.",
+      "Tăng ngân sách cho mỗi phiên bản quảng cáo.",
+      "Chỉ chọn phiên bản hiệu quả nhất mà không cần thử nghiệm.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Khi cần tạo nội dung cho các chiến dịch marketing trên mạng xã hội, bạn cần cung cấp thông tin nào để công cụ tự động hoạt động hiệu quả?",
+    "options": [
+      "Lịch sử tương tác của khách hàng.",
+      "Danh sách hình ảnh và video có sẵn.",
+      "Dữ liệu doanh thu hàng năm.",
+      "Từ khóa và Định hướng nội dung.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Khi một doanh nghiệp muốn thử nghiệm nhiều phiên bản quảng cáo khác nhau, AI có thể hỗ trợ bằng cách nào?",
+    "options": [
+      "Tăng tần suất chạy quảng cáo để cải thiện hiệu quả.",
+      "Đánh giá chiến lược quảng cáo của đối thủ.",
+      "Tạo nhiều video từ một nội dung cơ bản để thử nghiệm A/",
+      "Giảm chi phí cho mỗi lần chạy quảng cáo.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Điều gì quan trọng nhất khi áp dụng AI trong việc tối ưu hóa chiến lược mạng xã hội?",
+    "options": [
+      "Tăng tần suất bài đăng mà không quan tâm đến hiệu quả.",
+      "Sử dụng AI chỉ để theo dõi bình luận của khách hàng.",
+      "Tích hợp AI để phân tích và đưa ra đề xuất cải thiện nội dung phù hợp.",
+      "Chọn công cụ AI có chi phí thấp nhất.",
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2
   }
-
-
-      ]
-
+];
 
 
     
