@@ -44,2103 +44,1876 @@
 <button onclick="renderQuiz()">🔄 Làm lại 30 câu tiếp theo</button>
 
 <script>
-  const questions = [
+ const questions = [
   {
-    "question": "Ai chịu trách nhiệm chính trong việc lãnh đạo và giám sát dự án phần mềm?",
-    "options": [
-      "Developer",
-      "Tester",
-      "Project Manager",
-      "Stakeholder"
+    question: "Trong tư duy chiến lược, “Khách hàng là trung tâm” có nghĩa là:",
+    options: [
+      "Định hướng mọi sáng kiến để nâng cao trải nghiệm khách hàng",
+      "Dựa vào dữ liệu từ nhân sự",
+      "Tối ưu hóa cho nội bộ trước",
+      "Giảm chi phí vận hành"
     ],
-    "answer": 2
+    answers: [0]
   },
   {
-    "question": "Sự khác biệt chính giữa dự án phần mềm và dự án xây dựng là gì?",
-    "options": [
-      "Tính linh hoạt và khả năng thay đổi yêu cầu",
-      "Quy mô dự án",
-      "Đội ngũ tham gia",
-      "Ngân sách thực hiện"
+    question: "Vì sao tư duy chiến lược cần tính linh hoạt?",
+    options: [
+      "Để tùy cơ ứng biến mà không cần đo lường",
+      "Để không cần lập kế hoạch",
+      "Để dễ thay đổi nhân sự",
+      "Để có thể điều chỉnh lộ trình theo phản hồi thực tế và thị trường"
     ],
-    "answer": 0
+    answers: [3]
   },
   {
-    "question": "Project Manager có vai trò gì trong dự án phần mềm?",
-    "options": [
-      "Thực hiện kiểm thử phần mềm",
-      "Lãnh đạo và quản lý dự án",
-      "Phân tích yêu cầu khách hàng",
-      "Phát triển phần mềm"
+    question: "Những bước quan trọng nào thường xuất hiện trong lộ trình chuyển đổi số của doanh nghiệp thành công? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Bỏ qua phân tích nhu cầu và triển khai ngay giải pháp",
+      "Đầu tư mạnh ngay từ đầu mà không cần đo lường kết quả",
+      "Thử nghiệm giải pháp trên phạm vi nhỏ trước khi mở rộng toàn doanh nghiệp",
+      "Đánh giá hiện trạng và xây dựng tầm nhìn chiến lược"
     ],
-    "answer": 1
+    answers: [2,3]
   },
   {
-    "question": "Vai trò của Tester là gì trong dự án phần mềm?",
-    "options": [
-      "Kiểm tra và đảm bảo chất lượng sản phẩm",
-      "Quản lý dự án",
-      "Phát triển phần mềm",
-      "Phân tích yêu cầu"
+    question: "Các yếu tố đóng vai trò quyết định trong lộ trình chuyển đổi số tại các doanh nghiệp quốc tế là gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Sự cam kết từ lãnh đạo cấp cao và văn hóa đổi mới",
+      "Sự phối hợp liên phòng ban và quản trị thay đổi hiệu quả",
+      "Đầu tư mạnh vào thiết bị in ấn",
+      "Tuyệt đối không thay đổi quy trình cũ"
     ],
-    "answer": 0
+    answers: [0,1]
   },
   {
-    "question": "Dự án phần mềm thường có đặc điểm nào?",
-    "options": [
-      "Được thực hiện bởi một cá nhân",
-      "Ngân sách thấp hơn các dự án xây dựng",
-      "Khả năng thay đổi yêu cầu linh hoạt",
-      "Quy mô nhỏ hơn các dự án khác"
+    question: "Vì sao các công ty quốc tế thường bắt đầu chuyển đổi số bằng việc đánh giá hiện trạng? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Vì bắt buộc theo quy định nhà nước",
+      "Để thay đổi toàn bộ hệ thống CNTT ngay lập tức",
+      "Làm cơ sở định hướng chiến lược và lựa chọn công nghệ phù hợp",
+      "Giúp xác định rõ điểm mạnh, điểm yếu để xây dựng lộ trình phù hợp"
     ],
-    "answer": 2
+    answers: [2,3]
   },
   {
-    "question": "Project Manager cần làm gì để đảm bảo dự án đạt được mục tiêu?",
-    "options": [
-      "Tạo ra mã nguồn chất lượng cao nhất có thể",
-      "Lập kế hoạch, giám sát và điều chỉnh dự án theo nhu cầu",
-      "Thiết kế giao diện người dùng theo đúng mô tả",
-      "Kiểm thử phần mềm liên tục để đảm bảo mục tiêu đề ra"
+    question: "Doanh nghiệp nên làm gì trước khi mở rộng quy mô chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Đo lường hiệu quả thử nghiệm để điều chỉnh kế hoạch",
+      "Thử nghiệm giải pháp ở quy mô nhỏ (MVP)",
+      "Thay đổi toàn bộ nhân sự",
+      "Áp dụng ngay trên toàn hệ thống mà không kiểm chứng"
     ],
-    "answer": 1
+    answers: [0,1]
   },
   {
-    "question": "Vì sao vai trò của Stakeholder quan trọng trong quản lý dự án phần mềm?",
-    "options": [
-      "Họ đưa ra yêu cầu và phản hồi để dự án đáp ứng nhu cầu",
-      "Họ thiết kế dự án theo đúng yêu cầu",
-      "Họ phát triển sản phẩm đầy đủ chức năng",
-      "Họ kiểm tra mã nguồn đảm bảo phần mềm hoạt động đúng"
+    question: "Bài học từ các công ty quốc tế như Amazon hay Microsoft cho thấy điều gì trong CĐS? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Công nghệ là quan trọng nhưng phải song hành cùng đổi mới mô hình kinh doanh",
+      "Tập trung toàn bộ vào marketing online",
+      "Cần đầu tư mạnh vào trải nghiệm khách hàng và khai thác dữ liệu thông minh",
+      "Chuyển đổi số chỉ thành công khi sử dụng AI"
     ],
-    "answer": 0
+    answers: [0,2]
   },
   {
-    "question": "Giai đoạn đầu tiên trong vòng đời dự án phần mềm là gì?",
-    "options": [
-      "Kiểm thử",
-      "Bảo trì",
-      "Phát triển",
-      "Lập kế hoạch"
+    question: "Tại sao việc quản trị thay đổi lại cần thiết trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp nhân viên hiểu rõ mục tiêu và giảm kháng cự",
+      "Tạo sự đồng thuận và hỗ trợ thực hiện lộ trình hiệu quả hơn",
+      "Làm đẹp kế hoạch trình bày",
+      "Không cần thiết nếu đã có công nghệ tốt"
     ],
-    "answer": 3
+    answers: [0,1]
   },
   {
-    "question": "Giai đoạn nào trong vòng đời dự án giúp đảm bảo chất lượng phần mềm?",
-    "options": [
-      "Lập kế hoạch",
-      "Thiết kế",
-      "Phát triển",
-      "Kiểm thử"
+    question: "Những điểm chung trong lộ trình chuyển đổi số thành công giữa các công ty Việt Nam và quốc tế là gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tự động thay thế toàn bộ lao động thủ công",
+      "Tận dụng dữ liệu và công nghệ để tối ưu hóa vận hành và gia tăng giá trị cho khách hàng",
+      "Cắt giảm hoàn toàn hoạt động tiếp thị truyền thống",
+      "Có chiến lược rõ ràng và xác định mục tiêu cụ thể"
     ],
-    "answer": 3
+    answers: [1,3]
   },
   {
-    "question": "Mục đích của giai đoạn Bảo trì là gì?",
-    "options": [
-      "Tạo ra mã nguồn",
-      "Phát triển sản phẩm",
-      "Kiểm tra việc đáp ứng tính năng",
-      "Cập nhật và sửa lỗi sau khi triển khai"
+    question: "Trong giai đoạn khởi đầu chuyển đổi số, doanh nghiệp cần thực hiện những bước nào để đảm bảo thành công? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Lựa chọn vấn đề ưu tiên để thử nghiệm giải pháp (MVP)",
+      "Đánh giá hiện trạng tổ chức và xác định tầm nhìn dài hạn",
+      "Cắt giảm toàn bộ quy trình cũ ngay lập tức",
+      "Triển khai đồng loạt công nghệ mới mà không cần kiểm thử"
     ],
-    "answer": 3
-  }, {
-    "question": "Tại sao giai đoạn lập kế hoạch lại quan trọng trong vòng đời dự án phần mềm?",
-    "options": [
-      "Giúp xác định ngân sách",
-      "Giúp tạo giao diện người dùng",
-      "Giúp xác định mục tiêu và lịch trình",
-      "Giúp phát triển mã nguồn"
-    ],
-    "answer": 2
+    answers: [0,1]
   },
   {
-    "question": "Giai đoạn Phân tích yêu cầu giúp ích gì cho đội ngũ phát triển?",
-    "options": [
-      "Kiểm tra sản phẩm",
-      "Hiểu rõ nhu cầu của khách hàng",
-      "Thiết kế giao diện",
-      "Phát triển mã nguồn"
+    question: "Các bước nào dưới đây thể hiện một khởi đầu đúng trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Xây dựng tầm nhìn chiến lược dựa trên thực trạng và mục tiêu dài hạn",
+      "Thử nghiệm giải pháp ở quy mô nhỏ (MVP) trước khi nhân rộng",
+      "Cắt giảm nhân sự để đầu tư vào phần mềm",
+      "Áp dụng công nghệ theo xu hướng thị trường mà không cần đánh giá nhu cầu"
     ],
-    "answer": 1
+    answers: [0,1]
   },
   {
-    "question": "Tại sao giai đoạn kiểm thử lại cần thiết trong phát triển phần mềm?",
-    "options": [
-      "Đảm bảo xây dựng giao diện người dùng",
-      "Đảm bảo chất lượng sản phẩm",
-      "Đảm bảo ngân sách phù hợp",
-      "Đảm bảo phân tích đúng yêu cầu"
+    question: "Việc có sự đồng thuận và cam kết của lãnh đạo trong giai đoạn đầu chuyển đổi số giúp: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giảm bớt vai trò của các phòng ban kỹ thuật",
+      "Tạo động lực và định hướng rõ ràng cho toàn tổ chức",
+      "Hạn chế rủi ro và tăng khả năng thành công của dự án",
+      "Tránh cần xây dựng kế hoạch truyền thông nội bộ"
     ],
-    "answer": 1
+    answers: [1,2]
   },
   {
-    "question": "Vai trò của giai đoạn kiểm thử trong vòng đời dự án phần mềm là gì?",
-    "options": [
-      "Viết mã nguồn cho ứng dụng",
-      "Đảm bảo sản phẩm đáp ứng yêu cầu đề ra",
-      "Xây dựng tính năng của phần mềm",
-      "Lên kế hoạch ngân sách dự án phần mềm"
+    question: "Tại sao việc thử nghiệm giải pháp (MVP) là bước quan trọng ở giai đoạn đầu? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp đánh giá tính khả thi và tác động thực tế của giải pháp trước khi triển khai rộng",
+      "Hạn chế rủi ro và điều chỉnh kịp thời khi có vấn đề phát sinh",
+      "Giúp tránh việc đo lường hiệu quả",
+      "Là cách để tiêu tốn ngân sách ban đầu"
     ],
-    "answer": 1
+    answers: [0,1]
   },
   {
-    "question": "Điều gì xảy ra nếu giai đoạn phân tích yêu cầu không được thực hiện đúng?",
-    "options": [
-      "Không có dự trù ngân sách hợp lý",
-      "Giao diện phần mềm thiếu sự thu hút",
-      "Phần mềm có thể xuất hiện nhiều lỗi hơn",
-      "Phần mềm không đáp ứng nhu cầu của người dùng"
+    question: "Trong thực tiễn, các doanh nghiệp chuyển đổi số thành công thường bắt đầu bằng: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tập trung vào bài toán kinh doanh cụ thể cần giải quyết trước",
+      "Lựa chọn công nghệ phù hợp với mục tiêu và nguồn lực",
+      "Áp dụng công nghệ theo đề xuất của nhà cung cấp mà không cần phân tích",
+      "Triển khai đồng loạt toàn bộ hệ thống CNTT ngay từ đầu"
     ],
-    "answer": 3
+    answers: [0,1]
   },
   {
-    "question": "Quản lý dự án phần mềm là việc thực hiện các hoạt động nào?",
-    "options": [
-      "Phát triển mã nguồn",
-      "Quản lý khách hàng",
-      "Thiết kế giao diện người dùng",
-      "Tổ chức, lập kế hoạch, và kiểm soát dự án"
+    question: "Việc xây dựng cơ sở dữ liệu ở giai đoạn đầu chuyển đổi số mang lại những lợi ích gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp chuẩn hóa và đồng bộ thông tin trên toàn tổ chức",
+      "Tăng khả năng phân tích và ra quyết định dựa trên dữ liệu",
+      "Gây khó khăn trong tích hợp hệ thống",
+      "Làm tăng độ phức tạp trong quản trị"
     ],
-    "answer": 3
+    answers: [0,1]
   },
   {
-    "question": "Trong quản lý dự án phần mềm, ai là người chịu trách nhiệm cuối cùng trong việc xác định và phê duyệt các yêu cầu của dự án?",
-    "options": [
-      "Developer",
-      "Stakeholder",
-      "Designer",
-      "Tester"
+    question: "Vai trò của lãnh đạo cấp cao trong chuyển đổi số là:",
+    options: [
+      "Tổ chức các buổi liên hoan công ty",
+      "Định hướng chiến lược, phân bổ nguồn lực, thúc đẩy thay đổi",
+      "Chỉ quản lý ngân sách dự án",
+      "Là người thực hiện mã nguồn"
     ],
-    "answer": 1
+    answers: [1]
   },
   {
-    "question": "Developer có vai trò gì trong quy trình quản lý dự án phần mềm?",
-    "options": [
-      "Xây dựng yêu cầu khách hàng",
-      "Quản lý ngân sách dự án",
-      "Thực hiện phát triển và triển khai mã nguồn",
-      "Giám sát tiến độ dự án"
+    question: "Vì sao sự tham gia của lãnh đạo là điều kiện tiên quyết trong chuyển đổi số?",
+    options: [
+      "Họ giúp phá vỡ rào cản, truyền cảm hứng, và thúc đẩy văn hóa đổi mới",
+      "Vì họ biết lập trình",
+      "Vì họ kiểm tra phần mềm",
+      "Để ký phê duyệt tài chính"
     ],
-    "answer": 2
+    answers: [0]
   },
   {
-    "question": "Giai đoạn nào tập trung vào việc hiểu yêu cầu của khách hàng?",
-    "options": [
-      "Thiết kế",
-      "Phát triển",
-      "Phân tích yêu cầu",
-      "Kiểm thử"
+    question: "Một trong ba trụ cột của tư duy chiến lược trong chuyển đổi số là:",
+    options: [
+      "Trải nghiệm khách hàng (Customer Centricity)",
+      "Kế hoạch marketing",
+      "Đổi địa chỉ văn phòng",
+      "Tuyển dụng nhanh"
     ],
-    "answer": 2
+    answers: [0]
   },
   {
-    "question": "Giai đoạn nào cung cấp sản phẩm cho người dùng cuối?",
-    "options": [
-      "Phân tích yêu cầu",
-      "Thiết kế",
-      "Triển khai",
-      "Phát triển"
+    question: "Trong tư duy chiến lược, dữ liệu được coi là:",
+    options: [
+      "Tài sản quý giá giúp tạo lợi thế cạnh tranh nếu được khai thác đúng",
+      "Vấn đề riêng của bộ phận IT",
+      "Thứ yếu, chỉ dùng khi cần báo cáo",
+      "Gánh nặng lưu trữ"
     ],
-    "answer": 2
-  },{
-    "question": "Mục tiêu chính của giai đoạn thiết kế là gì?",
-    "options": [
-      "Xây dựng cấu trúc và giải pháp kỹ thuật",
-      "Kiểm thử phần mềm",
-      "Tạo ra mã nguồn cho phần mềm",
-      "Triển khai sản phẩm"
-    ],
-    "answer": 0
+    answers: [0]
   },
   {
-    "question": "Giai đoạn triển khai yêu cầu những hoạt động nào?",
-    "options": [
-      "Kiểm tra lỗi",
-      "Đưa phần mềm vào sử dụng thực tế",
-      "Phát triển mã nguồn",
-      "Phân tích yêu cầu"
+    question: "Mô hình của MIT CISR không bao gồm lĩnh vực nào sau đây?",
+    options: [
+      "Trải nghiệm khách hàng",
+      "Mức độ hài hước của lãnh đạo",
+      "Văn hóa tổ chức",
+      "Năng lực số"
     ],
-    "answer": 1
+    answers: [1]
+  },
+    {
+    question: "Chuyển đổi số là gì?",
+    options: [
+      "Là quá trình dùng công nghệ số để thay đổi toàn diện tổ chức",
+      "Là tạo website để quảng bá sản phẩm",
+      "Là việc chuyển đổi dữ liệu từ dạng giấy sang file PDF",
+      "Là dùng phần mềm thay cho lao động thủ công"
+    ],
+    answers: [0]
   },
   {
-    "question": "Lợi ích của việc có giai đoạn bảo trì trong quản lý dự án phần mềm là gì?",
-    "options": [
-      "Đảm bảo hiệu quả và phù hợp với nhu cầu người dùng",
-      "Bổ sung và phát triển các tính năng mới",
-      "Hỗ trợ trong việc quản lý và vận hành nhóm",
-      "Giảm thiểu chi phí duy trì hệ thống"
+    question: "Vì sao chuyển đổi số là cấp thiết trong thời đại hiện nay?",
+    options: [
+      "Vì đó là trào lưu nhất thời",
+      "Vì nó chỉ ứng dụng cho doanh nghiệp lớn",
+      "Vì nó giúp thích nghi nhanh với thay đổi",
+      "Vì khách hàng và thị trường không thay đổi"
     ],
-    "answer": 0
+    answers: [2]
   },
   {
-    "question": "Mục đích chính của giai đoạn bảo trì là gì?",
-    "options": [
-      "Kiểm thử sản phẩm trước khi đưa vào hoạt động",
-      "Phát triển sản phẩm mới",
-      "Xác định yêu cầu mới",
-      "Đảm bảo phần mềm hoạt động ổn định và được cập nhật"
+    question: "Trí tuệ nhân tạo (AI) được ứng dụng trong chuyển đổi số để:",
+    options: [
+      "Gây nhiễu dữ liệu",
+      "Cá nhân hóa trải nghiệm khách hàng",
+      "Tăng thời gian xử lý",
+      "Làm tăng lỗi thao tác thủ công"
     ],
-    "answer": 3
+    answers: [1]
   },
   {
-    "question": "Quản lý dự án phần mềm là gì?",
-    "options": [
-      "Quy trình thiết kế giao diện người dùng",
-      "Quá trình tạo ra mã nguồn phần mềm",
-      "Hệ thống phần mềm dùng để quản lý các bên liên quan",
-      "Quá trình tổ chức và kiểm soát một dự án để đạt mục tiêu"
+    question: "Ứng dụng của IoT trong chuyển đổi số bao gồm:",
+    options: [
+      "Lưu trữ tĩnh",
+      "Không hỗ trợ phân tích",
+      "Giám sát và thu thập dữ liệu thiết bị theo thời gian thực",
+      "Gửi thư giấy"
     ],
-    "answer": 3
+    answers: [2]
   },
   {
-    "question": "Ai là người chịu trách nhiệm chính trong việc phát triển mã nguồn?",
-    "options": [
-      "Tester",
-      "Project Manager",
-      "Developer",
-      "Stakeholder"
+    question: "Mô hình kinh doanh mới nhờ chuyển đổi số có thể là:",
+    options: [
+      "Mua bán qua tạp chí",
+      "Kinh tế chia sẻ (sharing economy)",
+      "Không tương tác khách hàng",
+      "Quản lý tập trung bằng giấy tờ"
     ],
-    "answer": 2
+    answers: [1]
   },
   {
-    "question": "Ai chịu trách nhiệm đưa ra phản hồi và yêu cầu thay đổi cho dự án?",
-    "options": [
-      "Tester",
-      "Developer",
-      "Project Manager",
-      "Stakeholder"
+    question: "Một minh chứng cho chuyển đổi số thành công là:",
+    options: [
+      "MB Bank triển khai ngân hàng số",
+      "Sử dụng phần mềm cũ không cập nhật",
+      "Cửa hàng truyền thống mở thêm chi nhánh",
+      "Bệnh viện giấy hóa toàn bộ quy trình"
     ],
-    "answer": 3
+    answers: [0]
   },
   {
-    "question": "Giai đoạn nào cung cấp sản phẩm cho người dùng cuối?",
-    "options": [
-      "Triển khai",
-      "Phát triển",
-      "Phân tích yêu cầu",
-      "Thiết kế"
+    question: "Những đặc điểm nào dưới đây là đúng về chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Là một quá trình thay đổi văn hóa và tư duy quản lý trong tổ chức",
+      "Là việc sử dụng công nghệ số để thay đổi toàn diện mô hình hoạt động",
+      "Là việc tăng số lượng nhân viên kỹ thuật",
+      "Là cập nhật phần mềm quản lý mỗi năm"
     ],
-    "answer": 0
+    answers: [0,1]
   },
   {
-    "question": "Vai trò của Tester là gì trong dự án phần mềm?",
-    "options": [
-      "Phân tích yêu cầu",
-      "Phát triển phần mềm",
-      "Kiểm tra và đảm bảo chất lượng sản phẩm",
-      "Quản lý dự án"
+    question: "Mục tiêu chính của chuyển đổi số trong doanh nghiệp là gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Nâng cao hiệu suất và trải nghiệm người dùng",
+      "Tăng khả năng cạnh tranh trên thị trường",
+      "Giảm sử dụng thiết bị số",
+      "Tăng chi phí vận hành"
     ],
-    "answer": 2
+    answers: [0,1]
   },
   {
-    "question": "Tại sao quản lý dự án phần mềm lại khác với quản lý dự án xây dựng?",
-    "options": [
-      "Quản lý dự án xây dựng không cần thay đổi",
-      "Các dự án phần mềm luôn lớn hơn dự án xây dựng",
-      "Quản lý dự án phần mềm có thời gian ngắn hơn",
-      "Quản lý dự án phần mềm cần tính linh hoạt cao hơn"
+    question: "Những yếu tố nào sau đây thể hiện vai trò của chuyển đổi số đối với xã hội hiện đại? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tăng tỷ lệ thất nghiệp",
+      "Gây khó khăn cho các ngành sản xuất truyền thống",
+      "Tăng khả năng tiếp cận dịch vụ công trực tuyến",
+      "Góp phần thúc đẩy phát triển kinh tế - xã hội bền vững"
     ],
-    "answer": 3
-  }, {
-    "question": "Phương pháp nào nổi tiếng với việc tập trung vào tính linh hoạt và khả năng thay đổi?",
-    "options": [
-      "Scrum",
-      "Lean",
-      "Waterfall",
-      "Agile"
-    ],
-    "answer": 3
+    answers: [2,3]
   },
   {
-    "question": "Phương pháp nào sử dụng các chu kỳ ngắn gọi là sprints?",
-    "options": [
-      "Scrum",
-      "Waterfall",
-      "Lean",
-      "XP (Extreme Programming)"
+    question: "Doanh nghiệp thực hiện chuyển đổi số hiệu quả cần tập trung vào những yếu tố nào sau đây? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Công nghệ phù hợp với mục tiêu và khả năng tổ chức",
+      "Tuyển dụng thêm bảo vệ và lao công",
+      "Tư duy lãnh đạo và chiến lược dài hạn",
+      "Đầu tư vào quảng cáo truyền hình"
     ],
-    "answer": 0
+    answers: [0,2]
   },
   {
-    "question": "So với Agile, Lean có điểm nhấn mạnh gì khác biệt?",
-    "options": [
-      "Tăng tốc độ phát triển",
-      "Tập trung vào khách hàng",
-      "Phát triển sản phẩm tốt hơn",
-      "Giảm thiểu lãng phí và tối ưu hóa quy trình"
+    question: "Khi thuyết trình đề cương dự án chuyển đổi số cho doanh nghiệp, hai luận điểm nào sau đây sẽ giúp tăng tính thuyết phục? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Đề cập mối liên hệ giữa chuyển đổi số và khả năng thích nghi thị trường",
+      "Nêu rõ vai trò của dữ liệu và công nghệ trong nâng cao hiệu quả vận hành",
+      "Tập trung vào lịch sử phát triển doanh nghiệp",
+      "Chỉ trình bày cảm xúc cá nhân về công nghệ"
     ],
-    "answer": 3
+    answers: [0,1]
   },
   {
-    "question": "Tại sao Agile được đánh giá cao trong các dự án phần mềm?",
-    "options": [
-      "Do yêu cầu ít tài nguyên trong quá trình phát triển",
-      "Vì không đòi hỏi giai đoạn thử nghiệm sản phẩm",
-      "Vì có tính linh hoạt và phản ứng nhanh với thay đổi",
-      "Do có chi phí phát triển thấp"
+    question: "Vì sao chuyển đổi số trở thành xu hướng bắt buộc trong doanh nghiệp hiện đại? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tạo ra lợi thế cạnh tranh dài hạn",
+      "Là một hình thức tuyên truyền nội bộ",
+      "Chỉ để hợp thức hóa công nghệ",
+      "Giúp thích ứng nhanh với thay đổi thị trường"
     ],
-    "answer": 2
+    answers: [0,3]
   },
   {
-    "question": "Điều gì làm cho phương pháp Lean trở nên hiệu quả trong quản lý dự án?",
-    "options": [
-      "Tăng tốc độ hoàn thành sản phẩm",
-      "Không cần sự tham gia của khách hàng",
-      "Loại bỏ các bước không cần thiết để giảm lãng phí",
-      "Cho phép thay đổi yêu cầu liên tục"
+    question: "Chuyển đổi số tác động tích cực đến xã hội thông qua những khía cạnh nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Thúc đẩy minh bạch và hiệu quả quản trị",
+      "Tăng chi phí vận hành cho người dân",
+      "Giảm khả năng tiếp cận thông tin",
+      "Mở rộng khả năng tiếp cận dịch vụ công trực tuyến"
     ],
-    "answer": 2
+    answers: [0,3]
   },
   {
-    "question": "Điểm đặc trưng của Scrum là gì?",
-    "options": [
-      "Chỉ áp dụng cho các nhóm có quy mô nhỏ",
-      "Sử dụng quy trình thực hiện tuần tự",
-      "Không cần tiến hành giai đoạn kiểm thử",
-      "Chu kỳ ngắn và tập trung vào sự linh hoạt cao"
+    question: "Khi xây dựng đề cương chuyển đổi số, nên thể hiện rõ vai trò chuyển đổi số vì: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cho thấy mối liên hệ với chiến lược phát triển tổ chức",
+      "Giúp nhà đầu tư tin tưởng hơn vào hiệu quả ứng dụng",
+      "Không bị loại khi xét duyệt dự án",
+      "Làm tăng độ dài bài viết"
     ],
-    "answer": 3
+    answers: [0,1]
   },
   {
-    "question": "Agile thường phù hợp với loại dự án nào?",
-    "options": [
-      "Dự án không yêu cầu thực hiện kiểm thử",
-      "Dự án áp dụng quy trình tuần tự, cố định",
-      "Dự án đòi hỏi linh hoạt và phản ứng nhanh với thay đổi",
-      "Dự án có các yêu cầu không thay đổi"
+    question: "Yếu tố nào dưới đây giúp tổ chức chuyển đổi số thành công? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Sự dẫn dắt và cam kết từ lãnh đạo cấp cao",
+      "Văn hóa đổi mới và chấp nhận thay đổi",
+      "Giao toàn bộ cho bộ phận IT",
+      "Bỏ qua đào tạo nội bộ vì công nghệ dễ dùng"
     ],
-    "answer": 2
+    answers: [0,1]
   },
   {
-    "question": "Khi nào nên sử dụng phương pháp Waterfall?",
-    "options": [
-      "Khi dự án cần tính linh hoạt cao",
-      "Khi không có ngân sách lớn",
-      "Khi yêu cầu và quy trình đã được xác định rõ ràng",
-      "Khi yêu cầu có khả năng thay đổi nhiều"
+    question: "Điện toán đám mây (Cloud Computing) cung cấp gì?",
+    options: [
+      "Chia sẻ tài liệu bằng USB",
+      "Lưu trữ dữ liệu qua mạng",
+      "Dịch vụ truyền thống tại chỗ",
+      "Cài đặt phần mềm từ đĩa CD"
     ],
-    "answer": 2
+    answers: [1]
   },
   {
-    "question": "Phương pháp nào là tốt nhất cho một dự án có quy trình cố định?",
-    "options": [
-      "Waterfall",
-      "Lean",
-      "Scrum",
-      "Agile"
+    question: "Big Data không đặc trưng bởi yếu tố nào sau đây?",
+    options: [
+      "Khối lượng lớn",
+      "Độ nén dữ liệu",
+      "Đa dạng nguồn dữ liệu",
+      "Tốc độ sinh dữ liệu cao"
     ],
-    "answer": 0
+    answers: [1]
   },
   {
-    "question": "Scrum phù hợp nhất với loại dự án nào?",
-    "options": [
-      "Dự án không có giai đoạn kiểm thử cụ thể",
-      "Dự án yêu cầu tính linh hoạt, nhóm nhỏ",
-      "Dự án có yêu cầu và kế hoạch cố định",
-      "Dự án với quy mô lớn và phức tạp"
+    question: "Vì sao dữ liệu được coi là tài sản quan trọng trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Dữ liệu là yếu tố thay thế con người hoàn toàn",
+      "Dữ liệu giúp đưa ra quyết định có cơ sở hơn",
+      "Dữ liệu chỉ dùng cho báo cáo tài chính",
+      "Dữ liệu phản ánh hành vi khách hàng, hỗ trợ cá nhân hóa dịch vụ"
     ],
-    "answer": 1
-  }, {
-    "question": "Tại sao Scrum phù hợp cho các dự án cần phản hồi nhanh?",
-    "options": [
-      "Scrum có các chu kỳ ngắn giúp điều chỉnh linh hoạt theo phản hồi",
-      "Scrum có ngân sách thấp nên phù hợp với dự án cần phản hồi nhanh",
-      "Scrum dễ dàng triển khai trong các nhóm dự án",
-      "Scrum có quy trình tuần tự phù hợp với các dự án lớn"
-    ],
-    "answer": 0
+    answers: [1,3]
   },
   {
-    "question": "Mô hình Lean phù hợp để áp dụng trong tình huống nào sau đây?",
-    "options": [
-      "Khi không cần tập trung vào việc tối ưu hóa giá trị cho khách hàng",
-      "Khi yêu cầu của khách hàng thường xuyên thay đổi và cần sự linh hoạt",
-      "Khi không cần thực hiện kiểm thử trong dự án",
-      "Khi dự án có các yêu cầu cố định và ít thay đổi"
+    question: "Văn hóa đổi mới trong chuyển đổi số bao gồm:",
+    options: [
+      "Ngại sai và sợ thay đổi",
+      "Học hỏi liên tục và chấp nhận thất bại",
+      "Từ chối công nghệ",
+      "Tư duy cố định"
     ],
-    "answer": 1
+    answers: [1]
   },
   {
-    "question": "Nếu dự án đòi hỏi sự linh hoạt cao, tại sao nên tránh sử dụng Waterfall?",
-    "options": [
-      "Waterfall không cho phép thay đổi dễ dàng khi đã hoàn thành các giai đoạn",
-      "Waterfall thiếu các giai đoạn thử nghiệm linh hoạt",
-      "Waterfall yêu cầu thời gian ngắn để hoàn thành từng giai đoạn",
-      "Waterfall yêu cầu ngân sách lớn để triển khai"
+    question: "Trụ cột của chuyển đổi số không bao gồm yếu tố nào?",
+    options: [
+      "Dữ liệu",
+      "Quy trình",
+      "Con người",
+      "Tài chính"
     ],
-    "answer": 0
+    answers: [3]
+  },
+    {
+    question: "Trong chuyển đổi số, ai là người có vai trò then chốt quyết định thành công hay thất bại?",
+    options: [
+      "Lãnh đạo tổ chức",
+      "Người dùng cuối",
+      "Nhân viên kỹ thuật",
+      "Nhân sự phòng kế toán"
+    ],
+    answers: [0]
   },
   {
-    "question": "Trong tình huống nào Scrum sẽ là lựa chọn lý tưởng?",
-    "options": [
-      "Khi dự án cần sự hợp tác và phản hồi liên tục",
-      "Khi dự án có yêu cầu cố định",
-      "Khi ngân sách hạn chế",
-      "Khi không cần kiểm thử"
+    question: "Vì sao lãnh đạo cần hiểu rõ công nghệ trong chuyển đổi số?",
+    options: [
+      "Để trực tiếp viết mã cho phần mềm",
+      "Để loại bỏ hoàn toàn nhân sự",
+      "Để giảm chi phí điện năng",
+      "Để ra quyết định dựa trên dữ liệu và định hướng chiến lược chính xác"
     ],
-    "answer": 0
+    answers: [3]
   },
   {
-    "question": "Trong dự án cần phát triển nhanh và phản hồi liên tục, tại sao Scrum là lựa chọn tốt?",
-    "options": [
-      "Scrum có chi phí thấp giúp tiết kiệm ngân sách dự án",
-      "Scrum không yêu cầu quy trình rõ ràng và có thể linh hoạt điều chỉnh",
-      "Scrum sử dụng các sprints ngắn để có thể điều chỉnh thường xuyên theo phản hồi.",
-      "Scrum yêu cầu ít tài nguyên để quản lý dự án"
+    question: "Cloud Computing góp phần gì cho tổ chức trong chuyển đổi số?",
+    options: [
+      "Hạn chế truy cập từ xa",
+      "Tăng chi phí phần cứng",
+      "Cung cấp hạ tầng linh hoạt, tiết kiệm, dễ mở rộng",
+      "Chỉ phù hợp với công ty lớn"
     ],
-    "answer": 2
+    answers: [2]
   },
   {
-    "question": "Phương pháp Waterfall trong quản lý dự án là gì?",
-    "options": [
-      "Phương pháp ưu tiên khách hàng",
-      "Phương pháp xoay vòng",
-      "Phương pháp tuần tự với các giai đoạn cố định",
-      "Phương pháp lặp đi lặp lại"
+    question: "Internet vạn vật (IoT) đóng vai trò gì trong chuyển đổi số?",
+    options: [
+      "Tăng cường truyền thống in ấn",
+      "Duy trì hệ thống điện văn phòng",
+      "Thu thập dữ liệu từ các thiết bị và môi trường thực tế",
+      "Quản lý bàn ghế trong kho"
     ],
-    "answer": 2
+    answers: [2]
   },
   {
-    "question": "Phương pháp Lean trong quản lý dự án chủ yếu nhấn mạnh điều gì?",
-    "options": [
-      "Tăng cường tốc độ phát triển",
-      "Thời gian thực hiện nhanh nhất",
-      "Giảm thiểu lãng phí và tối ưu hóa quy trình",
-      "Đảm bảo sản phẩm có chất lượng cao nhất"
+    question: "Công nghệ nào sau đây giúp tổ chức triển khai ứng dụng mà không cần quản lý máy chủ vật lý?",
+    options: [
+      "USB Hosting",
+      "Excel Automation",
+      "Batch Processing",
+      "Serverless Computing"
     ],
-    "answer": 2
+    answers: [3]
   },
   {
-    "question": "Vì sao phương pháp Waterfall không phù hợp cho các dự án có yêu cầu thay đổi thường xuyên?",
-    "options": [
-      "Phương pháp này yêu cầu nhiều tài nguyên",
-      "Phương pháp này phức tạp và khó quản lý",
-      "Phương pháp này tuân thủ quy trình tuần tự, khó thay đổi khi đã hoàn thành một giai đoạn",
-      "Waterfall không phù hợp với các nhóm lớn"
+    question: "Big Data giúp doanh nghiệp:",
+    options: [
+      "Phân tích lượng dữ liệu lớn để đưa ra quyết định kinh doanh",
+      "Gửi tin nhắn SMS hàng loạt",
+      "Lưu file văn bản thông thường",
+      "Giảm chi phí thuê nhân viên"
     ],
-    "answer": 2
+    answers: [0]
   },
   {
-    "question": "Điểm khác biệt giữa Agile và Waterfall là gì?",
-    "options": [
-      "Agile không có giai đoạn kiểm thử sản phẩm",
-      "Agile không cần đến sự tham gia của khách hàng",
-      "Agile linh hoạt, cho phép thay đổi trong khi Waterfall tuân thủ quy trình cố định",
-      "Waterfall có tốc độ nhanh hơn so với Agile"
+    question: "IoT nâng cao hiệu quả kinh doanh bằng cách nào?",
+    options: [
+      "Thu thập dữ liệu từ cảm biến trong quy trình sản xuất để tối ưu vận hành",
+      "Gửi dữ liệu qua Bluetooth",
+      "Ngăn người dùng truy cập hệ thống",
+      "Lưu trữ ảnh sản phẩm"
     ],
-    "answer": 2
+    answers: [0]
   },
   {
-    "question": "Khi nào nên chọn phương pháp Scrum thay vì Waterfall?",
-    "options": [
-      "Khi yêu cầu dự án không thay đổi trong quá trình phát triển",
-      "Khi đội ngũ thực hiện có ít kinh nghiệm",
-      "Khi ngân sách dành cho dự án khá hạn chế",
-      "Khi dự án yêu cầu thay đổi liên tục và tính linh hoạt cao"
+    question: "Một doanh nghiệp sử dụng dữ liệu lịch sử và AI để tối ưu tồn kho là ví dụ của việc:",
+    options: [
+      "Áp dụng trực giác cá nhân",
+      "Dựa vào cảm tính",
+      "Ra quyết định dựa trên kinh nghiệm",
+      "Ứng dụng công nghệ hiện đại để nâng cao hiệu quả kinh doanh"
     ],
-    "answer": 3
-  },{
-    "question": "Mục tiêu chính của Lean trong quản lý dự án là gì?",
-    "options": [
-      "Tối ưu hóa quy trình và loại bỏ lãng phí",
-      "Giảm thời gian quản lý dự án",
-      "Tăng tốc độ phát triển",
-      "Đảm bảo chất lượng sản phẩm cao nhất"
-    ],
-    "answer": 0
+    answers: [3]
   },
   {
-    "question": "Tại sao Scrum lại thích hợp với các nhóm nhỏ?",
-    "options": [
-      "Vì quy trình nhanh và yêu cầu giao tiếp thường xuyên giữa các thành viên",
-      "Vì Scrum không cần có kế hoạch chi tiết",
-      "Vì Scrum không yêu cầu thực hiện kiểm thử phần mềm",
-      "Vì phương pháp này giúp tiết kiệm chi phí trong dự án"
+    question: "Blockchain có thể giúp nâng cao hiệu quả kinh doanh bằng cách nào?",
+    options: [
+      "Xây dựng logo doanh nghiệp",
+      "Chống virus cho máy tính",
+      "Gửi email mã hóa",
+      "Quản lý giao dịch minh bạch, không thể chỉnh sửa, tăng niềm tin"
     ],
-    "answer": 0
+    answers: [3]
   },
   {
-    "question": "Khi nào Lean sẽ là phương pháp thích hợp nhất?",
-    "options": [
-      "Khi không có sự tham gia của khách hàng",
-      "Khi dự án cần hoàn thành nhanh chóng",
-      "Khi muốn giảm thiểu lãng phí và tối ưu hóa quy trình",
-      "Khi yêu cầu khách hàng thay đổi liên tục"
+    question: "Internet vạn vật (IoT) có thể ứng dụng hiệu quả trong các lĩnh vực nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tăng giấy tờ hành chính",
+      "Nông nghiệp thông minh và giám sát môi trường",
+      "Quản lý thiết bị công nghiệp theo thời gian thực",
+      "Lưu trữ văn bản truyền thống"
     ],
-    "answer": 2
+    answers: [1,2]
   },
   {
-    "question": "Trong trường hợp yêu cầu thay đổi thường xuyên, tại sao Agile là lựa chọn hợp lý?",
-    "options": [
-      "Agile linh hoạt, dễ dàng thích ứng thay đổi",
-      "Agile ít yêu cầu về nguồn lực dự án",
-      "Agile có quy trình thực hiện dễ hiểu",
-      "Agile giúp giảm thiểu ngân sách dự án"
+    question: "Trong tình hình mới, dữ liệu lớn (Big Data) mang lại lợi ích gì cho tổ chức? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cung cấp thông tin có giá trị từ dữ liệu khổng lồ",
+      "Giúp cá nhân hóa dịch vụ và trải nghiệm khách hàng tốt hơn",
+      "Tăng chi phí lưu trữ không cần thiết",
+      "Làm chậm quá trình xử lý nghiệp vụ"
     ],
-    "answer": 0
+    answers: [0,1]
   },
   {
-    "question": "Trong một dự án với yêu cầu rõ ràng, không có nhiều thay đổi, phương pháp quản lý dự án nào phù hợp nhất?",
-    "options": [
-      "Waterfall",
-      "Lean",
-      "Agile",
-      "Scrum"
+    question: "Điện toán đám mây đang được doanh nghiệp ưa chuộng vì những lý do nào sau đây? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cho phép truy cập tài nguyên mọi lúc, mọi nơi thông qua internet",
+      "Giảm khả năng mở rộng hệ thống",
+      "Giảm chi phí đầu tư hạ tầng ban đầu",
+      "Yêu cầu mua máy chủ riêng cho mỗi chi nhánh"
     ],
-    "answer": 0
+    answers: [0,2]
   },
   {
-    "question": "Điều gì làm cho Agile thích hợp cho các dự án phần mềm phức tạp?",
-    "options": [
-      "Chi phí thấp giúp tiết kiệm nguồn lực dự án",
-      "Thời gian ngắn để hoàn thành các chu kỳ phát triển",
-      "Quy trình tuần tự trong việc phát triển và triển khai",
-      "Tính linh hoạt và khả năng thích ứng với những thay đổi liên tục"
+    question: "Công nghệ nào giúp doanh nghiệp nâng cao hiệu quả sản xuất bằng cách tối ưu quy trình và giảm chi phí? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Internet vạn vật (IoT)",
+      "Ghi chép thủ công bằng biểu mẫu giấy",
+      "Blockchain trong quản lý tài sản cố định",
+      "Sử dụng phần mềm trình chiếu"
     ],
-    "answer": 3
+    answers: [0,2]
   },
   {
-    "question": "Điều gì làm cho phương pháp Lean trở nên hiệu quả trong quản lý dự án?",
-    "options": [
-      "Tăng tốc độ hoàn thành sản phẩm",
-      "Cho phép thay đổi yêu cầu liên tục",
-      "Loại bỏ các bước không cần thiết để giảm lãng phí",
-      "Không cần sự tham gia của khách hàng"
+    question: "Điện toán đám mây (Cloud Computing) mang lại lợi ích gì trong kinh doanh? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Chỉ hoạt động khi có kết nối nội bộ LAN",
+      "Cho phép truy cập dữ liệu từ mọi nơi có internet",
+      "Cần đầu tư nhiều máy chủ vật lý tại mỗi chi nhánh",
+      "Giúp doanh nghiệp dễ dàng mở rộng quy mô công nghệ thông tin"
     ],
-    "answer": 2
+    answers: [1,3]
   },
   {
-    "question": "Tại sao Lean là lựa chọn phù hợp cho các dự án yêu cầu hiệu quả cao?",
-    "options": [
-      "Lean tối ưu hóa quy trình và giảm thiểu lãng phí",
-      "Lean yêu cầu ít nguồn lực",
-      "Lean có quy trình phức tạp",
-      "Lean cần nhiều thời gian"
+    question: "Trí tuệ nhân tạo (AI) được ứng dụng trong hoạt động kinh doanh để: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Hỗ trợ tối ưu hóa chuỗi cung ứng và sản xuất",
+      "Tăng chi phí nhân sự",
+      "Loại bỏ hoàn toàn nhu cầu quản lý",
+      "Tự động phân loại và trả lời email khách hàng"
     ],
-    "answer": 0
+    answers: [0,3]
   },
   {
-    "question": "Trong tình huống nào Agile sẽ hiệu quả nhất?",
-    "options": [
-      "Khi yêu cầu của dự án được giữ nguyên",
-      "Khi dự án có quy mô nhỏ gọn",
-      "Khi yêu cầu thay đổi liên tục và phản hồi nhanh",
-      "Khi ngân sách thực hiện bị hạn chế"
+    question: "Những xu hướng công nghệ nào đang tác động mạnh đến hoạt động của doanh nghiệp hiện nay? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Máy chụp ảnh cơ",
+      "Dữ liệu lớn (Big Data)",
+      "Công nghệ điện than",
+      "Trí tuệ nhân tạo (AI)"
     ],
-    "answer": 2
+    answers: [1,3]
   },
   {
-    "question": "Trong dự án cần phát triển nhanh và phản hồi liên tục, tại sao Scrum là lựa chọn tốt?",
-    "options": [
-      "Scrum có chi phí thấp giúp tiết kiệm ngân sách dự án",
-      "Scrum không yêu cầu quy trình rõ ràng và có thể linh hoạt điều chỉnh",
-      "Scrum yêu cầu ít tài nguyên để quản lý dự án",
-      "Scrum sử dụng các sprints ngắn để có thể điều chỉnh thường xuyên theo phản hồi."
+    question: "Vì sao trí tuệ nhân tạo (AI) được xem là xu hướng trọng tâm trong ứng dụng công nghệ hiện nay? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "AI chỉ dùng để thay thế nhân sự cấp cao",
+      "AI giúp doanh nghiệp ra quyết định dựa trên dữ liệu",
+      "AI chỉ hoạt động trên máy tính lượng tử",
+      "AI có khả năng tự động hóa và nâng cao hiệu quả vận hành"
     ],
-    "answer": 3
-  },{
-    "question": "Dự án với các giai đoạn cụ thể và yêu cầu cố định nên áp dụng phương pháp nào?",
-    "options": [
-      "Waterfall",
-      "Scrum",
-      "Agile",
-      "Lean"
-    ],
-    "answer": 0
+    answers: [1,3]
   },
   {
-    "question": "Phân chia yêu cầu phần mềm thành các nhiệm vụ nhỏ giúp ích như thế nào trong quản lý dự án phần mềm?",
-    "options": [
-      "Phát hiện lỗi dễ dàng hơn",
-      "Giảm số lượng nhân viên tham gia dự án",
-      "Loại bỏ hoàn toàn các rủi ro trong dự án",
-      "Giảm sự tham gia của các bên liên quan"
+    question: "Việc ứng dụng trí tuệ nhân tạo (AI) trong kinh doanh mang lại lợi ích gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Thay thế hoàn toàn bộ phận kế toán",
+      "Làm tăng sự phụ thuộc vào lao động phổ thông",
+      "Hỗ trợ dự đoán nhu cầu và tối ưu quản lý chuỗi cung ứng",
+      "Cải thiện cá nhân hóa trải nghiệm khách hàng theo thời gian thực"
     ],
-    "answer": 0
+    answers: [2,3]
   },
   {
-    "question": "Một nhiệm vụ tốt thường có đặc điểm gì?",
-    "options": [
-      "Phức tạp và chi tiết",
-      "Đơn giản và không có ưu tiên",
-      "Dài hạn và khó thay đổi",
-      "Cụ thể, rõ ràng và khả thi"
+    question: "Công nghệ nào dưới đây đang được ứng dụng phổ biến để tăng hiệu quả sản xuất? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Trí tuệ nhân tạo (AI)",
+      "Công nghệ máy hơi nước",
+      "Internet vạn vật (IoT)",
+      "Máy fax"
     ],
-    "answer": 3
+    answers: [0,2]
   },
   {
-    "question": "Khi nào nên cập nhật danh sách nhiệm vụ đã phân chia?",
-    "options": [
-      "Khi hoàn thành dự án",
-      "Khi dự toán ngân sách được phê duyệt",
-      "Khi nhóm bắt đầu triển khai dự án",
-      "Khi yêu cầu dự án thay đổi"
+    question: "Công nghệ nào dưới đây được ví như “nền móng” cho mọi ứng dụng số hiện nay?",
+    options: [
+      "LAN nội bộ",
+      "VPN",
+      "Cloud Computing (Điện toán đám mây)",
+      "Email Server"
     ],
-    "answer": 3
+    answers: [2]
+  },
+    {
+    question: "CRM là công cụ hỗ trợ doanh nghiệp trong lĩnh vực nào?",
+    options: [
+      "Quản lý quan hệ khách hàng",
+      "Sản xuất hàng hóa",
+      "Đào tạo nội bộ",
+      "Tuyển dụng"
+    ],
+    answers: [0]
   },
   {
-    "question": "Biểu đồ PERT thường dùng để làm gì?",
-    "options": [
-      "Quản lý thời gian và trình tự các công việc trong dự án",
-      "Đánh giá chất lượng sản phẩm trong dự án",
-      "Tạo các báo cáo liên quan đến tài chính, nguồn lực, rủi ro cho dự án",
-      "Giúp tối ưu hóa chi phí, nhân sự, rủi ro trong quá trình quản lý dự án"
+    question: "Trong bản đồ hành trình chuyển đổi số, việc ưu tiên hóa sáng kiến giúp:",
+    options: [
+      "Tránh làm việc nhóm",
+      "Làm những dự án dễ trước",
+      "Tăng số lượng dự án cùng lúc",
+      "Tập trung vào dự án có tác động cao và khả thi"
     ],
-    "answer": 0
+    answers: [3]
   },
   {
-    "question": "Mục tiêu chính của biểu đồ PERT là gì?",
-    "options": [
-      "Lập kế hoạch và kiểm soát tiến độ dự án",
-      "Quản lý rủi ro tài chính của dự án",
-      "Đo lường hiệu quả làm việc của nhân viên",
-      "Tạo báo cáo tài chính cho dự án"
+    question: "Trải nghiệm khách hàng số (CX) khác với dịch vụ khách hàng truyền thống ở điểm nào?",
+    options: [
+      "Chỉ diễn ra sau khi mua hàng",
+      "Bao gồm mọi điểm chạm từ online đến offline",
+      "Chỉ đo bằng khảo sát",
+      "Chỉ dùng chatbot"
     ],
-    "answer": 0
+    answers: [1]
   },
   {
-    "question": "Một Gantt chart hiển thị thông tin nào?",
-    "options": [
-      "Phân tích rủi ro và các yếu tố tiềm ẩn ảnh hưởng đến tiến độ",
-      "Tiến độ và thời gian thực hiện từng nhiệm vụ",
-      "Ngân sách và các khoản chi phí dự kiến cho từng giai đoạn của dự án",
-      "Chi phí chi tiết của từng nhiệm vụ và tài nguyên sử dụng"
+    question: "Một sản phẩm công nghệ muốn thành công cần chú trọng:",
+    options: [
+      "Giao diện hấp dẫn và phù hợp hành vi người dùng",
+      "Phát hành sớm dù chưa hoàn thiện",
+      "Chạy được là đủ",
+      "Phát hành sớm dù chưa hoàn thiện"
     ],
-    "answer": 1
+    answers: [0]
   },
   {
-    "question": "Biểu đồ PERT dựa trên điều gì để ước tính thời gian?",
-    "options": [
-      "Đánh giá tổng thể các yếu tố trong dự án để ước tính thời gian hoàn thành",
-      "Ba giá trị thời gian (lạc quan, bi quan, trung bình)",
-      "Ngân sách phân bổ cho dự án và các yếu tố tài chính khác",
-      "Kinh nghiệm quản lý trước đó và các yếu tố lịch sử trong các dự án tương tự"
+    question: "Phân tích SWOT trong chuyển đổi số không bao gồm yếu tố nào sau đây?",
+    options: [
+      "Cơ hội",
+      "Sở thích cá nhân",
+      "Điểm mạnh",
+      "Thách thức"
     ],
-    "answer": 1
+    answers: [1]
   },
   {
-    "question": "PERT chart khác Gantt chart ở điểm nào?",
-    "options": [
-      "Gantt chart không thể hiện mối quan hệ phụ thuộc",
-      "Biểu đồ PERT là biểu đồ mạng, Biểu đồ Gantt là biểu đồ cột",
-      "Biểu đồ PERT là biểu đồ cột, biểu đồ Gantt chart là biểu đồ mạng",
-      "PERT chart dựa trên thời gian, Gantt chart không dựa trên thời gian"
+    question: "Vì sao doanh nghiệp nên áp dụng hệ thống ERP trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "ERP chỉ phù hợp với công ty sản xuất phần cứng",
+      "ERP tăng hiệu quả vận hành và giảm sai sót do dữ liệu phân mảnh",
+      "ERP làm tăng số lượng nhân viên nhập liệu",
+      "ERP giúp quản lý toàn diện các hoạt động nội bộ trong một hệ thống duy nhất"
     ],
-    "answer": 1
+    answers: [1,3]
   },
   {
-    "question": "Khi nào biểu đồ Gantt không phù hợp?",
-    "options": [
-      "Khi dự án yêu cầu sự linh hoạt và thay đổi liên tục trong quá trình thực hiện",
-      "Khi dự án có tiến độ được lên kế hoạch rõ ràng và gần như không thay đổi",
-      "Khi dự án yêu cầu theo dõi tiến độ chi tiết và chính xác từng nhiệm vụ",
-      "Khi dự án có quy mô nhỏ và đơn giản, với ít nhiệm vụ và ít sự phụ thuộc",
-      "Khi có nhiều nhiệm vụ có mối quan hệ phức tạp, phụ thuộc lẫn nhau"
+    question: "Trí tuệ nhân tạo (AI) được tích hợp vào các công cụ quản trị để làm gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cá nhân hóa trải nghiệm khách hàng và tự động hóa dịch vụ chăm sóc",
+      "Tăng số lượng hồ sơ giấy cần xử lý",
+      "Tự động tạo các tài liệu pháp lý",
+      "Phân tích dữ liệu và hỗ trợ ra quyết định dựa trên dự báo thông minh"
     ],
-    "answer": 0
+    answers: [0,3]
+  },
+  {
+    question: "Dữ liệu lớn (Big Data) có vai trò gì trong hoạt động của doanh nghiệp hiện đại? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp hiểu rõ hành vi và xu hướng của khách hàng để tối ưu chiến lược kinh doanh",
+      "Làm tăng số lượng báo cáo giấy",
+      "Cung cấp nền tảng phân tích ra quyết định dựa trên dữ liệu quy mô lớn",
+      "Là công cụ dự trữ dữ liệu không cần xử lý"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Các nền tảng điện toán đám mây (Cloud) hỗ trợ doanh nghiệp như thế nào trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Chỉ hoạt động khi không có internet",
+      "Hỗ trợ triển khai phần mềm nhanh chóng và dễ mở rộng theo nhu cầu doanh nghiệp",
+      "Cho phép truy cập tài nguyên CNTT từ mọi nơi, linh hoạt và tiết kiệm chi phí",
+      "Bắt buộc doanh nghiệp phải đầu tư máy chủ riêng"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Internet vạn vật (IoT) có thể được ứng dụng như thế nào trong sản xuất và kinh doanh? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cắt giảm các công cụ đo lường",
+      "Chỉ áp dụng trong lĩnh vực truyền thông",
+      "Phân tích dữ liệu từ cảm biến để dự báo bảo trì, giảm ngừng hoạt động",
+      "Giám sát thiết bị và dây chuyền sản xuất theo thời gian thực"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Các công cụ nào thường được doanh nghiệp lựa chọn khi xây dựng kế hoạch chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Máy fax truyền thống",
+      "Hệ thống CRM (Customer Relationship Management)",
+      "Phần mềm chơi nhạc",
+      "Hệ thống ERP (Enterprise Resource Planning)"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Khi xây dựng kế hoạch chuyển đổi số, doanh nghiệp nên ưu tiên lựa chọn công nghệ theo tiêu chí nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Phù hợp với mục tiêu chiến lược của doanh nghiệp",
+      "Dễ tích hợp với hệ thống hiện tại và có khả năng mở rộng",
+      "Dựa hoàn toàn vào xu hướng thị trường",
+      "Càng hiện đại càng tốt, không cần đánh giá nhu cầu"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "ERP và CRM hỗ trợ gì trong kế hoạch chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "CRM dùng để thiết kế đồ họa",
+      "ERP thay thế hoàn toàn nhân sự",
+      "CRM hỗ trợ chăm sóc khách hàng và quản lý mối quan hệ khách hàng hiệu quả",
+      "ERP giúp quản lý tài nguyên doanh nghiệp một cách đồng bộ"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Vì sao điện toán đám mây (Cloud Computing) nên được xem xét khi lập kế hoạch chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Bắt buộc đầu tư máy chủ tại tất cả chi nhánh",
+      "Chỉ sử dụng được trong các doanh nghiệp lớn",
+      "Cho phép mở rộng linh hoạt và tiết kiệm chi phí đầu tư",
+      "Hỗ trợ truy cập dữ liệu mọi lúc, mọi nơi qua internet"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Ứng dụng trí tuệ nhân tạo (AI) trong kế hoạch chuyển đổi số mang lại lợi ích gì?",
+    options: [
+      "Tăng số lượng công việc thủ công",
+      "Hỗ trợ dự báo nhu cầu và tối ưu hóa quy trình ra quyết định",
+      "Cá nhân hóa dịch vụ cho khách hàng theo thời gian thực",
+      "Loại bỏ hoàn toàn việc đào tạo nhân viên"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Vì sao cần lập kế hoạch chuyển đổi số thay vì triển khai công nghệ rời rạc?",
+    options: [
+      "Vì yêu cầu từ đối tác",
+      "Để có hồ sơ đẹp khi thanh tra",
+      "Để tối ưu nguồn lực và kết nối chiến lược với công nghệ",
+      "Để dễ xin ngân sách mua thiết bị"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Vì sao lập kế hoạch chiến lược số quan trọng với doanh nghiệp khởi nghiệp?",
+    options: [
+      "Hạn chế sự sáng tạo tự do",
+      "Dễ gây ấn tượng với truyền thông",
+      "Giúp xin tài trợ từ chính phủ",
+      "Định hình mô hình kinh doanh dựa trên dữ liệu và công nghệ hiện đại"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Những phần mềm hoặc công cụ nào sau đây hỗ trợ hiệu quả cho quản trị và vận hành doanh nghiệp số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Phần mềm nghe nhạc",
+      "Hệ thống CRM (Customer Relationship Management)",
+      "Phần mềm chỉnh sửa ảnh cá nhân",
+      "Hệ thống ERP (Enterprise Resource Planning)"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Các công cụ phân tích dữ liệu khách hàng giúp IT:",
+    options: [
+      "Giảm thời gian đào tạo",
+      "Phân phối giấy tờ nhanh hơn",
+      "Xác định xu hướng hành vi và cải tiến hệ thống chính xác hơn",
+      "Gửi thông báo bằng loa phát thanh"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Những công nghệ nào sau đây thường được tích hợp trong kế hoạch chuyển đổi số của doanh nghiệp? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Ổ đĩa mềm",
+      "Máy đánh chữ",
+      "Trí tuệ nhân tạo (AI)",
+      "Dữ liệu lớn (Big Data)"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Khi lập kế hoạch chuyển đổi số cho doanh nghiệp sản xuất, IoT có thể được ứng dụng thế nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Không áp dụng được trong các ngành công nghiệp",
+      "Tăng phụ thuộc vào lao động thủ công",
+      "Phân tích dữ liệu để dự báo sự cố và bảo trì máy móc hiệu quả",
+      "Giám sát và thu thập dữ liệu từ thiết bị sản xuất theo thời gian thực"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Dữ liệu lớn (Big Data) có vai trò gì trong việc lập kế hoạch chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp dự đoán xu hướng và tối ưu vận hành doanh nghiệp",
+      "Hỗ trợ phân tích hành vi khách hàng và ra quyết định chiến lược",
+      "Tăng nhu cầu lưu trữ giấy tờ",
+      "Cung cấp dữ liệu ngẫu nhiên cho các bộ phận không liên quan"
+    ],
+    answers: [0,1]
+  },
+   {
+    question: "Big Data được đặc trưng bởi yếu tố nào sau đây?",
+    options: [
+      "Sự đa dạng dữ liệu",
+      "Dữ liệu dạng bảng duy nhất",
+      "Tốc độ chậm",
+      "Dung lượng thấp"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Công nghệ nào thường được dùng để lưu trữ dữ liệu phi cấu trúc quy mô lớn?",
+    options: [
+      "Block Storage",
+      "File .docx",
+      "Object Storage",
+      "FTP Server"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Trong kiến trúc IoT, tầng nào chịu trách nhiệm tương tác trực tiếp với thiết bị vật lý?",
+    options: [
+      "Application Layer",
+      "Device Layer",
+      "Edge Layer",
+      "Cloud Layer"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Lợi ích của việc sử dụng AI trong vận hành doanh nghiệp là:",
+    options: [
+      "Loại bỏ vai trò của quản trị viên",
+      "Tự động hóa các tác vụ và phân tích chuyên sâu từ dữ liệu",
+      "Gửi thư tay nhanh hơn",
+      "Tăng số lượng công nhân"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Vì sao Cloud Computing phù hợp với startup trong giai đoạn phát triển ý tưởng?",
+    options: [
+      "Chỉ dùng cho doanh nghiệp lớn",
+      "Yêu cầu đầu tư phần cứng lớn",
+      "Giúp giảm chi phí hạ tầng ban đầu và mở rộng nhanh khi cần",
+      "Không hỗ trợ tự động hóa"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Big Data giúp doanh nghiệp đổi mới mô hình kinh doanh bằng cách nào?",
+    options: [
+      "Dự đoán nhu cầu, xu hướng để ra quyết định dựa trên dữ liệu",
+      "Giảm chi phí marketing truyền thống",
+      "Mua thêm bảng trắng",
+      "Chuyển hết nhân sự sang CNTT"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Công nghệ nào giúp cá nhân hóa dịch vụ và nâng cao trải nghiệm khách hàng trong khởi nghiệp?",
+    options: [
+      "Trình chiếu PowerPoint",
+      "Phần mềm kế toán",
+      "ERP nội bộ",
+      "Trí tuệ nhân tạo (AI) phân tích dữ liệu và gợi ý nội dung phù hợp"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Vì sao trí tuệ nhân tạo (AI) được xem là công nghệ cốt lõi trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "AI giúp phân tích dữ liệu để hỗ trợ ra quyết định nhanh chóng và chính xác",
+      "AI chỉ dùng để giải trí cá nhân",
+      "AI có khả năng tự học và cải tiến theo thời gian, tăng hiệu quả vận hành",
+      "AI chỉ hỗ trợ xử lý văn bản"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Dữ liệu lớn (Big Data) có vai trò gì trong hoạt động quản lý và phát triển doanh nghiệp hiện đại? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Là công cụ để lưu trữ tài liệu giấy truyền thống",
+      "Cung cấp nền tảng phân tích dữ liệu khối lượng lớn để phát hiện xu hướng tiềm ẩn",
+      "Chỉ dùng trong ngành công nghiệp nặng",
+      "Giúp cá nhân hóa dịch vụ và nâng cao trải nghiệm khách hàng"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Blockchain hỗ trợ hoạt động doanh nghiệp như thế nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Chỉ phù hợp với việc lưu trữ hình ảnh",
+      "Đảm bảo tính tin cậy trong giao dịch, đặc biệt trong chuỗi cung ứng và tài chính",
+      "Tạo ra hệ thống ghi nhận thông tin minh bạch và không thể thay đổi",
+      "Là công nghệ giải trí trực tuyến"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Điện toán đám mây (Cloud Computing) có tác động như thế nào trong việc triển khai giải pháp số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cho phép truy cập tài nguyên từ bất cứ đâu có internet, hỗ trợ làm việc linh hoạt",
+      "Không thích hợp với các tổ chức nhỏ hoặc vừa",
+      "Yêu cầu phải đầu tư thiết bị lưu trữ tại chỗ cho từng máy tính",
+      "Giảm chi phí đầu tư hạ tầng công nghệ cho doanh nghiệp"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Vì sao điện toán đám mây (Cloud Computing) được xem là nền tảng công nghệ quan trọng trong chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Yêu cầu doanh nghiệp đầu tư thêm máy chủ vật lý tại mỗi chi nhánh",
+      "Cho phép truy cập tài nguyên CNTT từ mọi nơi, linh hoạt về quy mô",
+      "Giảm chi phí hạ tầng ban đầu và hỗ trợ triển khai nhanh các ứng dụng số",
+      "Chỉ áp dụng được cho doanh nghiệp lớn"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Những công nghệ nào sau đây được xem là nền tảng phục vụ chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Ổ đĩa mềm",
+      "Máy photocopy",
+      "Trí tuệ nhân tạo (AI)",
+      "Dữ liệu lớn (Big Data)"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Các ứng dụng của điện toán đám mây trong chuyển đổi số bao gồm: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Lưu trữ dữ liệu và truy cập từ xa thông qua internet",
+      "Cài đặt phần mềm bằng đĩa CD",
+      "Triển khai nhanh các ứng dụng mà không cần hạ tầng vật lý",
+      "Lưu trữ dữ liệu trên ổ cứng cá nhân"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "IoT (Internet of Things – Internet vạn vật) đóng vai trò gì trong nền tảng công nghệ chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Ghi âm cuộc họp",
+      "Kết nối các thiết bị để thu thập và chia sẻ dữ liệu theo thời gian thực",
+      "Giám sát và điều khiển hệ thống từ xa thông qua cảm biến và internet",
+      "Truyền hình nội bộ"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Edge Computing giúp giải quyết vấn đề gì trong hệ thống IoT?",
+    options: [
+      "Giảm độ trễ bằng cách xử lý dữ liệu gần nguồn phát sinh",
+      "Bảo trì hệ thống định kỳ",
+      "Thay thế hoàn toàn điện toán đám mây",
+      "Tăng độ trễ khi truyền dữ liệu"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Blockchain đóng vai trò gì trong bảo mật dữ liệu IoT?",
+    options: [
+      "Gửi lệnh tới máy in",
+      "Lưu trữ các bản sao Excel",
+      "Tạo email xác thực",
+      "Cung cấp môi trường mã hóa dữ liệu trên một hệ thống phân tán"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Blockchain có thể hỗ trợ mô hình kinh doanh minh bạch bằng cách nào?",
+    options: [
+      "Thay thế nhân sự bán hàng",
+      "Tăng số lượng hợp đồng giấy",
+      "Mã hóa video quảng cáo",
+      "Ghi lại và xác thực các giao dịch không thể thay đổi"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Edge Computing hỗ trợ việc khởi nghiệp sáng tạo bằng cách:",
+    options: [
+      "Yêu cầu đầu tư cao ngay từ đầu",
+      "Loại bỏ vai trò của Cloud",
+      "Giảm thời gian phản hồi nhờ xử lý dữ liệu tại thiết bị",
+      "Chỉ phù hợp với doanh nghiệp lớn"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Công nghệ Blockchain hỗ trợ chuyển đổi số thông qua: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tạo mạng LAN nội bộ cho doanh nghiệp",
+      "In ấn tài liệu nhanh hơn",
+      "Tăng độ tin cậy cho các giao dịch kỹ thuật số",
+      "Cung cấp hệ thống lưu trữ dữ liệu minh bạch, không thể thay đổi"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Vì sao điện toán đám mây là nền tảng quan trọng trong chuyển đổi số?",
+    options: [
+      "Giúp tăng chi phí đầu tư ban đầu",
+      "Không cần quản lý bảo mật",
+      "Cung cấp phần cứng vật lý giá rẻ",
+      "Cho phép mở rộng linh hoạt và triển khai nhanh hệ thống"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Một doanh nghiệp muốn phân tích hành vi khách hàng theo thời gian thực, nên sử dụng:",
+    options: [
+      "Excel thủ công",
+      "Email Marketing",
+      "Batch Processing",
+      "Stream Processing"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Lớp thiết bị (Device Layer) trong IoT có nhiệm vụ:",
+    options: [
+      "Gửi hóa đơn khách hàng",
+      "Phân tích dữ liệu lớn",
+      "Thu thập dữ liệu từ cảm biến",
+      "Quản lý người dùng hệ thống"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Điện toán đám mây (Cloud Computing) giúp doanh nghiệp: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giảm khả năng truy cập thông tin từ xa",
+      "Tăng phụ thuộc vào hồ sơ giấy",
+      "Mở rộng quy mô công nghệ nhanh chóng, dễ tích hợp",
+      "Lưu trữ và truy cập dữ liệu linh hoạt, tiết kiệm chi phí"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Những yếu tố nào là đặc trưng của nền tảng công nghệ chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Cần nhiều giấy tờ hành chính",
+      "Tính linh hoạt và khả năng mở rộng",
+      "Hoạt động chủ yếu qua điện thoại bàn",
+      "Khả năng tích hợp dữ liệu và hệ thống khác nhau"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Công nghệ nào dưới đây cung cấp môi trường chạy ứng dụng mà không cần quản lý hạ tầng?",
+    options: [
+      "Serverless Computing",
+      "VPS truyền thống",
+      "IaaS",
+      "SaaS"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Những công nghệ nào sau đây được xem là nền tảng trong chuyển đổi số hiện nay? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Máy in kim",
+      "Dữ liệu lớn (Big Data)",
+      "Trí tuệ nhân tạo (AI)",
+      "Hệ thống truyền hình cáp"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Công nghệ Blockchain thường được ứng dụng trong các lĩnh vực nào sau đây? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giao dịch tài chính, hợp đồng thông minh",
+      "Quản lý chuỗi cung ứng với độ minh bạch cao",
+      "Thiết kế đồ họa 3D",
+      "Quản lý công văn giấy tờ"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Công nghệ nào sau đây là một cơ sở dữ liệu phi quan hệ thường dùng cho Big Data?",
+    options: [
+      "Oracle",
+      "MongoDB",
+      "Microsoft Excel",
+      "SQL Server"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Trí tuệ nhân tạo (AI) và dữ liệu lớn (Big Data) đóng vai trò gì trong nền tảng công nghệ phục vụ chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "AI hỗ trợ tự động hóa quy trình và ra quyết định thông minh dựa trên dữ liệu",
+      "Big Data giúp phân tích hành vi khách hàng, phát hiện xu hướng thị trường",
+      "AI chỉ được dùng trong thiết kế đồ họa",
+      "Big Data chỉ dùng để lưu trữ dữ liệu chưa phân loại"
+    ],
+    answers: [0,1]
+  },
+    {
+    question: "MVP trong thiết kế giải pháp số là gì?",
+    options: [
+      "Công cụ quản trị nhân sự",
+      "Sản phẩm khả thi tối thiểu",
+      "Gói tính năng đắt nhất",
+      "Người quan trọng nhất dự án"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Khi đề xuất giải pháp số, yếu tố nào sau đây là minh chứng rõ nhất cho tính khả thi?",
+    options: [
+      "Được tài trợ từ bên ngoài",
+      "Có ngân sách và xu hướng công nghệ",
+      "Phù hợp với cơ sở hạ tầng, nhân lực và văn hóa hiện tại",
+      "Do CIO lựa chọn"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Khi làm tư vấn CĐS, sinh viên CNTT nên bắt đầu từ đâu để tạo ảnh hưởng thực tế?",
+    options: [
+      "Phân tích sâu quy trình, năng lực, văn hóa doanh nghiệp để đề xuất giải pháp phù hợp",
+      "Tạo logo hệ thống",
+      "Tư vấn phần cứng",
+      "Học cách viết phần mềm nâng cao"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Việc đánh giá hiện trạng tổ chức trong chuyển đổi số thường gọi là:",
+    options: [
+      "Information Inventory",
+      "Business Outsourcing",
+      "As-Is Assessment",
+      "Digital Mapping"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Công cụ hỗ trợ mô tả luồng dữ liệu giữa các hệ thống là:",
+    options: [
+      "ChatGPT",
+      "DFD (Data Flow Diagram)",
+      "SWOT",
+      "Wireframe"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Digital Maturity thể hiện:",
+    options: [
+      "Tuổi trung bình nhân sự IT",
+      "Thời gian sử dụng mạng xã hội",
+      "Mức độ sẵn sàng và trưởng thành số của tổ chức",
+      "Số lượng phần mềm đã triển khai"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Một giải pháp số hiệu quả cần hội tụ yếu tố nào sau đây?",
+    options: [
+      "Đáp ứng đúng vấn đề cốt lõi, dễ dùng và bền vững",
+      "Công nghệ mới nhất, khó dùng",
+      "Dựa trên phần mềm rẻ tiền",
+      "Càng nhiều chức năng càng tốt"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Khi tổ chức thiếu nhân lực chuyên môn, giải pháp nào hợp lý?",
+    options: [
+      "Thuê ngoài (outsourcing) từng phần hoặc theo dự án",
+      "Giao cho bộ phận hành chính",
+      "Hủy toàn bộ hệ thống",
+      "Hoãn chuyển đổi số"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Lợi ích của việc sử dụng DFD trong thiết kế hệ thống là:",
+    options: [
+      "Thay thế hoàn toàn kế hoạch kinh doanh",
+      "Giao tiếp nội bộ nhanh hơn",
+      "Mô tả chính xác luồng dữ liệu, giúp tổ chức hiểu cách hoạt động của giải pháp",
+      "Tạo biểu đồ đẹp"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Khi tư vấn lộ trình chuyển đổi số, cần ưu tiên những nội dung nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Gợi ý thay toàn bộ nhân sự để phù hợp với công nghệ",
+      "Đề xuất giải pháp phù hợp với nguồn lực và mục tiêu của tổ chức",
+      "Tập trung chủ yếu vào việc thay đổi thương hiệu",
+      "Phân tích hiện trạng tổ chức và xác định vấn đề trọng tâm cần chuyển đổi"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Vì sao việc quản lý thay đổi là một phần không thể thiếu trong lộ trình chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Thay thế vai trò của lãnh đạo dự án",
+      "Đảm bảo tổ chức duy trì hoạt động ổn định trong quá trình thay đổi",
+      "Giúp nhân sự hiểu mục tiêu, giảm kháng cự và tăng sự cam kết",
+      "Giúp tránh sử dụng công nghệ tiên tiến"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Các yếu tố nào sau đây giúp đảm bảo giải pháp số được thiết kế phù hợp thực tế? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Sao chép mô hình từ doanh nghiệp khác mà không điều chỉnh",
+      "Căn cứ vào chiến lược kinh doanh và mục tiêu cụ thể",
+      "Đánh giá mức độ sẵn sàng về con người, quy trình và công nghệ",
+      "Áp dụng công nghệ theo xu hướng thị trường bất kể năng lực tổ chức"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Trong việc thiết kế giải pháp chuyển đổi số, thông tin nào sau đây là cần thiết? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Khó khăn hiện tại trong vận hành và kỳ vọng cải tiến",
+      "Mức tiêu thụ điện của tòa nhà",
+      "Đặc điểm người dùng cuối và quy trình liên quan",
+      "Sở thích cá nhân của ban giám đốc"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Công cụ nào thường được sử dụng để hỗ trợ thiết kế giải pháp số phù hợp? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Mô hình Canvas hoặc Business Model",
+      "Phân tích SWOT và ma trận ưu tiên (Prioritization Matrix)",
+      "Soạn thảo hợp đồng lao động",
+      "Lập sơ đồ phòng ban"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Trong lộ trình chuyển đổi số, chỉ số đánh giá hiệu quả (KPI) có vai trò gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tạo cơ sở khách quan cho việc phân bổ nguồn lực hợp lý",
+      "Không ảnh hưởng nếu đã hoàn thành dự án",
+      "Giúp theo dõi tiến độ, đánh giá kết quả và ra quyết định điều chỉnh phù hợp",
+      "Dùng để trang trí báo cáo"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Mô hình SWOT giúp phân tích yếu tố nào sau đây?",
+    options: [
+      "Mức độ hài lòng khách hàng",
+      "Hiệu suất máy chủ",
+      "Điểm mạnh, điểm yếu, cơ hội và thách thức",
+      "Tâm lý người tiêu dùng"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Trong mô hình hóa giải pháp số, BPF là viết tắt của:",
+    options: [
+      "Business Process Flow",
+      "Best Product Framework",
+      "Basic Product Format",
+      "Business Performance File"
+    ],
+    answers: [0]
+  },
+   {
+    question: "Vì sao truyền thông trong CĐS cần tùy biến theo từng nhóm đối tượng?",
+    options: [
+      "Để phù hợp với nhu cầu, mối quan tâm, ngôn ngữ và kênh tiếp nhận của từng nhóm",
+      "Để gửi thông tin giống nhau qua nhiều kênh",
+      "Để tiết kiệm chi phí họp",
+      "Để giảm thời gian làm việc"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Mục tiêu cốt lõi của truyền thông trong chuyển đổi số là:",
+    options: [
+      "Tăng số lượng email gửi đi",
+      "Tạo sự đồng thuận và hiểu đúng giữa các bên liên quan",
+      "Tăng hiệu suất máy tính",
+      "Giúp dự án nhanh chóng hoàn tất"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Khi xây dựng đề cương dự án CĐS, vai trò của kế hoạch truyền thông là:",
+    options: [
+      "Đảm bảo các bên liên quan được thông tin, hiểu rõ và ủng hộ",
+      "Chuyển trách nhiệm cho bộ phận PR",
+      "Làm đẹp hồ sơ dự án",
+      "Hạn chế tương tác nội bộ"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Trong một đề cương xin ý kiến chuyên gia, nội dung truyền thông cần thể hiện:",
+    options: [
+      "Các kênh, nội dung, tần suất và mục tiêu truyền thông rõ ràng",
+      "Chi tiết lương thưởng của nhân viên",
+      "Thông tin mạng nội bộ",
+      "Kế hoạch tổ chức tiệc"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Những thành phần cơ bản cần có trong đề cương dự án chuyển đổi số là gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Mục tiêu, phạm vi và lộ trình triển khai dự án",
+      "Danh sách nhân sự nghỉ việc",
+      "Giải pháp công nghệ dự kiến và chỉ số đánh giá hiệu quả",
+      "Mẫu phiếu khảo sát giấy"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Khi trình bày đề cương dự án chuyển đổi số, những nội dung nào sau đây cần thể hiện rõ? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tính khả thi của giải pháp thông qua phân tích nguồn lực và KPI",
+      "Các dự án không liên quan",
+      "Căn cứ thực tiễn và nhu cầu chuyển đổi từ hiện trạng tổ chức",
+      "Chi tiết sở thích của ban lãnh đạo"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Vì sao trong đề cương dự án chuyển đổi số cần trình bày rõ mục tiêu và phạm vi? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Để tránh bị phản biện khi thuyết trình",
+      "Để giảm bớt số lượng trang trình bày",
+      "Là cơ sở để xác định các chỉ số đo lường hiệu quả phù hợp",
+      "Giúp chuyên gia đánh giá tính tập trung và khả thi của giải pháp"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Khi xây dựng đề cương dự án, việc đề xuất mô hình thử nghiệm (MVP) có ý nghĩa gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tối ưu hóa nguồn lực và tăng khả năng điều chỉnh sớm nếu có vấn đề",
+      "Giảm độ tin cậy của dự án",
+      "Làm tăng chi phí triển khai",
+      "Cho phép đánh giá tính hiệu quả và rủi ro trước khi triển khai toàn bộ"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Việc đưa các chỉ số đánh giá hiệu quả (KPI) vào đề cương nhằm mục đích gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Đo lường mức độ đạt được mục tiêu và theo dõi tiến độ triển khai",
+      "Tăng tính minh bạch và khả năng thuyết phục chuyên gia thẩm định",
+      "Gây ấn tượng với nhà đầu tư",
+      "Làm đẹp đề cương bằng bảng biểu"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Khi thuyết trình đề cương dự án chuyển đổi số, cần chú trọng điều gì để thuyết phục chuyên gia? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Trình bày logic, có minh chứng dữ liệu và gắn với chiến lược tổ chức",
+      "Dùng nhiều từ viết tắt để thể hiện trình độ",
+      "Tránh trả lời câu hỏi phản biện",
+      "Diễn giải rõ luận cứ về nhu cầu thực tế và giải pháp đề xuất"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Truyền thông hiệu quả trong chuyển đổi số giúp tổ chức đạt được mục tiêu nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Loại bỏ vai trò của đào tạo nội bộ",
+      "Tăng sự đồng thuận và giảm kháng cự từ nhân viên",
+      "Gây nhầm lẫn giữa các phòng ban",
+      "Nâng cao nhận thức và cam kết của các bên liên quan"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Những yếu tố nào cần có trong kế hoạch truyền thông chuyển đổi số hiệu quả? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Xác định đối tượng truyền thông cụ thể và thông điệp phù hợp",
+      "Lên kế hoạch thời gian và kênh truyền thông phù hợp với từng giai đoạn",
+      "Dựa hoàn toàn vào truyền miệng nội bộ",
+      "Truyền thông chỉ cần thực hiện sau khi dự án đã hoàn tất"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Truyền thông hiệu quả trong chuyển đổi số giúp doanh nghiệp đạt được điều gì? (Chọn 3 đáp án đúng nhất)",
+    options: [
+      "Tăng cường sự tham gia và cam kết của nhân viên trong quá trình thay đổi",
+      "Làm cho nhân viên không cần cập nhật kỹ năng mới",
+      "Giảm thời gian đào tạo nghiệp vụ chuyên môn",
+      "Giúp tổ chức chủ động xử lý phản hồi và điều chỉnh lộ trình kịp thời"
+    ],
+    answers: [0,2,3]
+  },
+  {
+    question: "Điều gì thể hiện một chiến dịch truyền thông chuyển đổi số kém hiệu quả? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Truyền thông chỉ tập trung vào lãnh đạo, bỏ qua nhân viên vận hành",
+      "Được tích hợp với kế hoạch quản lý thay đổi và đào tạo",
+      "Có nhiều kênh truyền thông và đo lường phản hồi định kỳ",
+      "Thông điệp không rõ ràng, thiếu minh bạch khiến nhân viên hiểu sai"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Để truyền thông trong chuyển đổi số mang lại hiệu quả thực tế, doanh nghiệp nên: (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Gắn truyền thông với mục tiêu và lợi ích cụ thể cho từng nhóm đối tượng",
+      "Thiết kế thông điệp truyền cảm hứng, dễ tiếp cận và dễ ghi nhớ",
+      "Tránh chia sẻ thông tin với nhân viên tuyến đầu",
+      "Chỉ thông báo các thay đổi lớn vào cuối quá trình chuyển đổi"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Đối tượng quan tâm nhiều đến KPI và kết quả kinh doanh khi truyền thông là:",
+    options: [
+      "Bộ phận kỹ thuật",
+      "Lãnh đạo cấp cao",
+      "Khách hàng cuối",
+      "Nhân viên vận hành"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Tại sao nên sử dụng Microlearning trong đào tạo số?",
+    options: [
+      "Dễ chia sẻ qua mạng xã hội",
+      "Giảm vai trò của chuyên gia",
+      "Để tránh học tập trung",
+      "Giúp học nhanh, từng nội dung ngắn gọn, dễ tiếp thu"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Trong phần “Giải pháp công nghệ” của đề cương, cần thể hiện những gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Khả năng tích hợp với hạ tầng hiện tại và mức độ thân thiện với người dùng",
+      "Danh sách các phần mềm phổ biến trên thị trường",
+      "Sự phù hợp giữa công nghệ được chọn và bài toán thực tế của tổ chức",
+      "Công nghệ càng phức tạp càng tốt"
+    ],
+    answers: [0,2]
+  },
+   {
+    question: "KPI là viết tắt của:",
+    options: [
+      "Key Performance Indicator",
+      "Key Project Insight",
+      "Knowledge Plan Integration",
+      "Key Performance Index"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Khi thuyết trình đề cương dự án CĐS trước chuyên gia, bạn nên trình bày các KPI thế nào?",
+    options: [
+      "Dựa theo ý kiến cá nhân",
+      "Chỉ dùng chỉ số tài chính",
+      "Trình bày càng nhiều chỉ số càng tốt",
+      "Chọn chỉ số cụ thể, liên quan đến mục tiêu dự án, có cách đo rõ ràng"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Một giải pháp giúp duy trì động lực học tập cho nhân viên là:",
+    options: [
+      "Cung cấp ngân sách học tập cá nhân và khuyến khích chia sẻ",
+      "Tổ chức họp liên tục",
+      "Không cần đo lường kết quả",
+      "Cắt giảm thời gian đào tạo"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Điều gì nên làm nếu KPI không đạt nhưng dự án vẫn có tiềm năng?",
+    options: [
+      "Chuyển sang phòng ban khác",
+      "Điều chỉnh tính năng, phạm vi, mục tiêu dự án",
+      "Dừng ngay",
+      "Không cần thay đổi"
+    ],
+    answers: [1]
+  },
+  {
+    question: "KPI là viết tắt của cụm từ nào sau đây?",
+    options: [
+      "Knowledge Process Insight",
+      "Key Project Initiative",
+      "Key Performance Indicator",
+      "Key Product Integration"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Trong đo lường hiệu suất, chỉ số 'Cycle Time' phản ánh điều gì?",
+    options: [
+      "Thời gian nhân viên nghỉ trưa",
+      "Tuổi trung bình của nhân viên",
+      "Tốc độ internet",
+      "Thời gian xử lý một quy trình"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Tại sao cần lồng ghép KPI vào đề cương dự án chuyển đổi số khi trình bày với chuyên gia?",
+    options: [
+      "Tạo cảm giác chuyên nghiệp",
+      "Giúp trình bày cho có hình thức",
+      "Để tránh bị đặt câu hỏi",
+      "Làm rõ tính khả thi, mục tiêu và cách đo lường hiệu quả dự án"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Trong dự án chuyển đổi số, “feedback loop” đóng vai trò gì?",
+    options: [
+      "Giảm chi phí đào tạo",
+      "Cung cấp phản hồi từ người dùng để điều chỉnh và cải tiến giải pháp",
+      "Tăng tốc độ xử lý kỹ thuật",
+      "Loại bỏ vai trò của người dùng cuối"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Một doanh nghiệp nên mở rộng giải pháp số thí điểm khi nào?",
+    options: [
+      "Sau khi đầu tư đủ phần mềm",
+      "Khi nhận được phản hồi tốt và KPI đạt kỳ vọng",
+      "Ngay khi có tài trợ bên ngoài",
+      "Khi tất cả nhân viên đồng ý"
+    ],
+    answers: [1]
+  },
+  {
+    question: "Khi thuyết trình đề cương dự án chuyển đổi số, cần trình bày rõ những nội dung nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Vấn đề thực tiễn của doanh nghiệp và căn cứ lựa chọn giải pháp",
+      "Các chỉ số đánh giá hiệu quả (KPI) và lợi ích kỳ vọng sau triển khai",
+      "Thông tin cá nhân của người thuyết trình",
+      "Lịch nghỉ phép của phòng IT"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Những yếu tố nào thể hiện một bài thuyết trình đề cương có căn cứ? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giải pháp gắn với mục tiêu và nhu cầu thực tế của tổ chức",
+      "Trình bày dài dòng nhưng thiếu trọng tâm",
+      "Dựa hoàn toàn vào cảm nhận chủ quan",
+      "Có dẫn chứng từ dữ liệu hoặc thực trạng nội bộ doanh nghiệp"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Khi thuyết trình đề cương chuyển đổi số, tại sao cần trình bày rõ vấn đề thực tế của tổ chức? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Để kéo dài thời gian trình bày",
+      "Để chuyên gia hiểu được bối cảnh và tính cấp thiết của giải pháp",
+      "Vì đó là phần ít ai chú ý",
+      "Làm rõ lý do cần đầu tư và triển khai chuyển đổi số"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Trong thuyết trình đề cương dự án, vì sao cần minh họa bằng số liệu hoặc mô hình trực quan? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp người nghe dễ hình dung và tin tưởng hơn vào giải pháp",
+      "Tăng khả năng tiếp nhận thông tin và tạo điểm nhấn cho bài trình bày",
+      "Làm cho nội dung trở nên khó hiểu với người không chuyên",
+      "Làm bài thuyết trình ngắn lại mà không cần giải thích"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Hai yếu tố nào giúp tăng tính thuyết phục khi trình bày trước chuyên gia? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Lặp lại nội dung nhiều lần để ghi nhớ",
+      "Trình bày rõ ràng mục tiêu và lợi ích kỳ vọng từ dự án",
+      "Sử dụng các dẫn chứng, số liệu minh họa phù hợp",
+      "Dùng thuật ngữ kỹ thuật phức tạp để gây ấn tượng"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Khi xin ý kiến chuyên gia cho đề cương chuyển đổi số, cần lưu ý điều gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Diễn giải hợp lý về tính khả thi và tác động thực tiễn của giải pháp",
+      "Tránh trình bày các giới hạn của dự án",
+      "Tập trung vào mục tiêu cá nhân thay vì mục tiêu tổ chức",
+      "Trình bày rõ các tiêu chí đánh giá hiệu quả và rủi ro có thể xảy ra"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Những thành phần chính trong một bài thuyết trình đề cương dự án chuyển đổi số là gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giới thiệu tổng quan dự án và mục tiêu chuyển đổi số",
+      "Lộ trình triển khai và các giải pháp công nghệ đề xuất",
+      "Thời gian nghỉ của ban điều hành",
+      "Danh sách nhân viên kỹ thuật"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Việc gắn giải pháp với nhu cầu thực tiễn và mục tiêu chiến lược của doanh nghiệp mang lại điều gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Làm cho nội dung thuyết trình khó tiếp cận",
+      "Giúp giải pháp phù hợp với nguồn lực và kỳ vọng của tổ chức",
+      "Làm mất tính sáng tạo của người trình bày",
+      "Tăng tính thuyết phục và đảm bảo khả năng triển khai thành công"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Đâu là các yếu tố giúp phần thuyết trình đề cương có căn cứ và thuyết phục? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Có dữ liệu thực tế hỗ trợ và phân tích chi tiết lộ trình triển khai",
+      "Đưa ra các chỉ số đánh giá cụ thể và gắn với kết quả đầu ra",
+      "Trình bày theo cảm tính, không cần chuẩn bị cấu trúc rõ ràng",
+      "Dùng ngôn ngữ phức tạp để thể hiện trình độ"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Thông tin nào cần có để bài thuyết trình đề cương có căn cứ? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Dữ liệu thực tế phản ánh vấn đề hoặc nhu cầu của tổ chức",
+      "Phân tích mức độ phù hợp của giải pháp với nguồn lực hiện có",
+      "Slogan quảng bá thương hiệu",
+      "Mẫu hợp đồng với nhà cung cấp"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Việc sử dụng số liệu và dẫn chứng trong thuyết trình đề cương có ý nghĩa gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giúp thay thế phần trình bày chiến lược dài hạn",
+      "Tăng tính minh bạch và thuyết phục của bài trình bày",
+      "Làm rõ căn cứ lựa chọn giải pháp và định hướng triển khai",
+      "Gây nhiễu thông tin cho người nghe"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Một bài thuyết trình đề cương dự án hiệu quả cần thể hiện điều gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Nêu toàn bộ thông tin kỹ thuật chi tiết dù không cần thiết",
+      "Dùng ngôn ngữ chuyên môn cao để tạo ấn tượng",
+      "Kết nối được mục tiêu dự án với chiến lược phát triển của tổ chức",
+      "Giải pháp phù hợp với nguồn lực, lộ trình rõ ràng, chỉ số đánh giá cụ thể"
+    ],
+    answers: [2,3]
+  },
+   {
+    question: "Một trong những lợi ích nổi bật của họp video là:",
+    options: [
+      "Tiết kiệm thời gian và chi phí di chuyển",
+      "Dễ gây hiểu lầm ngôn ngữ cơ thể",
+      "Không hỗ trợ chia sẻ thông tin",
+      "Tăng chi phí tổ chức"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Vì sao nên sử dụng kết hợp cả Chat và Email trong môi trường làm việc số?",
+    options: [
+      "Tối ưu hiệu quả giao tiếp theo mục tiêu và ngữ cảnh",
+      "Để tránh lưu trữ tài liệu",
+      "Để giới hạn thời gian phản hồi",
+      "Để tăng số lượng tin nhắn"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Hạn chế chính khi chia sẻ tài liệu qua link là:",
+    options: [
+      "Không thể chia sẻ cùng lúc",
+      "Phải in tài liệu",
+      "Dễ sử dụng quá nhiều màu",
+      "Rủi ro bảo mật nếu sai cấu hình quyền truy cập"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Khi thuyết trình, sinh viên cần phản hồi câu hỏi chuyên gia thế nào cho hiệu quả?",
+    options: [
+      "Lảng tránh câu hỏi phức tạp",
+      "Trả lời ngắn gọn, mơ hồ",
+      "Trình bày có căn cứ, thuyết phục, và gắn với đề cương dự án"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Việc đính kèm file dưới dạng đường dẫn thay vì tập tin giúp:",
+    options: [
+      "Giảm hợp tác nhóm",
+      "Tăng thời gian gửi mail",
+      "Tăng rủi ro dữ liệu",
+      "Hạn chế trùng lặp và tăng khả năng cộng tác thời gian thực"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Việc sử dụng AI trong văn phòng số đóng vai trò gì trong đề cương dự án?",
+    options: [
+      "Là yếu tố phụ trợ",
+      "Không liên quan đến năng suất",
+      "Là minh chứng cho tính hiệu quả và hiện đại của giải pháp số",
+      "Gây khó hiểu với người nghe"
+    ],
+    answers: [2]
+  },
+  {
+    question: "Nếu đề xuất dùng AI để tóm tắt nội dung họp, điều này thể hiện:",
+    options: [
+      "Tối ưu hoá thời gian và hiệu quả truyền đạt thông tin",
+      "Giảm khả năng ghi nhớ của nhân viên",
+      "Tư duy quản lý truyền thống",
+      "Loại bỏ vai trò thư ký"
+    ],
+    answers: [0]
+  },
+  {
+    question: "Các thành phần cơ bản nào cần có trong đề cương dự án chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Giải pháp công nghệ đề xuất và lộ trình triển khai",
+      "Danh sách mua sắm văn phòng phẩm",
+      "Lịch nghỉ phép của bộ phận IT",
+      "Hiện trạng doanh nghiệp và mục tiêu chuyển đổi"
+    ],
+    answers: [0,3]
+  },
+  {
+    question: "Việc phản hồi và tiếp thu ý kiến chuyên gia có ý nghĩa gì trong quá trình hoàn thiện đề cương? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Thể hiện tinh thần cầu thị và khả năng điều chỉnh linh hoạt của nhóm thực hiện",
+      "Góp phần hoàn thiện nội dung, tăng tính thực tiễn và khả thi của dự án",
+      "Là thủ tục mang tính hình thức, không ảnh hưởng đến chất lượng đề án",
+      "Giúp kéo dài thời gian trình bày"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Điều gì cho thấy một bài thuyết trình đề cương dự án có căn cứ rõ ràng? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Trình bày chung chung, thiếu phân tích hiện trạng",
+      "Có dẫn chứng từ dữ liệu thực tiễn và minh họa bằng mô hình triển khai",
+      "Trình bày giải pháp gắn với nguồn lực và mục tiêu cụ thể của tổ chức",
+      "Sử dụng nhiều thuật ngữ kỹ thuật để gây ấn tượng"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Trong quá trình trình bày và xin góp ý chuyên gia, điều gì cần tránh? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Ghi nhận các đề xuất phù hợp để điều chỉnh đề cương",
+      "Bỏ qua các nội dung chuyên gia quan tâm",
+      "Tránh trả lời các câu hỏi phản biện",
+      "Sẵn sàng giải thích, phản hồi hợp lý với các góp ý xây dựng"
+    ],
+    answers: [1,2]
+  },
+  {
+    question: "Doanh nghiệp nên tạm dừng hoặc điều chỉnh dự án chuyển đổi số khi nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Khi phát sinh chi phí vượt mức và hiệu quả chưa rõ ràng",
+      "Khi kết quả thử nghiệm không phù hợp với nhu cầu thực tế",
+      "Khi cần thay đổi thương hiệu công ty",
+      "Khi nhóm triển khai xin nghỉ phép"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Doanh nghiệp có thể áp dụng những cách nào để thúc đẩy nhân viên học tập liên tục? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Yêu cầu tự học hoàn toàn không cần hỗ trợ",
+      "Tổ chức các buổi chia sẻ nội bộ và học hỏi lẫn nhau",
+      "Chỉ cung cấp tài liệu dưới dạng giấy",
+      "Tích hợp học tập qua nền tảng số và nội dung ngắn gọn"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Việc mở rộng quy mô triển khai dự án chuyển đổi số nên thực hiện trong điều kiện nào? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Khi giai đoạn thử nghiệm (MVP) đạt được kết quả khả quan",
+      "Khi muốn thay đổi toàn bộ mô hình quản trị ngay lập tức",
+      "Khi các bộ phận đã sẵn sàng và có nguồn lực đầy đủ",
+      "Khi chưa đánh giá xong nhưng đã có ngân sách"
+    ],
+    answers: [0,2]
+  },
+  {
+    question: "Việc ăn mừng và ghi nhận thành công trong quá trình chuyển đổi số có ý nghĩa gì? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tăng cường sự gắn kết và tinh thần làm việc tích cực",
+      "Tạo động lực tinh thần cho đội ngũ và ghi nhận nỗ lực đóng góp",
+      "Tổ chức tiệc để sử dụng hết ngân sách",
+      "Làm hình thức để hoàn thành báo cáo"
+    ],
+    answers: [0,1]
+  },
+  {
+    question: "Họp video có lợi thế gì so với họp trực tiếp?",
+    options: [
+      "Tăng chi phí đi lại",
+      "Khó chia sẻ màn hình",
+      "Không phù hợp với môi trường doanh nghiệp",
+      "Giao tiếp nhanh, tiết kiệm thời gian và kết nối từ xa"
+    ],
+    answers: [3]
+  },
+  {
+    question: "Vì sao cần trình bày rõ chỉ số đánh giá hiệu quả (KPI) trong thuyết trình đề cương chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Để tăng số lượng slide trình bày",
+      "Giúp minh chứng tính khả thi và cụ thể hóa mục tiêu dự án",
+      "Vì tất cả dự án đều phải có KPI giống nhau",
+      "Để chuyên gia dễ dàng theo dõi, đánh giá tiến độ và kết quả triển khai"
+    ],
+    answers: [1,3]
+  },
+  {
+    question: "Khi xin ý kiến chuyên gia về đề cương, yếu tố nào sau đây giúp tăng tính thuyết phục? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Tập trung trình bày các chi tiết kỹ thuật phức tạp",
+      "Trình bày cảm tính, không cần chứng minh",
+      "Phân tích rõ ràng mối liên hệ giữa giải pháp và nhu cầu thực tiễn",
+      "Trình bày mạch lạc, có luận cứ rõ ràng, minh họa bằng dữ liệu thực tế"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Khi nào doanh nghiệp nên điều chỉnh hoặc tạm dừng triển khai một phần của dự án chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Khi đánh giá thấy hiệu quả thấp hơn kỳ vọng",
+      "Khi giải pháp không còn phù hợp với nhu cầu thực tế",
+      "Khi hết hạn bảo hành phần mềm",
+      "Khi nhân viên xin nghỉ phép"
+    ],
+    answers: [0,1]
   }
-, {
-    "question": "Thành phần nào sau đây không thuộc ngân sách dự án?",
-    "options": [
-      "Phân tích KPIs",
-      "Chi phí dự phòng",
-      "Chi phí nhân sự",
-      "Chi phí công cụ hỗ trợ"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Ngân sách dự án thường được điều chỉnh khi nào?",
-    "options": [
-      "Khi không đủ nguồn lực",
-      "Khi thay đổi yêu cầu",
-      "Khi gặp rủi ro không lường trước",
-      "Cả ba yếu tố trên"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Tại sao việc dự toán ngân sách chính xác lại quan trọng?",
-    "options": [
-      "Để giảm thiểu thời gian thực hiện dự án và các vấn đề phát sinh không cần thiết",
-      "Để tối ưu hóa các công cụ hỗ trợ",
-      "Để giảm bớt rủi ro kỹ thuật",
-      "Để tránh vượt ngân sách và đảm bảo nguồn lực hợp lý"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Yếu tố nào quyết định việc điều chỉnh ngân sách?",
-    "options": [
-      "Hiệu suất nhóm dự án",
-      "Thời gian hoàn thành dự án",
-      "Sự đồng thuận của các bên liên quan",
-      "Các thay đổi về yêu cầu và nguồn lực"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Làm thế nào để xác định ngân sách phù hợp?",
-    "options": [
-      "Dựa trên phân tích rủi ro",
-      "Phân tích yêu cầu và nguồn lực cần thiết",
-      "Tính toán dựa trên thời gian thực hiện",
-      "Tính toán dựa trên ngân sách cũ"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Tại sao việc điều chỉnh ngân sách lại cần thiết trong một số dự án?",
-    "options": [
-      "Để đảm bảo dự án có đủ nguồn lực và thích ứng với các thay đổi yêu cầu",
-      "Để xử lý các rủi ro không lường trước và các chi phí phát sinh",
-      "Để cân đối tài chính khi tiến độ và phạm vi dự án bị ảnh hưởng",
-      "Tất cả các lý do trên"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Kết quả của việc phân chia nhiệm vụ thường được thể hiện dưới dạng nào?",
-    "options": [
-      "Danh sách công việc cụ thể",
-      "Kế hoạch tiến độ tổng thể",
-      "Báo cáo phân tích yêu cầu",
-      "Biểu đồ ngân sách dự án"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Tại sao việc phân chia yêu cầu thành nhiệm vụ nhỏ lại quan trọng?",
-    "options": [
-      "Để giảm số lượng công việc của nhóm",
-      "Để đảm bảo không có rủi ro trong dự án",
-      "Để tiết kiệm chi phí dự án",
-      "Để giúp quản lý công việc dễ dàng hơn"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Một Gantt chart điển hình bao gồm các thành phần nào?",
-    "options": [
-      "Nhiệm vụ và thời gian thực hiện",
-      "Nhiệm vụ và biểu đồ rủi ro",
-      "Ngân sách và kế hoạch kiểm tra",
-      "Thời gian thực hiện và ngân sách"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Tại sao các nhiệm vụ phụ thuộc lẫn nhau cần được quản lý chặt chẽ?",
-    "options": [
-      "Để tiết kiệm chi phí dự án",
-      "Để đảm bảo tiến độ đúng hạn",
-      "Để tạo ấn tượng tốt với các bên liên quan",
-      "Để tiết kiệm nguồn lực cho dự án"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Công cụ nào hữu ích nhất khi điều chỉnh ngân sách dự án?",
-    "options": [
-      "Báo cáo tài chính dự án",
-      "Gantt chart",
-      "Báo cáo tiến độ",
-      "Biểu đồ PERT"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Lợi ích của việc phân bổ ngân sách hợp lý là gì?",
-    "options": [
-      "Giảm thiểu rủi ro và quản lý chi phí vượt mức",
-      "Duy trì tiến độ dự án hợp lý",
-      "Đảm bảo ngân sách đủ cho tất cả các nhiệm vụ dù không quan trọng",
-      "Đảm bảo các hạng mục quan trọng được ưu tiên và chi tiêu hợp lý"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Điều gì có thể xảy ra nếu ngân sách dự án không được phân bổ đúng cách?",
-    "options": [
-      "Dự án có khả năng hoàn thành nhanh hơn vì tiết kiệm được nhiều khoản chi phí không cần thiết",
-      "Tất cả các nhiệm vụ trong dự án sẽ được hoàn thành mà không gặp vấn đề gì",
-      "Tăng mức độ hài lòng của các bên liên quan nhờ vào cách chi tiêu linh hoạt và hợp lý hơn",
-      "Các hạng mục quan trọng có thể thiếu kinh phí, dẫn đến chậm tiến độ hoặc giảm chất lượng"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Khi chia nhỏ yêu cầu phần mềm, điều đầu tiên cần làm là gì?",
-    "options": [
-      "Xác định ngân sách và nguồn lực cần thiết cho dự án",
-      "Phân tích các yếu tố kỹ thuật bao gồm các yêu cầu phần cứng, phần mềm",
-      "Phân tích yêu cầu để xác định các chức năng chính của phần mềm",
-      "Thiết kế giao diện người dùng sao cho dễ sử dụng và hiệu quả"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Công cụ nào hỗ trợ minh họa thời gian thực hiện từng nhiệm vụ?",
-    "options": [
-      "Gantt chart",
-      "PERT chart",
-      "Ma trận rủi ro",
-      "Trello"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Khi chia nhỏ yêu cầu, điều gì cần ưu tiên?",
-    "options": [
-      "Ngân sách dự án",
-      "Mức độ phức tạp của nhiệm vụ",
-      "Tính khả thi của nhiệm vụ",
-      "Thời gian triển khai dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Một dự án thường sử dụng Gantt chart khi nào?",
-    "options": [
-      "Lập kế hoạch và theo dõi tiến độ",
-      "Giải quyết xung đột nhóm",
-      "Phân tích ngân sách",
-      "Đánh giá chất lượng sản phẩm"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Việc điều chỉnh ngân sách có thể giúp gì cho dự án?",
-    "options": [
-      "Cải thiện các yếu tố về chất lượng, tính năng và hiệu quả của sản phẩm",
-      "Tăng số lượng nhân viên cần thiết cho dự án",
-      "Giảm số lượng nhân viên cần thiết cho dự án",
-      "Đảm bảo dự án vẫn có đủ nguồn lực khi xảy ra thay đổi"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Chia nhỏ yêu cầu phần mềm nhằm mục đích gì?",
-    "options": [
-      "Giảm chi phí dự án",
-      "Đảm bảo chất lượng phần mềm",
-      "Dễ dàng quản lý và theo dõi tiến độ",
-      "Tăng cường bảo mật"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Công cụ nào thường được sử dụng để hỗ trợ phân tích yêu cầu?",
-    "options": [
-      "Báo cáo KPI",
-      "Gantt chart",
-      "Trello",
-      "Bảng phân tích nhiệm vụ"
-    ],
-    "answer": 3
-  }, {
-    "question": "Quy trình phân chia yêu cầu thường bắt đầu từ đầu?",
-    "options": [
-      "Thu thập thông tin yêu cầu",
-      "Phân tích báo cáo tài chính",
-      "Tạo ma trận rủi ro",
-      "Phân bổ nguồn lực"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Ma trận rủi ro giúp đánh giá rủi ro dựa trên yếu tố nào?",
-    "options": [
-      "Khả năng xảy ra và mức độ ảnh hưởng",
-      "Tiến độ và yêu cầu khách hàng",
-      "Chi phí và thời gian thực hiện",
-      "Nguồn lực và ngân sách dự án"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Rủi ro kỹ thuật trong dự án thường liên quan đến yếu tố nào?",
-    "options": [
-      "Hệ thống không đạt yêu cầu kỹ thuật",
-      "Nguồn lực tài chính không đủ",
-      "Thời gian triển khai bị kéo dài",
-      "Thiếu hụt công nghệ phù hợp"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Tại sao việc nhận diện rủi ro từ sớm lại quan trọng?",
-    "options": [
-      "Để cải thiện hiệu suất của nhóm dự án",
-      "Để giảm thiểu tác động tiêu cực của rủi ro",
-      "Để tối ưu hóa ngân sách dự án",
-      "Để rút ngắn thời gian triển khai"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Ví dụ nào sau đây thể hiện một rủi ro trong lịch trình dự án?",
-    "options": [
-      "Đội ngũ làm việc không đồng thuận",
-      "Hệ thống không đáp ứng hiệu suất yêu cầu",
-      "Một nhiệm vụ quan trọng bị trì hoãn",
-      "Ngân sách bị vượt quá dự toán"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Một rủi ro có mức độ ảnh hưởng cao nhưng khả năng xảy ra thấp cần xử lý như thế nào?",
-    "options": [
-      "Thực hiện các biện pháp giảm thiểu để giảm khả năng xảy ra",
-      "Chuyển giao rủi ro cho bên thứ ba hoặc mua bảo hiểm",
-      "Chấp nhận rủi ro và không cần theo dõi",
-      "Lập kế hoạch dự phòng"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Rủi ro tài chính trong dự án thường được kiểm soát bằng cách nào?",
-    "options": [
-      "Lập dự phòng ngân sách và theo dõi chi phí thường xuyên",
-      "Tăng ngân sách cho dự án để dự phòng các chi phí phát sinh",
-      "Tăng số lượng nhân sự tham gia dự án để hoàn thành nhanh hơn",
-      "Thiết lập các quy trình kiểm soát chi phí chặt chẽ"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Các yếu tố nào cần được ưu tiên trong kế hoạch phòng ngừa rủi ro?",
-    "options": [
-      "Tất cả các rủi ro có mức ảnh hưởng nhỏ",
-      "Những rủi ro có khả năng xảy ra cao và ảnh hưởng lớn",
-      "Chỉ những rủi ro không lường trước được",
-      "Rủi ro liên quan đến khách hàng"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Kiểm thử tự động thường sử dụng công cụ nào sau đây?",
-    "options": [
-      "Trello",
-      "Gantt chart",
-      "PERT",
-      "Selenium"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Mục tiêu chính của kiểm thử chất lượng phần mềm là gì?",
-    "options": [
-      "Tăng sự hài lòng của nhân viên phát triển",
-      "Đảm bảo phần mềm hoạt động đúng như yêu cầu",
-      "Tối ưu hóa chi phí phát triển phần mềm",
-      "Hoàn thành dự án trong thời gian ngắn nhất"
-    ],
-    "answer": 1
-  },{
-    "question": "Khi nào nên sử dụng kiểm thử tự động thay vì kiểm thử thủ công?",
-    "options": [
-      "Khi cần kiểm tra lại nhiều lần một chức năng",
-      "Khi không có công cụ hỗ trợ phù hợp",
-      "Khi ngân sách dự án bị giới hạn",
-      "Khi cần đánh giá giao diện người dùng"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Điểm khác biệt lớn nhất giữa kiểm thử thủ công và tự động là gì?",
-    "options": [
-      "Kiểm thử thủ công chỉ dùng cho hệ thống nhỏ",
-      "Kiểm thử tự động sử dụng công cụ để tăng tốc độ kiểm tra",
-      "Kiểm thử tự động không cần nhân lực tham gia",
-      "Kiểm thử thủ công không cần quy trình cụ thể"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Lợi ích chính của việc sử dụng kiểm thử tự động là gì?",
-    "options": [
-      "Tăng sự hài lòng của người dùng",
-      "Giảm chi phí dự án",
-      "Giảm thời gian thiết kế sản phẩm",
-      "Tăng hiệu quả và độ chính xác trong kiểm thử"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Kiểm thử thủ công có lợi thế gì so với kiểm thử tự động?",
-    "options": [
-      "Không yêu cầu nhiều nhân lực",
-      "Dễ dàng kiểm tra trải nghiệm người dùng",
-      "Giảm chi phí cho các dự án lớn",
-      "Tăng tốc độ kiểm tra"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Tại sao cần kết hợp kiểm thử thủ công và tự động trong quản lý dự án phần mềm?",
-    "options": [
-      "Để tạo ấn tượng với khách hàng",
-      "Để tận dụng lợi ích của cả hai phương pháp",
-      "Để tiết kiệm thời gian kiểm thử",
-      "Để giảm số lượng công cụ kiểm thử cần thiết"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Điều gì giúp tăng hiệu quả kiểm thử tự động?",
-    "options": [
-      "Chỉ sử dụng công cụ miễn phí để giảm chi phí",
-      "Thiết kế các kịch bản kiểm thử rõ ràng và chính xác",
-      "Thực hiện kiểm thử nhiều lần mà không cần thay đổi kịch bản",
-      "Đầu tư nhiều công cụ kiểm thử"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Ma trận rủi ro có vai trò gì trong quản lý dự án?",
-    "options": [
-      "Để ưu tiên xử lý các rủi ro quan trọng",
-      "Để tối ưu hóa chất lượng sản phẩm",
-      "Để tạo báo cáo tài chính chi tiết",
-      "Để theo dõi tiến độ dự án"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Khi nào cần cập nhật ma trận rủi ro?",
-    "options": [
-      "Khi nhóm dự án được bổ sung thêm thành viên mới",
-      "Khi hoàn thành một giai đoạn quan trọng trong dự án",
-      "Khi có thay đổi lớn trong yêu cầu dự án",
-      "Khi tiến độ dự án đạt mục tiêu"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Sử dụng ma trận rủi ro như thế nào để đánh giá các rủi ro?",
-    "options": [
-      "Dựa vào mức độ ảnh hưởng của rủi ro",
-      "Đánh giá dựa trên tiến độ công việc",
-      "Kết hợp khả năng xảy ra và mức độ ảnh hưởng",
-      "Phân loại rủi ro theo chi phí dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Kiểm thử thủ công là gì?",
-    "options": [
-      "Kiểm thử tính bảo mật của phần mềm bằng các phương pháp mã hóa",
-      "Kiểm tra các chức năng phần mềm bằng thao tác trực tiếp của người kiểm thử",
-      "Kiểm tra các lỗi phần mềm bằng công cụ tự động",
-      "Đánh giá hiệu suất hệ thống qua các bài kiểm tra tải"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Tại sao kiểm thử tự động lại hiệu quả hơn trong việc kiểm tra lại nhiều lần?",
-    "options": [
-      "Vì có thể thực hiện trong thời gian ngắn",
-      "Vì không yêu cầu kỹ năng chuyên môn cao",
-      "Vì đảm bảo tính nhất quán và tốc độ kiểm thử",
-      "Vì không yêu cầu thiết lập môi trường kiểm thử"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Trường hợp nào sau đây nên sử dụng kiểm thử thủ công?",
-    "options": [
-      "Khi có nhiều kịch bản kiểm thử phức tạp cần lặp lại",
-      "Khi cần kiểm tra các chức năng lặp lại nhiều lần",
-      "Khi cần giảm thời gian kiểm thử trên nhiều môi trường",
-      "Khi cần kiểm tra trải nghiệm người dùng và giao diện đồ họa"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Khi nào cần kiểm tra lại một chức năng phần mềm?",
-    "options": [
-      "Khi khách hàng yêu cầu thêm chức năng mới",
-      "Khi đội phát triển gặp vấn đề",
-      "Sau khi sửa lỗi để đảm bảo không ảnh hưởng đến các phần khác",
-      "Khi khách hàng yêu cầu loại bỏ chức năng cũ"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Bước đầu tiên trong quy trình quản lý rủi ro là gì?",
-    "options": [
-      "Nhận diện rủi ro",
-      "Phân tích rủi ro",
-      "Theo dõi và kiểm soát rủi ro",
-      "Lập kế hoạch đối phó"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Kỹ thuật nào sau đây thường được sử dụng để giảm thiểu rủi ro?",
-    "options": [
-      "Tăng số lượng nhân viên trong nhóm",
-      "Giảm số lượng yêu cầu của khách hàng",
-      "Tạm dừng dự án",
-      "Lập ngân sách dự phòng"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Điều gì giúp giảm khả năng xảy ra rủi ro kỹ thuật?",
-    "options": [
-      "Thay đổi công nghệ khi gặp vấn đề",
-      "Áp dụng kiểm thử và đánh giá sớm trong quy trình phát triển",
-      "Kéo dài thời gian thực hiện dự án",
-      "Tăng cường đào tạo và phát triển kỹ năng cho nhân viên"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Công cụ nào sau đây hỗ trợ kiểm thử tự động?",
-    "options": [
-      "A/B testing",
-      "Microsoft Project",
-      "Slack",
-      "JUnit"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Ưu điểm chính của kiểm thử tự động so với kiểm thử thủ công là gì?",
-    "options": [
-      "Không cần nhân lực để thực hiện",
-      "Thực hiện kiểm thử mà không cần kịch bản kiểm thử",
-      "Có thể kiểm tra trực tiếp giao diện người dùng",
-      "Thực hiện kiểm thử nhanh chóng và chính xác trên quy mô lớn"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Tiêu chí nào quan trọng nhất trong kiểm thử phần mềm?",
-    "options": [
-      "Độ chính xác và hiệu suất",
-      "Thời gian và chi phí",
-      "Độ bảo mật và giao diện",
-      "Độ chính xác và tiến độ"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Quản lý rủi ro trong dự án nhằm mục đích gì?",
-    "options": [
-      "Để giảm thiểu chi phí dự án",
-      "Để tăng năng suất nhóm làm việc",
-      "Để giảm tác động tiêu cực của các rủi ro",
-      "Để tăng tốc độ hoàn thành dự án"
-    ],
-    "answer": 2
-  },{
-    "question": "Điều gì xảy ra nếu không có kế hoạch quản lý rủi ro?",
-    "options": [
-      "Nhóm làm việc sẽ tự động xử lý các rủi ro mà không cần kế hoạch",
-      "Các rủi ro có thể gây ảnh hưởng nghiêm trọng đến dự án",
-      "Dự án sẽ hoàn thành nhanh hơn vì không mất thời gian lập kế hoạch",
-      "Dự án sẽ tự động điều chỉnh khi có vấn đề xảy ra"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Công cụ nào dưới đây sử dụng mô hình Kanban như mô hình mặc định để quản lý công việc?",
-    "options": [
-      "GitHub",
-      "Jira",
-      "Slack",
-      "Trello"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Asana là công cụ dùng để làm gì trong quản lý dự án?",
-    "options": [
-      "Tạo kênh giao tiếp và chia sẻ tài liệu",
-      "Theo dõi lỗi và quản lý quy trình Agile",
-      "Lập kế hoạch và phân công công việc trong dự án",
-      "Quản lý mã nguồn và theo dõi phiên bản"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Asana hỗ trợ tốt nhất trong quản lý dự án ở khía cạnh nào?",
-    "options": [
-      "Lập kế hoạch, theo dõi tiến độ và phân công nhiệm vụ cụ thể",
-      "Quản lý giao tiếp trong nhóm làm việc từ xa",
-      "Theo dõi lỗi trong phần mềm và tối ưu hóa mã nguồn",
-      "Hỗ trợ kiểm thử và bảo trì sản phẩm phần mềm"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Lợi thế của việc sử dụng GitHub trong quản lý dự án là gì?",
-    "options": [
-      "Theo dõi thay đổi mã nguồn và quản lý phiên bản mã hiệu quả",
-      "Tạo bảng nhiệm vụ và giao tiếp nhóm hiệu quả",
-      "Phân công nhiệm vụ tự động và lập kế hoạch chi tiết",
-      "Quản lý lỗi và điều phối nguồn lực dự án"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "GitHub hỗ trợ tốt nhất trong khâu nào của dự án phát triển phần mềm?",
-    "options": [
-      "Lập kế hoạch chi tiết cho dự án",
-      "Quản lý mã nguồn, hợp nhất thay đổi, và xử lý xung đột",
-      "Theo dõi tiến độ công việc và tạo báo cáo chi phí",
-      "Theo dõi lỗi và kiểm thử sản phẩm"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Asana và Trello có điểm chung gì trong quản lý dự án?",
-    "options": [
-      "Cả hai đều tích hợp kiểm thử tự động",
-      "Cả hai đều tập trung vào quản lý mã nguồn",
-      "Cả hai đều không hỗ trợ mô hình Kanban",
-      "Cả hai đều hỗ trợ phân công nhiệm vụ và theo dõi tiến độ công việc"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Ưu điểm chính của Jira khi áp dụng quy trình Agile là gì?",
-    "options": [
-      "Quản lý Sprint, theo dõi lỗi, và tối ưu hóa quy trình",
-      "Lập kế hoạch tổng thể và phân bổ nguồn lực",
-      "Hỗ trợ giao tiếp nhanh giữa các nhóm dự án",
-      "Tạo kênh giao tiếp và chia sẻ tài liệu hiệu quả"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Công cụ nào dưới đây phù hợp nhất để tạo báo cáo tiến độ chi tiết?",
-    "options": [
-      "GitHub",
-      "Asana",
-      "Slack",
-      "Trello"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "GitHub cung cấp tính năng nào quan trọng trong quản lý mã nguồn?",
-    "options": [
-      "Lập kế hoạch tiến độ dự án",
-      "Tạo báo cáo tiến độ cho khách hàng",
-      "Quản lý phiên bản và hợp nhất mã nguồn",
-      "Theo dõi lỗi và quản lý Sprint"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Công cụ Slack phù hợp với hoạt động nào trong dự án?",
-    "options": [
-      "Quản lý mã nguồn và theo dõi phiên bản",
-      "Kiểm tra lỗi trong phần mềm phát triển",
-      "Theo dõi tiến độ công việc và phân bổ nhiệm vụ",
-      "Giao tiếp nhanh và tổ chức kênh thông tin nhóm"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Asana giúp cải thiện việc theo dõi tiến độ công việc như thế nào?",
-    "options": [
-      "Bằng cách cung cấp kênh giao tiếp nhóm",
-      "Bằng cách tích hợp kiểm thử tự động",
-      "Bằng cách quản lý mã nguồn và phiên bản dự án",
-      "Bằng cách phân chia nhiệm vụ cụ thể và theo dõi hoàn thành từng bước"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Điều gì làm cho Jira trở thành công cụ mạnh mẽ trong quản lý nhóm?",
-    "options": [
-      "Cung cấp giao diện tối giản cho mọi loại dự án",
-      "Quản lý lỗi, tạo Sprint, và theo dõi quy trình Agile chi tiết",
-      "Hỗ trợ kiểm thử tự động trong dự án phần mềm lớn",
-      "Tích hợp quản lý mã nguồn và chia sẻ tài liệu"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Trello và Asana khác nhau ở điểm nào trong quản lý tiến độ?",
-    "options": [
-      "Trello không hỗ trợ mô hình Kanban, Asana hỗ trợ đầy đủ",
-      "Trello hỗ trợ kiểm thử mã nguồn, Asana hỗ trợ theo dõi lỗi",
-      "Trello chỉ phù hợp với dự án nhỏ, Asana phù hợp với mọi dự án",
-      "Trello tập trung vào trực quan hóa nhiệm vụ, Asana tập trung vào lập kế hoạch chi tiết"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Lợi ích chính của việc sử dụng các công cụ quản lý dự án hiện đại như Trello, Asana, và Jira là gì?",
-    "options": [
-      "Theo dõi tiến độ, quản lý nhóm, và lập báo cáo chi tiết",
-      "Quản lý mã nguồn và kiểm thử tự động",
-      "Tự động hóa hoàn toàn quy trình quản lý dự án",
-      "Giảm chi phí phát triển phần mềm"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Tính năng nào của Asana giúp theo dõi chi tiết tiến độ dự án?",
-    "options": [
-      "Quản lý mã nguồn",
-      "Tạo và theo dõi nhiệm vụ trong từng giai đoạn",
-      "Quản lý ngân sách dự án",
-      "Kiểm thử tự động sản phẩm"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "GitHub và GitLab chủ yếu được sử dụng để làm gì trong dự án?",
-    "options": [
-      "Quản lý mã nguồn và hợp nhất các thay đổi",
-      "Theo dõi lỗi và quản lý tài nguyên",
-      "Lập kế hoạch và phân bổ nguồn lực",
-      "Tạo báo cáo tiến độ và chia sẻ thông tin"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Tại sao Trello phù hợp cho các dự án nhóm nhỏ?",
-    "options": [
-      "Vì giao diện trực quan, dễ sử dụng, và quản lý công việc linh hoạt",
-      "Vì tích hợp tốt với công cụ kiểm thử tự động",
-      "Vì có khả năng tự động theo dõi lỗi trong dự án",
-      "Vì giao diện tập trung vào quản lý mã nguồn"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Điểm khác biệt chính giữa Jira và Trello là gì?",
-    "options": [
-      "Jira hỗ trợ tốt hơn trong quản lý quy trình Agile và theo dõi lỗi",
-      "Trello không thể quản lý công việc theo bảng nhiệm vụ",
-      "Jira phức tạp hơn và không hỗ trợ mô hình Kanban",
-      "Jira chỉ phù hợp cho các nhóm lớn"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Khi nào Trello không phải là lựa chọn phù hợp trong quản lý dự án?",
-    "options": [
-      "Khi nhóm làm việc nhỏ và yêu cầu đơn giản",
-      "Khi cần quản lý công việc theo mô hình Kanban",
-      "Khi dự án yêu cầu theo dõi lỗi phức tạp và quy trình Agile nghiêm ngặt",
-      "Khi dự án không cần công cụ giao tiếp"
-    ],
-    "answer": 2
-  },{
-    "question": "Jira hỗ trợ tốt nhất trong việc nào dưới đây?",
-    "options": [
-      "Tạo bảng nhiệm vụ và quản lý tài liệu",
-      "Theo dõi thay đổi mã nguồn dự án",
-      "Quản lý Sprint và theo dõi lỗi trong quy trình phát triển",
-      "Phân tích chi phí và ngân sách dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Khi nào cần sử dụng Jira thay vì Trello trong quản lý dự án?",
-    "options": [
-      "Khi dự án có quy mô nhỏ và nhiệm vụ đơn giản",
-      "Khi cần giao tiếp nhanh với nhóm",
-      "Khi cần quản lý tài liệu dự án",
-      "Khi cần quản lý lỗi và theo dõi quy trình Agile"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Trello có tính năng nào giúp quản lý tiến độ công việc?",
-    "options": [
-      "Tạo bảng nhiệm vụ và trực quan hóa tiến độ công việc",
-      "Theo dõi lỗi và kiểm thử sản phẩm",
-      "Lập kế hoạch chi tiết và phân công nhiệm vụ",
-      "Quản lý mã nguồn và kiểm thử tự động"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Khi nào cần sử dụng tính năng báo cáo tiến độ trên Asana?",
-    "options": [
-      "Khi cần giao tiếp nhanh với các thành viên nhóm",
-      "Khi cần tích hợp mã nguồn trong dự án",
-      "Khi dự án không có nhiều nhiệm vụ phức tạp",
-      "Khi cần báo cáo tiến độ chi tiết và phân tích công việc"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Khi nào cần sử dụng tính năng báo cáo tiến độ trên Trello?",
-    "options": [
-      "Khi cần lập kế hoạch ngân sách dự án",
-      "Khi cần theo dõi lỗi và kiểm thử sản phẩm",
-      "Khi cần xem thông tin về kết quả dự án",
-      "Khi cần quản lý nhiệm vụ theo mô hình Kanban"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Slack được sử dụng chủ yếu với mục đích nào trong dự án?",
-    "options": [
-      "Giao tiếp nhóm và chia sẻ thông tin tức thời",
-      "Theo dõi tiến độ công việc hàng ngày",
-      "Phân tích và báo cáo chi phí dự án",
-      "Quản lý và hợp nhất mã nguồn"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Slack giúp cải thiện giao tiếp nhóm như thế nào?",
-    "options": [
-      "Hỗ trợ theo dõi lỗi trong quy trình phát triển",
-      "Tự động hóa việc phân công nhiệm vụ trong nhóm",
-      "Cung cấp kênh giao tiếp tức thời và chia sẻ tài liệu dễ dàng",
-      "Quản lý tiến độ và lập báo cáo chi phí"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Khi nào nên sử dụng Slack trong dự án phần mềm?",
-    "options": [
-      "Khi cần theo dõi tiến độ tổng thể của dự án",
-      "Khi cần quản lý Sprint trong quy trình Agile",
-      "Khi cần tích hợp mã nguồn từ các thành viên",
-      "Khi cần giao tiếp nhanh và chia sẻ tài liệu trong nhóm"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Khi nào cần sử dụng Slack thay vì các công cụ khác?",
-    "options": [
-      "Khi cần quản lý lỗi trong quy trình Agile",
-      "Khi cần theo dõi tiến độ dự án phức tạp",
-      "Khi cần giao tiếp nhanh và tổ chức thông tin nhóm hiệu quả",
-      "Khi cần tạo báo cáo tiến độ và phân tích chi phí"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Slack hỗ trợ tốt nhất trong khía cạnh nào của quản lý dự án?",
-    "options": [
-      "Phân tích rủi ro và kiểm thử sản phẩm",
-      "Theo dõi tiến độ và lập báo cáo chi tiết",
-      "Lập kế hoạch chi tiết và phân bổ nguồn lực",
-      "Giao tiếp nhanh và tổ chức thông tin trong nhóm"
-    ],
-    "answer": 3
-  },{
-    "question": "Công cụ Jira hỗ trợ hiệu quả nhất trong hoạt động nào sau đây?",
-    "options": [
-      "Lập kế hoạch tổng thể cho dự án dài hạn",
-      "Quản lý lỗi và Sprint trong quy trình Agile",
-      "Tạo bảng nhiệm vụ và theo dõi tiến độ",
-      "Quản lý phiên bản mã nguồn dự án"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Chỉ số Actual Cost (AC) dùng để đo lường giá trị nào trong quản lý dự án?",
-    "options": [
-      "Giá trị công việc đã hoàn thành đến thời điểm hiện tại",
-      "Tổng ngân sách dự án",
-      "Chi phí thực tế chi trả cho công việc đã hoàn thành",
-      "Chi phí dự kiến hoàn thành công việc"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Khi Cost Performance Index (CPI) nhỏ hơn 1, điều này nói lên vấn đề gì của việc sử dụng ngân sách dự án?",
-    "options": [
-      "Dự án đúng ngân sách",
-      "Dự án vượt ngân sách",
-      "Dự án tiết kiệm chi phí",
-      "Dự án hoàn thành chậm tiến độ"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Nếu SPI > 1, điều này cho thấy gì về tiến độ dự án?",
-    "options": [
-      "Dự án đang đạt đúng ngân sách",
-      "Dự án đang hoàn thành nhanh hơn kế hoạch",
-      "Dự án đang chậm tiến độ",
-      "Dự án đang vượt ngân sách"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Cost Variance (CV) mang giá trị âm sẽ nói lên điều gì về việc chi tiêu trong dự án?",
-    "options": [
-      "Dự án vượt ngân sách",
-      "Dự án đúng ngân sách",
-      "Dự án hoàn thành trước tiến độ",
-      "Dự án tiết kiệm chi phí"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Chỉ số nào giúp dự đoán chi phí cần thiết để hoàn thành dự án trong phạm vi ngân sách?",
-    "options": [
-      "SPI",
-      "CPI",
-      "PV",
-      "TCPI"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Nếu Variance at Completion (VAC) có giá trị âm, điều này cho thấy dự án đang gặp phải vấn đề gì về chi phí?",
-    "options": [
-      "Dự án sẽ hoàn thành với chi phí thấp hơn dự kiến",
-      "Dự án sẽ hoàn thành với chi phí cao hơn dự kiến",
-      "Dự án đang tiết kiệm chi phí so với ngân sách",
-      "Dự án sẽ hoàn thành đúng ngân sách dự kiến"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Với CPI = 1.0 và SPI = 1.0 thì trạng thái của dự án là gì?",
-    "options": [
-      "Dự án đang diễn ra đúng ngân sách và đúng tiến độ",
-      "Dự án vượt ngân sách và chậm tiến độ",
-      "Dự án đúng tiến độ nhưng vượt ngân sách",
-      "Dự án tiết kiệm chi phí và nhanh hơn tiến độ"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Với EV = 150, AC = 180 và PV = 200, dự án đang ở trạng thái nào dưới đây?",
-    "options": [
-      "Dự án vượt ngân sách và tiến độ chậm",
-      "Dự án tiết kiệm chi phí và nhanh hơn tiến độ",
-      "Dự án đúng tiến độ và vượt ngân sách",
-      "Dự án vượt ngân sách và hoàn thành đúng tiến độ"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Để cải thiện hiệu suất chi phí của một dự án, chỉ số CPI cần phải có giá trị như thế nào?",
-    "options": [
-      "CPI không ảnh hưởng đến chi phí của dự án",
-      "CPI phải bằng 1",
-      "CPI phải nhỏ hơn 1",
-      "CPI phải lớn hơn 1"
-    ],
-    "answer": 3
-  },{
-    "question": "Mục tiêu chính của Báo Cáo Tiến Độ là gì?",
-    "options": [
-      "Để tóm tắt các bài học kinh nghiệm từ dự án",
-      "Để xác định các thành viên tham gia trong dự án",
-      "Cung cấp thông tin chi tiết về tình hình hiện tại của dự án và giúp quản lý đánh giá tiến độ so với kế hoạch",
-      "Đánh giá kết quả tài chính của dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Trong Báo Cáo Tiến Độ, phần 'Đánh giá rủi ro' sẽ bao gồm nội dung gì?",
-    "options": [
-      "Đánh giá về tình hình tài chính của dự án",
-      "Đưa ra các đề xuất về ngân sách cho các giai đoạn tiếp theo",
-      "Liệt kê các rủi ro đã xảy ra hoặc có nguy cơ ảnh hưởng đến tiến độ dự án",
-      "Tổng hợp các thông tin về các nhân sự tham gia dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Tỷ lệ thay đổi nhân sự cao trong báo cáo tiến độ có thể phản ánh điều gì về nhóm dự án?",
-    "options": [
-      "Sự thiếu ổn định trong đội ngũ làm việc",
-      "Ngân sách được kiểm soát tốt",
-      "Tỷ lệ hoàn thành công việc cao",
-      "Khả năng hoàn thành dự án đúng hạn"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Nếu thời gian phản hồi và xử lý rủi ro kéo dài, điều này có thể gây ra tác động gì cho dự án?",
-    "options": [
-      "Giảm nguy cơ lỗi phát sinh",
-      "Tăng sự hài lòng của khách hàng",
-      "Tiến độ dự án đạt được đúng kế hoạch",
-      "Làm chậm tiến độ và tăng nguy cơ phát sinh rủi ro khác"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Trong báo cáo tiến độ, việc theo dõi các mốc quan trọng (milestones) có ý nghĩa gì?",
-    "options": [
-      "Giúp đánh giá sự tiến triển của dự án so với kế hoạch ban đầu",
-      "Giúp phân bổ nguồn lực cho các công việc tiếp theo",
-      "Giúp xác định các rủi ro tiềm ẩn trong dự án",
-      "Giúp xác định ngân sách cho các giai đoạn tiếp theo của dự án"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Báo cáo kết thúc dự án sẽ đề cập đến nội dung gì liên quan đến rủi ro trong suốt quá trình dự án?",
-    "options": [
-      "Các rủi ro phát sinh và cách thức xử lý",
-      "Tổng chi phí để giải quyết rủi ro",
-      "Các thay đổi trong kế hoạch quản lý rủi ro",
-      "Những rủi ro tiềm ẩn chưa được nhận diện"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Trong các công thức dưới đây, đâu là công thức tính Cost Variance (CV)?",
-    "options": [
-      "CV = PV - EV",
-      "CV = EV + PV",
-      "CV = AC - EV",
-      "CV = EV - AC"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "CPI = 1 phản ánh điều gì về tình hình chi phí dự án?",
-    "options": [
-      "Dự án đang vượt ngân sách",
-      "Dự án đang hoàn thành chậm tiến độ",
-      "Dự án đang tiết kiệm chi phí",
-      "Dự án đang đạt đúng ngân sách"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Nếu CPI = 0.8 và SPI = 1.2, dự án đang gặp phải tình trạng nào dưới đây?",
-    "options": [
-      "Dự án vượt ngân sách nhưng nhanh hơn tiến độ",
-      "Dự án có tiến độ nhanh nhưng tiết kiệm ngân sách",
-      "Dự án tiết kiệm chi phí và chậm hơn tiến độ",
-      "Dự án đúng ngân sách và chậm tiến độ"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Với EV = 600, AC = 700 và PV = 800, trạng thái của dự án là gì?",
-    "options": [
-      "Dự án đúng tiến độ và vượt ngân sách",
-      "Dự án vượt ngân sách và tiến độ chậm",
-      "Dự án tiết kiệm chi phí và nhanh hơn tiến độ",
-      "Dự án hoàn thành đúng tiến độ nhưng vượt ngân sách"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Với PV = 1200, AC = 1000 và EV = 1300, trạng thái của dự án là gì?",
-    "options": [
-      "Dự án đúng tiến độ và vượt ngân sách",
-      "Dự án vượt ngân sách và hoàn thành đúng tiến độ",
-      "Dự án tiết kiệm chi phí và nhanh hơn tiến độ",
-      "Dự án vượt ngân sách và tiến độ chậm"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Tại sao báo cáo tiến độ là một phần quan trọng trong quá trình quản lý dự án?",
-    "options": [
-      "Vì nó giúp xác định các mục tiêu mới cho dự án",
-      "Vì nó đánh giá sự ảnh hưởng của dự án đối với các bên liên quan",
-      "Vì nó giúp đánh giá tình trạng dự án và đảm bảo rằng các hoạt động dự án diễn ra theo kế hoạch.",
-      "Vì nó chỉ ra các chi phí phát sinh và giúp lập kế hoạch tài chính"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Trong báo cáo kết thúc dự án, đánh giá chất lượng sản phẩm dựa trên chỉ số nào?",
-    "options": [
-      "Thời gian hoàn thành các mốc quan trọng",
-      "Tỷ lệ hoàn thành công việc",
-      "Mức độ đáp ứng yêu cầu của khách hàng",
-      "Chi phí thực tế so với ngân sách"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "PV (Planned Value) dùng để đo lường giá trị nào trong quản lý dự án?",
-    "options": [
-      "Giá trị thực tế chi phí đã chi trả",
-      "Giá trị công việc đã hoàn thành",
-      "Giá trị dự kiến của công việc cần hoàn thành theo kế hoạch",
-      "Giá trị công việc đã hoàn thành"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Trong công thức TCPI, giá trị BAC đại diện cho yếu tố nào của ngân sách dự án?",
-    "options": [
-      "Giá trị công việc hoàn thành",
-      "Chi phí thực tế đã chi trả",
-      "Ngân sách dự kiến để hoàn thành dự án",
-      "Tổng chi phí của dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Tần suất báo cáo tiến độ thường được quy định như thế nào?",
-    "options": [
-      "Tần suất báo cáo có thể là hàng tuần, hàng tháng hoặc theo từng giai đoạn quan trọng của dự án",
-      "Báo cáo chỉ được thực hiện khi có sự thay đổi lớn trong dự án",
-      "Báo cáo chỉ được gửi cho các bên liên quan vào cuối dự án",
-      "Báo cáo chỉ được thực hiện một lần duy nhất sau khi dự án hoàn thành"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Nếu thời gian tồn đọng giảm đi, điều này thường cho thấy điều gì về tiến độ dự án?",
-    "options": [
-      "Khả năng kiểm soát ngân sách kém",
-      "Nhóm dự án xử lý vấn đề hiệu quả hơn",
-      "Tỷ lệ thay đổi nhân sự cao",
-      "Tăng số lượng vấn đề phát sinh"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Chỉ số nào dùng để đo lường hiệu suất chi phí của dự án?",
-    "options": [
-      "CPI",
-      "EV",
-      "PV",
-      "AC"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Nếu EAC cao hơn BAC, điều này cho thấy dự án có vấn đề gì?",
-    "options": [
-      "Dự án dự kiến hoàn thành dưới ngân sách",
-      "Dự án hoàn thành đúng ngân sách",
-      "Dự án tiết kiệm chi phí",
-      "Dự án vượt ngân sách dự kiến"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SV có giá trị dương nói lên điều gì về mức độ hoàn thành công việc theo kế hoạch?",
-    "options": [
-      "Dự án vượt quá ngân sách",
-      "Dự án chi phí vượt ngân sách",
-      "Dự án hoàn thành nhanh hơn kế hoạch",
-      "Dự án chậm tiến độ"
-    ],
-    "answer": 2
-  },{
-    "question": "Earned Value (EV) giúp phản ánh vấn đề gì trong quản lý dự án?",
-    "options": [
-      "Mức độ hoàn thành công việc tính đến thời điểm hiện tại",
-      "Tỷ lệ chi phí và tiến độ của dự án",
-      "Ngân sách của dự án",
-      "Hiệu suất chi phí của dự án"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Kỹ năng giải quyết xung đột giúp ích gì trong quản lý dự án phần mềm?",
-    "options": [
-      "Đảm bảo tất cả các thành viên trong nhóm đồng ý với một giải pháp duy nhất",
-      "Xử lý hiệu quả các vấn đề phát sinh giữa các thành viên trong nhóm",
-      "Xây dựng chiến lược phát triển dự án",
-      "Đưa ra quyết định về tài chính dự án"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Kỹ năng giao tiếp hiệu quả trong quản lý dự án phần mềm giúp ích gì?",
-    "options": [
-      "Giúp tăng tốc độ phát triển phần mềm",
-      "Đảm bảo tính bảo mật của phần mềm",
-      "Cải thiện mối quan hệ giữa các bên liên quan",
-      "Tối ưu hóa sử dụng ngân sách"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Đàm phán thành công cần có yếu tố nào quan trọng nhất?",
-    "options": [
-      "Thời gian nhanh chóng",
-      "Kiến thức kỹ thuật vững chắc",
-      "Giữ vững quan điểm cá nhân",
-      "Sự thỏa hiệp hợp lý"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Kỹ năng giao tiếp tốt có thể giúp gì trong quản lý dự án phần mềm?",
-    "options": [
-      "Xác định phạm vi dự án",
-      "Tạo sự hiểu biết và đồng thuận giữa các bên liên quan",
-      "Giảm thiểu rủi ro kỹ thuật",
-      "Phân tích yêu cầu hệ thống"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Kỹ năng lãnh đạo trong quản lý dự án phần mềm là gì?",
-    "options": [
-      "Chỉ đạo, hướng dẫn và động viên các thành viên trong nhóm",
-      "Quản lý tài nguyên phần mềm",
-      "Quản lý tài chính dự án",
-      "Phân tích và phát triển phần mềm"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Nhà quản lý của một dự án phần mềm cần có khả năng nào để giúp nhóm hoạt động hiệu quả?",
-    "options": [
-      "Phân công công việc đúng người đúng việc",
-      "Đưa ra các quyết định kỹ thuật nhanh chóng",
-      "Tất cả các yếu tố trên",
-      "Giải quyết mọi vấn đề kỹ thuật"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Khi đối mặt với xung đột trong nhóm, lãnh đạo dự án nên ưu tiên làm gì?",
-    "options": [
-      "Đưa ra hình phạt để nhanh chóng giải quyết xung đột",
-      "Áp đặt quyết định một cách độc lập để nhanh chóng xử lý xung đột",
-      "Lắng nghe ý kiến của các thành viên và tìm hướng giải quyết chung",
-      "Tạm thời dừng công việc của nhóm để xung đột tự lắng xuống"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Lãnh đạo có thể tạo động lực cho nhóm trong quản lý dự án bằng cách nào?",
-    "options": [
-      "Đưa ra quyết định nhanh chóng mà không tham khảo ý kiến",
-      "Đưa ra các yêu cầu cụ thể mà không giải thích rõ ràng",
-      "Khuyến khích sự sáng tạo và giải quyết vấn đề của nhóm",
-      "Giám sát chặt chẽ tất cả các bước trong dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Khi giải quyết xung đột, nhà lãnh đạo cần duy trì thái độ nào?",
-    "options": [
-      "Không can thiệp vào xung đột",
-      "Thận trọng và do dự",
-      "Cứng rắn và không linh động",
-      "Mềm mỏng và tìm kiếm sự đồng thuận"
-    ],
-    "answer": 3
-  }, {
-    "question": "Với đề xuất mục tiêu: 'Tăng cường hiệu quả của nhóm trong thời gian tới.' Theo phương pháp SMART, mục tiêu này thiếu yếu tố nào?",
-    "options": [
-      "Relevant (Phù hợp)",
-      "Specific (Cụ thể)",
-      "Timely (Có thời hạn)",
-      "Achievable (Có thể đạt được)"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Một thành viên trong nhóm gặp khó khăn trong việc hoàn thành nhiệm vụ, nhà quản lý nên làm gì để hỗ trợ?",
-    "options": [
-      "Đưa ra hướng dẫn và tìm cách giúp họ giải quyết vấn đề.",
-      "Chỉ đạo họ cách làm mà không hỏi thêm.",
-      "Để họ tự giải quyết và không can thiệp.",
-      "Đưa công việc đó cho thành viên khác trong nhóm."
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Trong việc làm việc với khách hàng về yêu cầu thay đổi tính năng, để duy trì sự giao tiếp hiệu quả, nên làm gì?",
-    "options": [
-      "Đặt yêu cầu lên cấp trên để quyết định.",
-      "Đồng ý thay đổi ngay mà không cần thảo luận thêm.",
-      "Giải thích tác động của thay đổi và lắng nghe phản hồi từ khách hàng.",
-      "Phủ nhận yêu cầu thay đổi và giữ nguyên kế hoạch."
-    ],
-    "answer": 2
-  },{
-    "question": "Phương pháp Eisenhower Matrix chủ yếu được sử dụng để làm gì?",
-    "options": [
-      "Tìm kiếm các giải pháp sáng tạo cho công việc",
-      "Phân loại các công việc dựa trên mức độ quan trọng và tính khẩn cấp",
-      "Tăng tốc độ hoàn thành công việc trong một dự án",
-      "Tối ưu hóa việc phân bổ nguồn lực trong dự án"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Một lỗi nghiêm trọng trong phần mềm đang ảnh hưởng đến khách hàng và cần được sửa ngay lập tức. Theo Eisenhower Matrix, bạn làm thế nào để xử lý tình huống này?",
-    "options": [
-      "Hoãn việc sửa lỗi để tập trung vào các nhiệm vụ không khẩn cấp hơn",
-      "Phân loại lỗi vào ô \"Quan trọng và khẩn cấp\", xử lý ngay lập tức",
-      "Giao lại nhiệm vụ này cho người khác và không can thiệp",
-      "Đặt nhiệm vụ này vào ô \"Quan trọng nhưng không khẩn cấp\" và giao cho nhân viên xử lý"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Bạn nhận được một nhiệm vụ 'Cập nhật thông tin dự án' trên mạng nội bộ của công ty, nhiệm vụ này có thể hoàn thành vào cuối tuần, nhưng không ảnh hưởng đến tiến độ dự án. Theo Eisenhower Matrix, bạn sẽ xử lý nhiệm vụ này như thế nào?",
-    "options": [
-      "Đưa vào ô \"Không quan trọng và không khẩn cấp\", làm khi có thời gian",
-      "Thực hiện ngay để không để trễ hạn",
-      "Đưa vào ô \"Quan trọng nhưng không khẩn cấp\" và lập kế hoạch hoàn thành vào cuối tuần",
-      "Đưa vào ô \"Quan trọng và khẩn cấp\", yêu cầu hoàn thành ngay"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Đàm phán trong quản lý dự án phần mềm là gì?",
-    "options": [
-      "Là việc giải quyết các vấn đề kỹ thuật",
-      "Là việc tìm kiếm các giải pháp thỏa đáng cho các bên liên quan",
-      "Là việc giám sát tiến độ thực hiện dự án",
-      "Là việc thuyết phục các bên chia sẻ ngân sách dự án"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Một nhà lãnh đạo dự án cần làm gì khi giải quyết xung đột trong nhóm?",
-    "options": [
-      "Phân công lại công việc cho các thành viên",
-      "Đưa ra quyết định đơn phương",
-      "Thực hiện một cuộc họp để tìm giải pháp hợp lý",
-      "Thảo luận với các bên liên quan về chiến lược dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Kỹ năng giải quyết xung đột cần có yếu tố nào quan trọng nhất?",
-    "options": [
-      "Sự quyết đoán",
-      "Kỹ năng tổ chức",
-      "Lắng nghe và thấu hiểu các bên",
-      "Kỹ năng thuyết phục"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Kỹ năng giao tiếp trong quản lý dự án phần mềm giúp gì cho nhà quản lý khi làm việc với khách hàng?",
-    "options": [
-      "Xác định ngân sách và các chi phí dự án",
-      "Phân tích dữ liệu người dùng cuối",
-      "Đảm bảo các yêu cầu kỹ thuật được hiểu rõ",
-      "Giảm thiểu sự phức tạp của các yêu cầu"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Để duy trì tiến độ dự án, nhà quản lý cần làm gì khi nhóm gặp phải vấn đề về thời gian?",
-    "options": [
-      "Giảm bớt các yêu cầu khách hàng",
-      "Tăng cường phân công công việc cho các thành viên khác",
-      "Đưa ra các biện pháp điều chỉnh tiến độ phù hợp",
-      "Đảm bảo ngân sách được kiểm soát nghiêm ngặt"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Trong phương pháp SMART, chữ \"S\" đại diện cho điều gì?",
-    "options": [
-      "Specific (Cụ thể)",
-      "Successful (Thành công)",
-      "Strategic (Chiến lược)",
-      "Simple (Đơn giản)"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Trong quản lý dự án phần mềm, kỹ năng giao tiếp giúp gì cho các bên liên quan ngoài nhóm phát triển?",
-    "options": [
-      "Tạo cơ hội giao tiếp không chính thức giữa các bên",
-      "Giảm thiểu chi phí dự án",
-      "Đảm bảo các thay đổi về yêu cầu phần mềm được ghi nhận và xử lý",
-      "Đảm bảo tính bảo mật của dự án"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Với mục tiêu của nhóm là 'Hoàn thành báo cáo tiến độ mỗi tuần một lần để theo dõi hiệu quả làm việc.' Theo phương pháp SMART, mục tiêu này đã đáp ứng yếu tố nào?",
-    "options": [
-      "Measurable (Đo lường được)",
-      "Relevant (Phù hợp)",
-      "Achievable (Có thể đạt được)",
-      "Timely (Có thời hạn)"
-    ],
-    "answer": 3
-  }, {
-        "question": "Với mục tiêu 'Tăng doanh thu sản phẩm lên 15% trong vòng 3 tháng để đóng góp vào mục tiêu doanh thu chung của công ty.' Mục tiêu này đáp ứng yếu tố nào của phương pháp SMART?",
-        "options": [
-            "Các yếu tố \"Specific\" (Cụ thể), \"Measurable\" (Đo lường được), và \"Timely\" (Có thời hạn)",
-            "Các yếu tố \"Relevant\" (Phù hợp) và \"Measurable\" (Đo lường được)",
-            "Chỉ có yếu tố \"Achievable\" (Có thể đạt được)",
-            "Chỉ có yếu tố \"Specific\" (Cụ thể)"
-        ],
-        "answer": 0
-    },
-    {
-        "question": "Thế nào là một môi trường làm việc tích cực giúp đảm bảo chất lượng dự án?",
-        "options": [
-            "Hạn chế tương tác để tránh xung đột",
-            "Môi trường khuyến khích sáng tạo và hợp tác",
-            "Tăng áp lực hoàn thành công việc",
-            "Môi trường ít giao tiếp và tập trung vào nhiệm vụ cá nhân"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Là quản lý của một dự án phần mềm và đang với một cuộc họp khẩn cấp với khách hàng trong khi có một buổi đào tạo lãnh đạo sắp diễn ra. Dựa trên Eisenhower Matrix, bạn sẽ xử lý như thế nào?",
-        "options": [
-            "Hoãn cả hai nhiệm vụ cho đến khi có thể giải quyết sau.",
-            "Đặt cả cuộc họp và đào tạo vào ô \"Quan trọng và khẩn cấp\" và làm cả hai",
-            "Hoãn cuộc họp khách hàng để tham gia buổi đào tạo lãnh đạo",
-            "Chuyển đào tạo lãnh đạo sang ô \"Quan trọng nhưng không khẩn cấp\", xử lý cuộc họp khách hàng ngay"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "Kỹ năng lắng nghe tích cực trong quản lý dự án phần mềm giúp ích như thế nào cho người quản lý?",
-        "options": [
-            "Tối ưu hóa chi phí dự án",
-            "Xây dựng mối quan hệ tốt với các thành viên trong nhóm",
-            "Tăng cường khả năng quyết định nhanh chóng",
-            "Giảm thiểu rủi ro trong dự án"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Kỹ năng giao tiếp hiệu quả trong quản lý dự án phần mềm sẽ giúp gì cho nhóm?",
-        "options": [
-            "Tạo mối quan hệ thân thiết với các đối tác",
-            "Chia sẻ các lỗi và khắc phục sự cố kỹ thuật",
-            "Đảm bảo các yêu cầu khách hàng được truyền đạt chính xác",
-            "Tăng khả năng sáng tạo và đổi mới trong nhóm"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Trong một cuộc họp nhóm, một thành viên không tham gia thảo luận dù có câu hỏi cần được trả lời. Nhà quản lý nên làm gì?",
-        "options": [
-            "Chuyển cuộc họp sang một chủ đề khác.",
-            "Bỏ qua và tiếp tục cuộc họp.",
-            "Mời thành viên đó chia sẻ quan điểm của mình.",
-            "Dừng cuộc họp và giải thích cho thành viên đó biết việc tham gia là quan trọng"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Khi thấy nhóm đang có dấu hiệu mất động lực, bạn có thể làm gì để khuyến khích mọi người làm việc tích cực trở lại?",
-        "options": [
-            "Tăng cường giám sát thời gian làm việc",
-            "Tạo áp lực bằng cách tăng cường trách nhiệm",
-            "Phê bình những ai chưa làm tốt",
-            "Tổ chức buổi chia sẻ để đề xuất giải pháp cải thiện"
-        ],
-        "answer": 3
-    }
-
 ];
 
   let currentIndex = 0; // ✅ Theo dõi vị trí câu hỏi hiện tại
@@ -2218,3 +1991,4 @@
 </script>
 </body>
 </html>
+
