@@ -1916,80 +1916,100 @@
   }
 ];
 
-  let currentIndex = 0; // ✅ Theo dõi vị trí câu hỏi hiện tại
+ "Thử nghiệm giải pháp trên phạm vi nhỏ trước khi mở rộng toàn doanh nghiệp",
+      "Đánh giá hiện trạng và xây dựng tầm nhìn chiến lược"
+    ],
+    answers: [2,3]
+  },
+  {
+    question: "Khi nào doanh nghiệp nên điều chỉnh hoặc tạm dừng triển khai một phần của dự án chuyển đổi số? (Chọn 2 đáp án đúng nhất)",
+    options: [
+      "Khi đánh giá thấy hiệu quả thấp hơn kỳ vọng",
+      "Khi giải pháp không còn phù hợp với nhu cầu thực tế",
+      "Khi hết hạn bảo hành phần mềm",
+      "Khi nhân viên xin nghỉ phép"
+    ],
+    answers: [0,1]
+  }
+];
 
-  function renderQuiz() {
-    const quizForm = document.getElementById("quizForm");
-    quizForm.innerHTML = "";
-    document.getElementById("result").innerText = "";
+let currentIndex = 0;
 
-    // ✅ Nếu đã tới cuối danh sách, quay lại từ đầu
-    if (currentIndex >= questions.length) {
-      alert("🎉 Bạn đã hoàn thành toàn bộ bộ đề. Sẽ quay lại từ đầu.");
-      currentIndex = 0;
-    }
+function renderQuiz() {
+  const quizForm = document.getElementById("quizForm");
+  quizForm.innerHTML = "";
+  document.getElementById("result").innerText = "";
 
-    // ✅ Lấy 30 câu tiếp theo
-    const selectedQuestions = questions.slice(currentIndex, currentIndex + 30);
-    currentIndex += 30;
-
-    window.shuffledQuestions = selectedQuestions;
-
-    selectedQuestions.forEach((q, index) => {
-      const div = document.createElement("div");
-      div.classList.add("question-block");
-
-      let html = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>`;
-      html += q.options.map((opt, i) =>
-        `<label><input type="radio" name="q${index}" value="${i}"> • ${String.fromCharCode(65 + i)}: ${opt}</label><br>`
-      ).join('');
-
-      div.innerHTML = html;
-      quizForm.appendChild(div);
-    });
+  if (currentIndex >= questions.length) {
+    alert("🎉 Bạn đã hoàn thành toàn bộ bộ đề. Sẽ quay lại từ đầu.");
+    currentIndex = 0;
   }
 
-  function submitQuiz() {
-    let score = 0;
-    const shuffled = window.shuffledQuestions || [];
+  const selectedQuestions = questions.slice(currentIndex, currentIndex + 30);
+  currentIndex += 30;
+  window.shuffledQuestions = selectedQuestions;
 
-    shuffled.forEach((q, index) => {
-      const selected = document.querySelector(`input[name="q${index}"]:checked`);
-      const questionBlock = document.querySelectorAll(".question-block")[index];
+  selectedQuestions.forEach((q, index) => {
+    const div = document.createElement("div");
+    div.classList.add("question-block");
 
-      if (selected) {
-        const selectedIndex = parseInt(selected.value);
-        const labels = questionBlock.querySelectorAll("label");
+    // Nếu có nhiều đáp án đúng => dùng checkbox
+    const isMultiple = q.answers.length > 1;
+    let html = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>`;
 
-        if (selectedIndex === q.answer) {
-          score++;
-        } else {
-          labels[selectedIndex].style.color = "red";
-          const wrongMark = document.createElement("span");
-          wrongMark.style.color = "red";
-          wrongMark.textContent = " ❌";
-          labels[selectedIndex].appendChild(wrongMark);
-        }
+    html += q.options.map((opt, i) =>
+      `<label><input type="${isMultiple ? "checkbox" : "radio"}" name="q${index}" value="${i}"> • ${String.fromCharCode(65 + i)}: ${opt}</label>`
+    ).join('');
+
+    div.innerHTML = html;
+    quizForm.appendChild(div);
+  });
+}
+
+function submitQuiz() {
+  const shuffled = window.shuffledQuestions || [];
+  let score = 0;
+
+  shuffled.forEach((q, index) => {
+    const questionBlock = document.querySelectorAll(".question-block")[index];
+    const inputs = questionBlock.querySelectorAll("input");
+    const selected = [];
+
+    inputs.forEach((input, i) => {
+      if (input.checked) selected.push(i);
+    });
+
+    const correct = q.answers.sort().join(",");
+    const chosen = selected.sort().join(",");
+
+    // ✅ Đúng hết và không thừa đáp án
+    if (correct === chosen) score++;
+
+    // ❌ Hiển thị màu và dấu sai/đúng
+    inputs.forEach((input, i) => {
+      const label = input.parentElement;
+      if (q.answers.includes(i)) label.style.color = "green";
+      if (selected.includes(i) && !q.answers.includes(i)) {
+        label.style.color = "red";
+        label.insertAdjacentHTML("beforeend", " ❌");
       }
-
-      // ✅ Hiển thị đáp án đúng
-      const correctAnswerText = q.options[q.answer];
-      const answerDisplay = document.createElement("p");
-      answerDisplay.style.color = "green";
-      answerDisplay.innerText = `✅ Đáp án đúng: ${String.fromCharCode(65 + q.answer)}: ${correctAnswerText}`;
-      questionBlock.appendChild(answerDisplay);
     });
 
-    // ✅ Hiện điểm và khóa radio
-    document.getElementById("result").innerText = `🎉 Bạn được ${score}/${shuffled.length} điểm.`;
+    const correctText = q.answers.map(a => String.fromCharCode(65 + a)).join(", ");
+    const answerDisplay = document.createElement("p");
+    answerDisplay.style.color = "green";
+    answerDisplay.innerText = `✅ Đáp án đúng: ${correctText}`;
+    questionBlock.appendChild(answerDisplay);
+  });
 
-    document.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
-  }
+  document.getElementById("result").innerText = `🎯 Bạn được ${score}/${shuffled.length} điểm.`;
+  document.querySelectorAll('input').forEach(input => input.disabled = true);
+}
 
-  // ✅ Gọi lần đầu khi tải trang
-  renderQuiz();
+renderQuiz();
 </script>
 </body>
 </html>
+
 
 
