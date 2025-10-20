@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>THÀNH VĂN E300 </title>
+  <meta charset="UTF-8" />
+  <title>THÀNH VĂN E300</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 10px;
-    }
-    .question-block {
-      margin-bottom: 20px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
-    }
-    label {
-      display: block;
-      margin: 5px 0;
-      cursor: pointer;
-    }
-    input[type="radio"] {
-      margin-right: 6px;
-    }
-    .result {
-      font-weight: bold;
-      margin-top: 20px;
-      font-size: 18px;
-    }
-    button {
-      margin: 10px 5px 0 0;
-      padding: 8px 16px;
-      font-size: 16px;
-    }
+    body { font-family: Arial, sans-serif; max-width: 760px; margin: 30px auto; padding: 10px; }
+    .question-block { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #ddd; }
+    .subtitle { color: #666; font-size: 14px; margin: 4px 0 8px; }
+    label { display: block; margin: 6px 0; cursor: pointer; }
+    input[type="radio"], input[type="checkbox"] { margin-right: 6px; }
+    .correct { color: #0a8a0a; }
+    .wrong { color: #c62828; }
+    .result { font-weight: bold; margin-top: 16px; font-size: 18px; }
+    .actions { margin-top: 12px; }
+    button { padding: 8px 14px; font-size: 15px; cursor: pointer; margin-right: 8px; }
   </style>
 </head>
 <body>
 
+<h2>Trắc nghiệm</h2>
 
 <form id="quizForm"></form>
-<div id="result" style="margin-top: 1em; font-weight: bold;"></div>
-<button onclick="submitQuiz()">📩 Nộp bài</button>
-<button onclick="renderQuiz()">🔄 Làm lại 30 câu tiếp theo</button>
+
+<div class="actions">
+  <button type="button" onclick="submitQuiz()">📩 Nộp bài</button>
+  <button type="button" onclick="resetQuiz()">🔄 Làm lại</button>
+</div>
+
+<div id="result" class="result"></div>
 
 <script>
+
  const questions = [
   {
     question: "Trong tư duy chiến lược, “Khách hàng là trung tâm” có nghĩa là:",
@@ -1933,83 +1920,99 @@
   }
 ];
 
-let currentIndex = 0;
+const quizForm = document.getElementById("quizForm");
+const resultDiv = document.getElementById("result");
 
 function renderQuiz() {
-  const quizForm = document.getElementById("quizForm");
   quizForm.innerHTML = "";
-  document.getElementById("result").innerText = "";
+  resultDiv.textContent = "";
 
-  if (currentIndex >= questions.length) {
-    alert("🎉 Bạn đã hoàn thành toàn bộ bộ đề. Sẽ quay lại từ đầu.");
-    currentIndex = 0;
-  }
+  questions.forEach((q, idx) => {
+    const block = document.createElement("div");
+    block.className = "question-block";
 
-  const selectedQuestions = questions.slice(currentIndex, currentIndex + 30);
-  currentIndex += 30;
-  window.shuffledQuestions = selectedQuestions;
+    // Nếu có >1 đáp án, thêm ghi chú “Chọn 2 đáp án đúng nhất”
+    const isMulti = q.answers.length > 1;
 
-  selectedQuestions.forEach((q, index) => {
-    const div = document.createElement("div");
-    div.classList.add("question-block");
+    const title = document.createElement("p");
+    title.innerHTML = `<strong>Câu ${idx + 1}:</strong> ${q.question}`;
+    block.appendChild(title);
 
-    // Nếu có nhiều đáp án đúng => dùng checkbox
-    const isMultiple = q.answers.length > 1;
-    let html = `<p><strong>Câu ${index + 1}:</strong> ${q.question}</p>`;
+    if (isMulti) {
+      const note = document.createElement("div");
+      note.className = "subtitle";
+      note.textContent = "(Chọn 2 đáp án đúng nhất)";
+      block.appendChild(note);
+    }
 
-    html += q.options.map((opt, i) =>
-      `<label><input type="${isMultiple ? "checkbox" : "radio"}" name="q${index}" value="${i}"> • ${String.fromCharCode(65 + i)}: ${opt}</label>`
-    ).join('');
+    // Render options: radio cho 1 đáp án, checkbox cho nhiều đáp án
+    const type = isMulti ? "checkbox" : "radio";
+    q.options.forEach((opt, i) => {
+      const label = document.createElement("label");
+      const input = document.createElement("input");
+      input.type = type;
+      input.name = `q${idx}`;
+      input.value = i;
+      label.appendChild(input);
+      label.insertAdjacentText("beforeend", `• ${String.fromCharCode(65 + i)}: ${opt}`);
+      block.appendChild(label);
+    });
 
-    div.innerHTML = html;
-    quizForm.appendChild(div);
+    quizForm.appendChild(block);
   });
 }
 
 function submitQuiz() {
-  const shuffled = window.shuffledQuestions || [];
-  let score = 0;
+  let correctCount = 0;
 
-  shuffled.forEach((q, index) => {
-    const questionBlock = document.querySelectorAll(".question-block")[index];
-    const inputs = questionBlock.querySelectorAll("input");
-    const selected = [];
+  // Khóa chọn lại sau khi nộp
+  const allInputs = quizForm.querySelectorAll("input");
+  allInputs.forEach(inp => inp.disabled = true);
 
-    inputs.forEach((input, i) => {
-      if (input.checked) selected.push(i);
-    });
+  questions.forEach((q, idx) => {
+    const block = quizForm.querySelectorAll(".question-block")[idx];
+    const inputs = block.querySelectorAll("input");
 
-    const correct = q.answers.sort().join(",");
-    const chosen = selected.sort().join(",");
+    // Lấy lựa chọn của người dùng
+    const chosen = [];
+    inputs.forEach((inp, i) => { if (inp.checked) chosen.push(i); });
 
-    // ✅ Đúng hết và không thừa đáp án
-    if (correct === chosen) score++;
+    // So sánh chính xác: đủ và đúng các đáp án
+    const correctSorted = [...q.answers].sort((a,b)=>a-b);
+    const chosenSorted = [...chosen].sort((a,b)=>a-b);
+    const isCorrect = JSON.stringify(correctSorted) === JSON.stringify(chosenSorted);
+    if (isCorrect) correctCount++;
 
-    // ❌ Hiển thị màu và dấu sai/đúng
-    inputs.forEach((input, i) => {
-      const label = input.parentElement;
-      if (q.answers.includes(i)) label.style.color = "green";
-      if (selected.includes(i) && !q.answers.includes(i)) {
-        label.style.color = "red";
-        label.insertAdjacentHTML("beforeend", " ❌");
+    // Tô màu: đáp án đúng màu xanh, đáp án chọn sai màu đỏ + ❌
+    inputs.forEach((inp, i) => {
+      const label = inp.parentElement;
+      if (q.answers.includes(i)) {
+        label.classList.add("correct");
+      }
+      if (chosen.includes(i) && !q.answers.includes(i)) {
+        label.classList.add("wrong");
+        label.insertAdjacentText("beforeend", " ❌");
       }
     });
 
-    const correctText = q.answers.map(a => String.fromCharCode(65 + a)).join(", ");
-    const answerDisplay = document.createElement("p");
-    answerDisplay.style.color = "green";
-    answerDisplay.innerText = `✅ Đáp án đúng: ${correctText}`;
-    questionBlock.appendChild(answerDisplay);
+    // Hiển thị đáp án đúng (A, B, …)
+    const correctLetters = q.answers.map(a => String.fromCharCode(65 + a)).join(", ");
+    const ans = document.createElement("p");
+    ans.className = "correct";
+    ans.textContent = `✅ Đáp án đúng: ${correctLetters}`;
+    block.appendChild(ans);
   });
 
-  document.getElementById("result").innerText = `🎯 Bạn được ${score}/${shuffled.length} điểm.`;
-  document.querySelectorAll('input').forEach(input => input.disabled = true);
+  resultDiv.textContent = `🎉 Bạn trả lời đúng ${correctCount}/${questions.length} câu.`;
+}
+
+function resetQuiz() {
+  renderQuiz();
 }
 
 renderQuiz();
 </script>
 </body>
 </html>
-
 
 
